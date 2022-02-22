@@ -8,8 +8,8 @@
     "bundle": "react-static bundle",
     "export": "react-static export",
     "serve": "serve dist -p 3000 -s",
-    "lint": "eslint \"src/**/*\" \"types/**/*\"",
-    "fmt": "prettier --check \"src/**/*.{t,j}s{x,}*\" \"types/**/*.{t,j}s\"",
+    "lint": "eslint \"src/**/*.{t,j}s{x,}*\" \"types/**/*.{t,j}s\"",
+    "fmt": "prettier --write \"src/**/*.{t,j}s{x,}*\" \"types/**/*.{t,j}s\"",
     "check-fmt": "prettier --check 'src/**/*' 'types/**/*'"
   },
   "dependencies": {

@@ -22,5 +22,11 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
+        "react/display-name": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }
