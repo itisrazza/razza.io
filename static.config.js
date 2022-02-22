@@ -1,5 +1,6 @@
 import React from "react";
 import path from "path";
+import fs from "fs/promises";
 // import { Post } from './types'
 
 // Typescript support in static.config.js is not yet supported, but is coming in a future update!
@@ -24,8 +25,8 @@ export default {
 
   getSiteData: async () => {
     const siteTitle = "Raresh's Website";
-    const projects = require("./data/projects.json");
-    const siteLinks = require("./data/links.json");
+    const projects = JSON.parse(await fs.readFile("./data/projects.json"));
+    const siteLinks = JSON.parse(await fs.readFile("./data/projects.json"));
 
     return { projects, siteLinks };
   },

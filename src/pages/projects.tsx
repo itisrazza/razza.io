@@ -36,8 +36,8 @@ export default () => {
 
           <h1>Archived</h1>
           <p>
-            Older projects I&apos;ve worked on in the past, but have since moved
-            on from.
+            Some projects which are either a one-off, or an older project which
+            I&apos;ve since left behind.
           </p>
           <div className="projects">
             {projects

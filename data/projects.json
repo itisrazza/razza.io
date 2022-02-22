@@ -5,25 +5,26 @@
     "link": "https://github.com/thegreatrazz/razza.io"
   },
   {
+    "name": "pybledom",
+    "description": "Python library for controlling BLEDOM devices.",
+    "link": "https://pypi.org/project/bledom/"
+  },
+  {
+    "name": "BLEDOM Flutter Demo App",
+    "description": "A small application for testing Bluetooth functionality in Flutter.",
+    "link": "https://github.com/thegreatrazz/bledom-flutter-demo-app",
+    "archived": true
+  },
+  {
     "name": "SuperSize",
     "description": "A customisable tool for maximising windows across screens.",
     "link": "https://github.com/thegreatrazz/SuperSize"
   },
   {
-    "name": "Homepage",
-    "description": "A home page with useful links to my part of the internet.",
-    "link": "https://github.com/thegreatrazz/homepage"
-  },
-  {
-    "name": "Metlink GTFS Repo",
-    "description": "Metlink's Transit Feed, with additional data.",
-    "link": "https://github.com/thegreatrazz/metlink-gtfs"
-  },
-  {
     "name": "Annual Fireworks",
     "description": "Firework animations I stream to celebrate New Year's.",
     "link": "https://github.com/thegreatrazz/annual-fireworks",
-    "archived": true
+    "archived": false
   },
   {
     "name": "VGAPainter",
@@ -40,6 +41,16 @@
     "name": "Тетрис Рареша",
     "description": "A retro-looking Tetris clone to learn SDL.",
     "link": "https://github.com/thegreatrazz/tetris"
+  },
+  {
+    "name": "Homepage",
+    "description": "A home page with useful links to my part of the internet.",
+    "link": "https://github.com/thegreatrazz/homepage"
+  },
+  {
+    "name": "Metlink GTFS Repo",
+    "description": "Metlink's Transit Feed, with additional data.",
+    "link": "https://github.com/thegreatrazz/metlink-gtfs"
   },
   {
     "name": "wwwserve",
@@ -98,7 +109,8 @@
   {
     "name": "VR Experiments",
     "description": "Simple experiments for use with VR phone holders (Google Cardboard).",
-    "link": "https://thegreatrazz.github.io/vr-experiments/"
+    "link": "https://thegreatrazz.github.io/vr-experiments/",
+    "archived": true
   },
   {
     "name": "Notify.js",
