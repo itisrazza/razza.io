@@ -1,5 +1,10 @@
 [
   {
+    "name": "razza.io",
+    "description": "My own personal website. Now powered by React Static.",
+    "link": "https://github.com/thegreatrazz/razza.io"
+  },
+  {
     "name": "SuperSize",
     "description": "A customisable tool for maximising windows across screens.",
     "link": "https://github.com/thegreatrazz/SuperSize"

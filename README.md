@@ -1,21 +1,22 @@
-# React-Static - TypeScript Template
+# razza.io
 
-To use this template, run `react-static create` and use the `typescript` template.
+My very own personal website. Now powered by [React Static].
 
-## Path Aliases for Absolute Imports
+## Development
 
-`react-static-typescript-plugin` supports path aliases [since v3.1](https://github.com/react-static/react-static/pull/963#issuecomment-455596728). It has been set up in this template.
+### Clone, install and start
 
-```js
-// tsconfig.json
-{
-  // ...
-    "paths": {
-      "@components/*": ["src/components/*"]
-    },
-  // ...
-}
-
-// this works in your React app
-import FancyDiv from '@components/FancyDiv'
+```bash
+git clone git@github.com:thegreatrazz/razza.io.git
+yarn install
+yarn start
 ```
+
+### Code Quality
+
+```bash
+yarn fmt
+yarn lint
+```
+
+[react static]: https://github.com/react-static/react-static
