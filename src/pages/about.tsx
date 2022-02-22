@@ -25,7 +25,7 @@ export default () => {
           <p>
             Online, I&apos;ve given myself the pseudonym of{" "}
             <code>thegreatrazz</code>. I&apos;m on{" "}
-            <a href={siteLinks.twitter} target="_blank" rel="noreferrer">
+            <a href={siteLinks.twitter.link} target="_blank" rel="noreferrer">
               Twitter
             </a>{" "}
             and other social media.

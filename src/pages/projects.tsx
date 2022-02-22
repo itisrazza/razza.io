@@ -16,7 +16,7 @@ export default () => {
         <div className="container">
           <p>
             Most of my projects are available on{" "}
-            <a href={siteLinks.github} target="_blank" rel="noreferrer">
+            <a href={siteLinks.github.link} target="_blank" rel="noreferrer">
               GitHub
             </a>
             .

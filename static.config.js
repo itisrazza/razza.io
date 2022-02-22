@@ -26,7 +26,7 @@ export default {
   getSiteData: async () => {
     const siteTitle = "Raresh's Website";
     const projects = JSON.parse(await fs.readFile("./data/projects.json"));
-    const siteLinks = JSON.parse(await fs.readFile("./data/projects.json"));
+    const siteLinks = JSON.parse(await fs.readFile("./data/links.json"));
 
     return { projects, siteLinks };
   },

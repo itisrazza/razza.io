@@ -38,7 +38,7 @@ export default () => {
               VUW
             </a>
             . I work on <Link to="/projects">various projects</Link> and{" "}
-            <a href={siteLinks.notes} target="_blank" rel="noreferrer">
+            <a href={siteLinks.notes.link} target="_blank" rel="noreferrer">
               write notes
             </a>{" "}
             every now and then.
