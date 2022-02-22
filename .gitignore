@@ -156,3 +156,7 @@ thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/node,react
+
+# Additional react-static stuff
+artifacts/
+tmp/
