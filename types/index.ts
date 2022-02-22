@@ -8,6 +8,7 @@ export interface Project {
   name: string;
   description: string;
   link: string;
+  archived?: boolean;
 }
 
 export interface SiteLink {

@@ -14,7 +14,7 @@ export default {
     state: { siteData, renderMeta },
   }) => (
     <Html lang="en-NZ">
-      <Head>
+      <Head titleTemplate="%s - Raresh's Website">
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -23,6 +23,7 @@ export default {
   ),
 
   getSiteData: async () => {
+    const siteTitle = "Raresh's Website";
     const projects = require("./data/projects.json");
     const siteLinks = require("./data/links.json");
 

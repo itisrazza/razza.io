@@ -17,17 +17,19 @@
   {
     "name": "Annual Fireworks",
     "description": "Firework animations I stream to celebrate New Year's.",
-    "link": "https://github.com/thegreatrazz/annual-fireworks"
+    "link": "https://github.com/thegreatrazz/annual-fireworks",
+    "archived": true
   },
   {
     "name": "VGAPainter",
     "description": "A simple paint program targeting MCGA/VGA 256-color mode (Mode 13h).",
-    "link": "https://github.com/thegreatrazz/VGAPainter"
+    "link": "https://thegreatrazz.github.io/VGAPainter"
   },
   {
     "name": "Coronabot",
     "description": "The bot overseeing the 'CoronaClub' Discord server.",
-    "link": "https://github.com/thegreatrazz/coronabot"
+    "link": "https://github.com/thegreatrazz/coronabot",
+    "archived": true
   },
   {
     "name": "Тетрис Рареша",
@@ -37,47 +39,56 @@
   {
     "name": "wwwserve",
     "description": "A simple web server written in Node.js.",
-    "link": "https://www.npmjs.com/package/wwwserve"
+    "link": "https://www.npmjs.com/package/wwwserve",
+    "archived": true
   },
   {
     "name": "Markset",
     "description": "Markdown typesetter. Perhaps a misnomer.",
-    "link": "https://www.npmjs.com/package/markset"
+    "link": "https://www.npmjs.com/package/markset",
+    "archived": true
   },
   {
     "name": "LearnSQL",
     "description": "A browser-side database system for learning SQL.",
-    "link": "https://thegreatrazz.github.io/LearnSQL"
+    "link": "https://thegreatrazz.github.io/LearnSQL",
+    "archived": true
   },
   {
     "name": "Crawl Generator",
     "description": "A credits crawl image generator",
-    "link": "https://github.com/thegreatrazz/CrawlGen/releases/tag/the-only-one"
+    "link": "https://github.com/thegreatrazz/CrawlGen/releases/tag/the-only-one",
+    "archived": true
   },
   {
     "name": "UNIX Authentication for Nextcloud",
     "description": "A patched up NextCloud plugin for signing is as the server's UNIX user accounts.",
-    "link": "https://github.com/thegreatrazz/user_pwauth_ex"
+    "link": "https://github.com/thegreatrazz/user_pwauth_ex",
+    "archived": true
   },
   {
     "name": "fx-9860G File Metadata",
     "description": "A program for parsing the metadata for a fx-9860G add-on.",
-    "link": "https://github.com/thegreatrazz/fx-meta"
+    "link": "https://github.com/thegreatrazz/fx-meta",
+    "archived": true
   },
   {
     "name": "CASIO Pong",
     "description": "Yet another Pong clone, but this time... it's on a calculator... in C.",
-    "link": "https://github.com/thegreatrazz/casio-pong"
+    "link": "https://github.com/thegreatrazz/casio-pong",
+    "archived": true
   },
   {
     "name": "Conic Sections",
     "description": "A quick conic section plotter for absolutely no reason.",
-    "link": "https://thegreatrazz.github.io/conic-sections/"
+    "link": "https://thegreatrazz.github.io/conic-sections/",
+    "archived": true
   },
   {
     "name": "TCP Listener",
     "description": "A simple TCP listener that blurts out whatever it reads.",
-    "link": "https://www.npmjs.com/package/tcp-listener"
+    "link": "https://www.npmjs.com/package/tcp-listener",
+    "archived": true
   },
   {
     "name": "VR Experiments",
@@ -87,26 +98,31 @@
   {
     "name": "Notify.js",
     "description": "Notification that appears inside the webpage.",
-    "link": "http://thegreatrazz.github.io/notify.js/"
+    "link": "http://thegreatrazz.github.io/notify.js/",
+    "archived": true
   },
   {
     "name": "Slidey",
     "description": "A simple slideshow solution written in pure JavaScript and CSS.",
-    "link": "https://slidey.js.org"
+    "link": "https://slidey.js.org",
+    "archived": true
   },
   {
     "name": "Words on Digital Paper (Engine)",
     "description": "Blog platform for a high school assignment (2TCD).",
-    "link": "https://github.com/thegreatrazz/wodp-engine"
+    "link": "https://github.com/thegreatrazz/wodp-engine",
+    "archived": true
   },
   {
     "name": "BetaMuseum",
     "description": "A museum with old software relics (1TCD).",
-    "link": "https://thegreatrazz.github.io/betamuseum-og/"
+    "link": "https://thegreatrazz.github.io/betamuseum-og/",
+    "archived": true
   },
   {
     "name": "Camera Dump",
     "description": "Batch script resident on the camera SD card to quickly dump images.",
-    "link": "https://github.com/thegreatrazz/cameradump"
+    "link": "https://github.com/thegreatrazz/cameradump",
+    "archived": true
   }
 ]

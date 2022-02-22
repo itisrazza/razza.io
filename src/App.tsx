@@ -22,7 +22,10 @@ function App() {
           </Router>
         </React.Suspense>
       </div>
-      <footer className="Footer" style={{ fontSize: "small" }}>
+      <footer
+        className="Footer"
+        style={{ fontSize: "small", padding: "1em 0" }}
+      >
         <div className="container">
           &copy; 2016 - {currentYear} Raresh Nistor
         </div>
