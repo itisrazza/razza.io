@@ -1,0 +1,14 @@
+.project-button {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0;
+}
+
+.project-button .project-name {
+  font-family: var(--font-head-family);
+  margin: 0.2em 0;
+}
+
+.project-button .project-name a {
+  font-style: normal;
+}

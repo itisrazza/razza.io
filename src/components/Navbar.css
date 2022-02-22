@@ -1,0 +1,28 @@
+.Navbar {
+  display: flex;
+  padding-top: 10vh;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--colour-background-darker);
+}
+
+.Navbar .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Navbar .navbar-home {
+  font-style: unset;
+  margin: 0;
+  border: 0;
+  padding: 8px;
+  margin-right: 8px;
+  display: block;
+  line-height: 0;
+}
+
+.Navbar .navbar-title {
+  font-family: var(--font-head-family);
+  font-weight: 900;
+}

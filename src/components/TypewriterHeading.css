@@ -1,0 +1,28 @@
+.TypewriterHeading {
+  font-family: var(--font-mono-family);
+  font-weight: 900;
+}
+
+.TypewriterHeading-text {
+  position: relative;
+}
+
+.TypewriterHeading-cover {
+  position: absolute;
+  top: -0.2em;
+  left: 0;
+  bottom: -0.2em;
+  right: 0;
+}
+
+.TypewriterHeading-cover {
+  background-color: var(--colour-background-darker);
+  animation: TypewriterHeading 2.5s steps(var(--textlength), end);
+  animation-fill-mode: both;
+}
+
+@keyframes TypewriterHeading {
+  to {
+    left: 100%;
+  }
+}

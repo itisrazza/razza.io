@@ -1,0 +1,60 @@
+.Home {
+}
+
+.Home > header {
+  display: flex;
+  min-height: 40vh;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background: var(--colour-background-darker);
+  padding: 1em 0;
+}
+
+.Home .link-stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.Home .link-stack a {
+  margin: 0 0.2em;
+}
+
+.Home .link-stack a:first-child {
+  margin-left: 0;
+}
+
+.Home .project-stack {
+  margin-top: 0.6em;
+}
+
+.Home main {
+  padding: 16px 0;
+}
+
+@media (min-width: 600px) {
+  .Home > main > .container {
+    display: grid;
+    grid-template-columns: auto 16px 25%;
+    grid-template-rows: auto;
+  }
+
+  .Home .link-stack {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .Home .link-stack a {
+    margin: 0.2em 0;
+  }
+
+  .Home .link-stack a::after {
+    content: " →";
+  }
+
+  .Home .project-stack {
+    margin-top: -0.4em;
+  }
+}
