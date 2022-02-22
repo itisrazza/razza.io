@@ -50,33 +50,14 @@ export default () => {
           <div style={{ gridColumn: 3, gridRow: 1 }}>
             <div className="link-stack">
               <Link to="/about">About</Link>
-              <a
-                href="//notion.so/thegreatrazz/d5024bf1e6344c49a561f7a4ff7fe769?v=57a969aad0924012961ca3b9e214ae16"
-                target="_black"
-                rel="noreferrer"
-              >
+              <a href={siteLinks.notes.link} target="_black" rel="noreferrer">
                 Notes
               </a>
-              <a
-                href="//twitter.com/thegreatrazz"
-                target="_black"
-                rel="noreferrer"
-              >
+              <a href={siteLinks.twitter.link} target="_black" rel="noreferrer">
                 Twitter
               </a>
-              <a
-                href="//github.com/thegreatrazz"
-                target="_black"
-                rel="noreferrer"
-              >
+              <a href={siteLinks.github.link} target="_black" rel="noreferrer">
                 GitHub
-              </a>
-              <a
-                href="mailto:raresh@nistor.email"
-                target="_black"
-                rel="noreferrer"
-              >
-                Email
               </a>
             </div>
           </div>

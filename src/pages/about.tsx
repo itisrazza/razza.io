@@ -30,10 +30,6 @@ export default () => {
             </a>{" "}
             and other social media.
           </p>
-          <p>
-            You can also get in touch with me{" "}
-            <a href="mailto:raresh@nistor.email">by email</a>.
-          </p>
 
           <h1>This Website</h1>
           <p>
