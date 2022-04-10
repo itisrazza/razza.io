@@ -12,7 +12,7 @@ export function ProjectButton(props: ProjectButtonProps) {
     <div className="project-button">
       <div className="project-name">
         <a href={props.link} target="_blank" rel="noreferrer">
-          {props.name} ↗
+          {props.name}&nbsp;↗
         </a>
       </div>
       <div className="project-description">{props.description}</div>
