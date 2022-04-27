@@ -28,16 +28,7 @@ export default () => {
         <div className="container">
           <h1>{name}</h1>
           <p>
-            I&apos;m a Wellingtonian software engineering student at{" "}
-            <a
-              href="//wgtn.ac.nz"
-              target="_black"
-              rel="noreferrer"
-              title="Victoria University of Wellington"
-            >
-              VUW
-            </a>
-            . I work on <Link to="/projects">various projects</Link> and{" "}
+            I&apos;m a software engineer. I work on <Link to="/projects">various projects</Link> and{" "}
             <a href={siteLinks.notes.link} target="_blank" rel="noreferrer">
               write notes
             </a>{" "}
