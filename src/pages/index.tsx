@@ -6,6 +6,7 @@ import { Link } from "@reach/router";
 import "../styles/index.css";
 import { ProjectButton } from "../components/ProjectButton";
 import { Project } from "../../types";
+import { Head } from "react-static";
 
 const alternateNames = [
   "Raresh Nistor", // english
@@ -24,11 +25,15 @@ export default () => {
 
   return (
     <div className="Home">
+      <Head>
+        <title>{alternateNames[0]}</title>
+      </Head>
       <header>
         <div className="container">
           <h1>{name}</h1>
           <p>
-            I&apos;m a software engineer. I work on <Link to="/projects">various projects</Link> and{" "}
+            I&apos;m a software engineer. I work on{" "}
+            <Link to="/projects">various projects</Link> and{" "}
             <a href={siteLinks.notes.link} target="_blank" rel="noreferrer">
               write notes
             </a>{" "}
