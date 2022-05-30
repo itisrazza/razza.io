@@ -2,7 +2,7 @@
   {
     "name": "razza.io",
     "description": "My own personal website. Now powered by React Static.",
-    "link": "https://github.com/thegreatrazz/razza.io"
+    "link": "https://github.com/itisrazza/razza.io"
   },
   {
     "name": "pybledom",
@@ -12,45 +12,45 @@
   {
     "name": "BLEDOM Flutter Demo App",
     "description": "A small application for testing Bluetooth functionality in Flutter.",
-    "link": "https://github.com/thegreatrazz/bledom-flutter-demo-app",
+    "link": "https://github.com/itisrazza/bledom-flutter-demo-app",
     "archived": true
   },
   {
     "name": "SuperSize",
     "description": "A customisable tool for maximising windows across screens.",
-    "link": "https://github.com/thegreatrazz/SuperSize"
+    "link": "https://github.com/itisrazza/SuperSize"
   },
   {
     "name": "Annual Fireworks",
     "description": "Firework animations I stream to celebrate New Year's.",
-    "link": "https://github.com/thegreatrazz/annual-fireworks",
+    "link": "https://github.com/itisrazza/annual-fireworks",
     "archived": false
   },
   {
     "name": "VGAPainter",
     "description": "A simple paint program targeting MCGA/VGA 256-color mode (Mode 13h).",
-    "link": "https://thegreatrazz.github.io/VGAPainter"
+    "link": "https://itisrazza.github.io/VGAPainter"
   },
   {
     "name": "Coronabot",
     "description": "The bot overseeing the 'CoronaClub' Discord server.",
-    "link": "https://github.com/thegreatrazz/coronabot",
+    "link": "https://github.com/itisrazza/coronabot",
     "archived": true
   },
   {
     "name": "Тетрис Рареша",
     "description": "A retro-looking Tetris clone to learn SDL.",
-    "link": "https://github.com/thegreatrazz/tetris"
+    "link": "https://github.com/itisrazza/tetris"
   },
   {
     "name": "Homepage",
     "description": "A home page with useful links to my part of the internet.",
-    "link": "https://github.com/thegreatrazz/homepage"
+    "link": "https://github.com/itisrazza/homepage"
   },
   {
     "name": "Metlink GTFS Repo",
     "description": "Metlink's Transit Feed, with additional data.",
-    "link": "https://github.com/thegreatrazz/metlink-gtfs"
+    "link": "https://github.com/itisrazza/metlink-gtfs"
   },
   {
     "name": "wwwserve",
@@ -67,37 +67,37 @@
   {
     "name": "LearnSQL",
     "description": "A browser-side database system for learning SQL.",
-    "link": "https://thegreatrazz.github.io/LearnSQL",
+    "link": "https://itisrazza.github.io/LearnSQL",
     "archived": true
   },
   {
     "name": "Crawl Generator",
     "description": "A credits crawl image generator",
-    "link": "https://github.com/thegreatrazz/CrawlGen/releases/tag/the-only-one",
+    "link": "https://github.com/itisrazza/CrawlGen/releases/tag/the-only-one",
     "archived": true
   },
   {
     "name": "UNIX Authentication for Nextcloud",
     "description": "A patched up NextCloud plugin for signing is as the server's UNIX user accounts.",
-    "link": "https://github.com/thegreatrazz/user_pwauth_ex",
+    "link": "https://github.com/itisrazza/user_pwauth_ex",
     "archived": true
   },
   {
     "name": "fx-9860G File Metadata",
     "description": "A program for parsing the metadata for a fx-9860G add-on.",
-    "link": "https://github.com/thegreatrazz/fx-meta",
+    "link": "https://github.com/itisrazza/fx-meta",
     "archived": true
   },
   {
     "name": "CASIO Pong",
     "description": "Yet another Pong clone, but this time... it's on a calculator... in C.",
-    "link": "https://github.com/thegreatrazz/casio-pong",
+    "link": "https://github.com/itisrazza/casio-pong",
     "archived": true
   },
   {
     "name": "Conic Sections",
     "description": "A quick conic section plotter for absolutely no reason.",
-    "link": "https://thegreatrazz.github.io/conic-sections/",
+    "link": "https://itisrazza.github.io/conic-sections/",
     "archived": true
   },
   {
@@ -109,13 +109,13 @@
   {
     "name": "VR Experiments",
     "description": "Simple experiments for use with VR phone holders (Google Cardboard).",
-    "link": "https://thegreatrazz.github.io/vr-experiments/",
+    "link": "https://itisrazza.github.io/vr-experiments/",
     "archived": true
   },
   {
     "name": "Notify.js",
     "description": "Notification that appears inside the webpage.",
-    "link": "http://thegreatrazz.github.io/notify.js/",
+    "link": "http://itisrazza.github.io/notify.js/",
     "archived": true
   },
   {
@@ -127,19 +127,19 @@
   {
     "name": "Words on Digital Paper (Engine)",
     "description": "Blog platform for a high school assignment (2TCD).",
-    "link": "https://github.com/thegreatrazz/wodp-engine",
+    "link": "https://github.com/itisrazza/wodp-engine",
     "archived": true
   },
   {
     "name": "BetaMuseum",
     "description": "A museum with old software relics (1TCD).",
-    "link": "https://thegreatrazz.github.io/betamuseum-og/",
+    "link": "https://itisrazza.github.io/betamuseum-og/",
     "archived": true
   },
   {
     "name": "Camera Dump",
     "description": "Batch script resident on the camera SD card to quickly dump images.",
-    "link": "https://github.com/thegreatrazz/cameradump",
+    "link": "https://github.com/itisrazza/cameradump",
     "archived": true
   }
 ]
