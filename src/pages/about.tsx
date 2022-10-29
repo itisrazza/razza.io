@@ -35,7 +35,7 @@ export default () => {
           <h1>Get in touch</h1>
           <p>
             Online, I&apos;ve given myself the pseudonym of{" "}
-            <code>thegreatrazz</code>. I&apos;m on{" "}
+            <code>itisrazza</code>. I&apos;m on{" "}
             <a href={siteLinks.twitter.link} target="_blank" rel="noreferrer">
               Twitter
             </a>{" "}
