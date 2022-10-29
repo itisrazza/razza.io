@@ -12,8 +12,19 @@ export default () => {
         <div className="container">
           <p>
             Hello there! My name is Raresh (or Rareș, or Razz). I&apos;m a
-            software developer at <a href="https://www.fluxfederation.com/" target="_blank">Flux Federation</a>.
-            I&apos;m also wrapping up Computer Science at <a href="https://www.wgtn.ac.nz/" target="_blank">Victoria University of Wellington</a>.
+            software developer at{" "}
+            <a
+              href="https://www.fluxfederation.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Flux Federation
+            </a>
+            . I&apos;m also wrapping up my Computer Science degree at{" "}
+            <a href="https://www.wgtn.ac.nz/" target="_blank" rel="noreferrer">
+              Victoria University of Wellington
+            </a>
+            .
           </p>
           <p>
             I&apos;m interested in various curious things, like technology and
