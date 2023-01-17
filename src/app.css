@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap");
-@import url("https://rsms.me/inter/inter.css");
+@import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CRSV,MONO@-15..0,300..800,0..1,0..1&display=swap');
 
 :root {
   --colour-background: #fafafa;
@@ -8,9 +7,11 @@
   --colour-contrast-opacity: 0.8;
   --colour-accent: #3949ab;
   --colour-accent-lighter: #304ffe;
-  --font-body-family: "Inter", sans-serif;
-  --font-head-family: "Inter var experimental", var(--font-body-family);
-  --font-mono-family: "Jetbrains Mono", monospace;
+  --font-body-family: "Recursive", sans-serif;
+  --font-head-family: "Recursive", var(--font-body-family);
+  --font-mono-family: "Recursive", monospace;
+
+  font-variation-settings: "CASL" 0;
 }
 
 body {
@@ -74,6 +75,7 @@ a:active {
 
 code {
   font-family: var(--font-mono-family);
+  font-variation-settings: 'MONO' 1;
 }
 
 h1,

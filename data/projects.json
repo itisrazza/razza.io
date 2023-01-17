@@ -50,7 +50,8 @@
   {
     "name": "Metlink GTFS Repo",
     "description": "Metlink's Transit Feed, with additional data.",
-    "link": "https://github.com/itisrazza/metlink-gtfs"
+    "link": "https://github.com/itisrazza/metlink-gtfs",
+    "archived": true
   },
   {
     "name": "wwwserve",
