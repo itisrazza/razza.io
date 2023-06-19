@@ -103,53 +103,6 @@ table {
     }
 }
 
-body > nav {
-    background: #424242;
-    color: #fafafa;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    box-shadow: $box-shadow;
-
-    ul {
-        display: flex;
-        padding: unset;
-        margin: unset;
-
-        li {
-            display: flex;
-            padding: unset;
-            margin: unset;
-            justify-content: center;
-            align-items: stretch;
-
-            a {
-                display: block;
-                color: unset;
-                text-decoration: none;
-                padding: 8px 12px;
-                border: 2px solid #424242;
-                border-radius: 6px;
-                transition: background-color .1s, color .1s;
-
-                &:hover {
-                    background: #fafafa;
-                    color: #212121;
-                }
-
-                &.brand {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 8px;
-                    padding: 0 8px;
-                }
-            }
-        }
-    }
-}
-
 body > footer {
     border-top: 1px solid #424242;
     padding: 0.5em 0;
