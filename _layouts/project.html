@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<header class="wrapper">
+    {% assign logo_path = "/assets/logos/" | append: page.slug | append: ".svg" %}
+
+    <img src="{{ logo_path | relative_url }}" alt="" height="128" class="logo">
+    <h1 class="title">{{ page.title }}</h1>
+    <p class="tagline">{{ page.subtitle }}</p>
+
+    {% if page.urls | size != 0 %}
+    <ul class="buttons">
+        {% for url in page.urls %}
+            <li><a href="{{ url.url }}">{{ url.label }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</header>
+
+<main class="wrapper">
+    {{ content }}
+</main>
