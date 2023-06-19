@@ -1,0 +1,112 @@
+- name: Razza Suite
+  description: Collection of tools and utilities for power users and developers
+  link: https://suite.razza.io/
+  icon: suite.svg
+
+- name: SuperSize
+  description: Resize windows across multiple displays
+  link: https://github.com/itisrazza/SuperSize
+  icon: supersize.svg
+
+- name: Beetroot
+  description: Crowdsourced tunes queue for parties and get-togethers
+  link: https://suite.razza.io/projects/beetroot/
+  icon: beetroot.svg
+
+- name: VGAPainter
+  description: Draw and convert images for limited graphics formats
+  link: https://itisrazza.github.io/VGAPainter
+  icon: vgapainter.svg
+
+- name: Annual Fireworks
+  description: Firework animations I stream to celebrate New Year's.
+  link: https://github.com/itisrazza/annual-fireworks
+
+- name: razza.io
+  description: My own personal website. Now powered by Jekyll.
+  link: https://github.com/itisrazza/razza.io
+
+- name: pybledom
+  description: Python library for controlling BLEDOM devices.
+  link: https://pypi.org/project/bledom/
+  icon: illumin8.svg
+  archived: true
+
+- name: BLEDOM Flutter Demo App
+  description: A small application for testing Bluetooth functionality in Flutter.
+  link: https://github.com/itisrazza/bledom-flutter-demo-app
+  icon: illumin8.svg
+  archived: true
+
+- name: Coronabot
+  description: Discord bot for course email, assignments and class time notifications.
+  link: https://github.com/itisrazza/coronabot
+  icon: coronabot.png
+  archived: true
+
+- name: Тетрис Рареша
+  description: A retro-looking Tetris clone to learn SDL.
+  link: https://github.com/itisrazza/tetris
+  archived: true
+
+- name: Homepage
+  description: A home page with useful links to my part of the internet.
+  link: https://github.com/itisrazza/homepage
+
+- name: Metlink GTFS Repo
+  description: Metlink's Transit Feed, with additional data.
+  link: https://github.com/itisrazza/metlink-gtfs
+  archived: true
+
+- name: LearnSQL
+  description: A browser-side database system for learning SQL.
+  link: https://itisrazza.github.io/LearnSQL
+  archived: true
+
+- name: Crawl Generator
+  description: A credits crawl image generator
+  link: https://github.com/itisrazza/CrawlGen/releases/tag/the-only-one
+  archived: true
+
+- name: CASIO Pong
+  description: A port of Pong to the CASIO fx-9860G graphing calculators.
+  link: https://github.com/itisrazza/casio-pong
+  archived: true
+
+- name: Conic Sections
+  description: A quick conic section plotter for absolutely no reason.
+  link: https://itisrazza.github.io/conic-sections/
+  archived: true
+
+- name: TCP Listener
+  description: A simple TCP listener that blurts out whatever it reads.
+  link: https://www.npmjs.com/package/tcp-listener
+  archived: true
+
+- name: Notify.js
+  description: Notification that appears inside the webpage.
+  link: http://itisrazza.github.io/notify.js/
+  archived: true
+
+- name: Slidey
+  description: A simple slideshow solution written in pure JavaScript and CSS.
+  link: https://slidey.js.org
+  archived: true
+
+- name: Words on Digital Paper (Engine)
+  description: Blog platform for a high school assignment (2TCD).
+  link: https://github.com/itisrazza/wodp-engine
+  archived: true
+  icon: wodp_main.png
+
+- name: BetaMuseum
+  description: A museum with old software relics (1TCD).
+  link: https://itisrazza.github.io/betamuseum-og/
+  archived: true
+  icon: betamuseum.jpg
+
+- name: Camera Dump
+  description: Batch script resident on the camera SD card to quickly dump images.
+  link: https://github.com/itisrazza/cameradump
+  archived: true
+  icon: cameradumper.ico
