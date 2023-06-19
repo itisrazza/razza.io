@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "outFile": "assets/script.js",
+        "esModuleInterop": true,
+        "module": "AMD",
+        "sourceMap": true,
+    },
+    "include": [
+        "_scripts/**/*.ts",
+        "_scripts/**/*.tsx"
+    ]
+}

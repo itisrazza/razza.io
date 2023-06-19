@@ -1,0 +1,12 @@
+{
+  "name": "razza.io",
+  "private": true,
+  "scripts": {
+    "serve": "jekyll serve & tsc --watch",
+    "build": "tsc && jekyll build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
+}

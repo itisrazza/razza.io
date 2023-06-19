@@ -17,6 +17,76 @@ layout: default
     {% endfor %}
 </div>
 
+<main class="wrapper">
+    <section id="projects" class="biglist">
+        <h1 class="biglist-heading">Projects</h1>
+        <div class="biglist-content">
+            <a href="#" class="biglist-item">
+                <img src="{{ 'assets/logos/projects/suite.svg' | relative_url }}" alt="" width="32" height="32">
+                <span class="biglist-item-main">
+                    <span class="title">Razza Suite</span>
+                    <span class="description">Collection of tools and utilities for the users and developers</span>
+                </span>
+            </a>
+            <a href="#" class="biglist-item">
+                <img src="{{ 'assets/logos/projects/suite.svg' | relative_url }}" alt="" width="32" height="32">
+                <span class="biglist-item-main">
+                    <span class="title">Razza Suite</span>
+                    <span class="description">Collection of tools and utilities for the users and developers</span>
+                </span>
+            </a>
+            <a href="#" class="biglist-item">
+                <img src="{{ 'assets/logos/projects/suite.svg' | relative_url }}" alt="" width="32" height="32">
+                <span class="biglist-item-main">
+                    <span class="title">Razza Suite</span>
+                    <span class="description">Collection of tools and utilities for the users and developers</span>
+                </span>
+            </a>
+            <a href="#" class="biglist-item">
+                <img src="{{ 'assets/logos/projects/suite.svg' | relative_url }}" alt="" width="32" height="32">
+                <span class="biglist-item-main">
+                    <span class="title">Razza Suite</span>
+                    <span class="description">Collection of tools and utilities for the users and developers</span>
+                </span>
+            </a>
+            <a href="#" class="biglist-item">
+                <img src="{{ 'assets/logos/projects/suite.svg' | relative_url }}" alt="" width="32" height="32">
+                <span class="biglist-item-main">
+                    <span class="title">Razza Suite</span>
+                    <span class="description">Collection of tools and utilities for the users and developers</span>
+                </span>
+            </a>
+            <a href="#" class="biglist-item">
+                <img src="{{ 'assets/logos/projects/suite.svg' | relative_url }}" alt="" width="32" height="32">
+                <span class="biglist-item-main">
+                    <span class="title">Razza Suite</span>
+                    <span class="description">Collection of tools and utilities for the users and developers</span>
+                </span>
+            </a>
+        </div>
+
+
+        <div class="biglist-more">
+            <a href="/notes" class="button">See More</a>
+        </div>
+    </section>
+    <section id="notes" class="biglist">
+        <h1 class="biglist-heading">Latest Notes</h1>
+        <div class="biglist-content">
+            <a href="#" class="biglist-item">
+                <span class="biglist-item-main">
+                    <span class="title">Installing Windows within Windows</span>
+                    <span class="description">May 30, 2023</span>
+                </span>
+            </a>
+        </div>
+
+        <div class="biglist-more">
+            <a href="/projects" class="button">See More</a>
+        </div>
+    </section>
+</main>
+
 <div class="wrapper">
     {% assign sections = site.projects | map: "section" | uniq | sort %}
     {% for section in sections %}

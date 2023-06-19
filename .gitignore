@@ -3,3 +3,6 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+assets/script.js
+assets/script.js.map
+node_modules/

@@ -1,0 +1,71 @@
+.biglist {
+    background: #424242;
+    color: #fafafa;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+
+    .biglist-heading {
+        margin: unset;
+        font-size: smaller;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    .biglist-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        flex-grow: 1;
+
+        .biglist-item {
+            display: flex;
+            border: $light-border;
+            padding: 8px;
+            border-radius: 8px;
+            color: unset;
+            text-decoration: none;
+            align-items: center;
+            gap: 8px;
+            transition: box-shadow .1s, color .1s, background-color .1s;
+
+            &:hover {
+                background: #fafafa;
+                color: #212121;
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+            }
+
+            &:active {
+                background: #e0e0e0;
+                color: #212121;
+                box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+            }
+
+            .biglist-item-main {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                .title {
+                    font-family: $head-font-family;
+                    font-size: larger;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .biglist-more {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 4px;
+        justify-self: flex-end;
+
+        .button {
+            box-shadow: none;
+        }
+    }
+}
