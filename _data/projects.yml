@@ -44,7 +44,7 @@
   icon: coronabot.png
   archived: true
 
-- name: Тетрис Рареша
+- name: Razza's Tetris
   description: A retro-looking Tetris clone to learn SDL.
   link: https://github.com/itisrazza/tetris
   archived: true
@@ -88,7 +88,7 @@
   link: http://itisrazza.github.io/notify.js/
   archived: true
 
-- name: Slidey
+- name: Slidey.js
   description: A simple slideshow solution written in pure JavaScript and CSS.
   link: https://slidey.js.org
   archived: true
