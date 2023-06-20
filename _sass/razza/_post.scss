@@ -1,0 +1,64 @@
+.layout-post {
+    > nav {
+        position: relative;
+        z-index: 100;
+        background-color: fade-out($color: #424242, $amount: 0.2);
+        backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    > header.background-image-header {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        height: 300px;
+        mask-image: linear-gradient(to bottom, #000000, transparent);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    > header.meta-header {
+        position: relative;
+        margin-top: 8px;
+        margin-bottom: 8px;
+
+        .meta-header-content {
+            padding: 2em 12px;
+            background-color: fade-out($color: #424242, $amount: 0.2);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-radius: 8px;
+            box-shadow: $box-shadow;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+
+            .meta-title {
+                font-size: 2em;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            .meta-date {
+                margin: 0;
+            }
+
+            ul.meta-categories {
+                display: flex;
+                padding: unset;
+                margin: unset;
+                list-style: none;
+                gap: 4px;
+
+                li {
+                    font-size: smaller;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    color: black;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+    > main {
+        position: relative;
+    }
+}

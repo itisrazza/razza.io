@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{% include navbar.html %}
+
+<header class="background-image-header" style="background-image: url(https://picsum.photos/1920/1080);"></header>
+<header class="meta-header">
+    <div class="wrapper">
+        <div class="meta-header-content">
+            <h1 class="meta-title">{{ page.title }}</h1>
+            <p class="meta-date">{{ page.date | date: "%B %e, %Y" }}</p>
+            <ul class="meta-categories">
+                {% for category in page.categories %}
+                    <li>{{ category }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main class="wrapper">
+    {{ content }}
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const IMAGE_HEIGHT = 300;
+        const imageHeader = document.querySelector(".layout-post > header.background-image-header");
+
+        if (imageHeader == null) return;
+
+        document.addEventListener("scroll", (ev) => {
+            imageHeader.style.top = `-${window.scrollY / 2}px`;
+            imageHeader.style.opacity = window.scrollY > IMAGE_HEIGHT
+                ? "0"
+                : `${1 - scrollY / IMAGE_HEIGHT}`;
+        });
+    });
+</script>

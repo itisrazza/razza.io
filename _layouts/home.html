@@ -45,12 +45,15 @@ layout: default
     <section id="notes" class="biglist">
         <h1 class="biglist-heading">Latest Notes</h1>
         <div class="biglist-content">
-            <a href="#" class="biglist-item">
-                <span class="biglist-item-main">
-                    <span class="title">Installing Windows within Windows</span>
-                    <span class="description">May 30, 2023</span>
-                </span>
-            </a>
+            {% assign notes = site.posts | slice: 0, 5 %}
+            {% for note in notes %}
+                <a href="{{ note.url | relative_url }}" class="biglist-item">
+                    <span class="biglist-item-main">
+                        <span class="title">{{ note.title }}</span>
+                        <span class="date">{{ note.date | date: "%B %e, %Y" }}</span>
+                    </span>
+                </a>
+            {% endfor %}
         </div>
 
         <div class="biglist-more">
