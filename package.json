@@ -2,11 +2,15 @@
   "name": "razza.io",
   "private": true,
   "scripts": {
-    "serve": "jekyll serve & tsc --watch",
-    "build": "tsc && jekyll build"
+    "serve": "tsc --watch & bundle exec jekyll serve",
+    "build": "tsc && bundle exec jekyll build",
+    "page:new": "node _tasks/newPage.js"
   },
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.1.3"
+    "commander": "^11.0.0",
+    "slugify": "^1.6.6",
+    "typescript": "^5.1.3",
+    "yaml": "^2.3.1"
   }
 }
