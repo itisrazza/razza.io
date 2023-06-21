@@ -6,6 +6,31 @@
 body {
     background: #212121;
     color: #fafafa;
+    line-height: 1.4;
+}
+
+code, kbd, pre {
+    font-family: $mono-font-family;
+}
+
+code {
+    background: #424242;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: smaller;
+}
+
+pre {
+    background-color: #424242;
+    padding: 8px;
+    overflow-x: auto;
+    border-radius: 8px;
+
+    code {
+        background: unset;
+        border-radius: unset;
+        padding: unset;
+    }
 }
 
 a {
