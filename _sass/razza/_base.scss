@@ -39,6 +39,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $head-font-family;
+    font-weight: 500;
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
@@ -115,10 +116,11 @@ table {
     box-shadow: $box-shadow;
     transition: box-shadow .1s, color .1s, background-color .1s;
 
-    &:hover {
+    &:hover, &:focus {
         background: #fafafa;
         color: #212121;
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+        outline: none;
     }
 
     &:active {

@@ -71,9 +71,10 @@ body > nav {
                 border-radius: 8px;
                 transition: background-color .1s, color .1s;
 
-                &:hover {
+                &:hover, &:focus {
                     background: #fafafa;
                     color: #212121;
+                    outline: none;
                 }
 
                 &.brand {
