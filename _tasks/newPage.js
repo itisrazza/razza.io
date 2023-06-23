@@ -49,7 +49,7 @@ function createPageAssets(page) {
     fs.mkdirSync(pageAssetsPath(page));
     fs.copyFileSync(
         path.join("assets", "transparent.png"),
-        path.join(pageAssetsPath(page), "header.png")
+        path.join(pageAssetsPath(page), "masthead.png")
     );
 }
 

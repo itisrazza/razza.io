@@ -4,7 +4,10 @@ layout: default
 
 {% include navbar.html %}
 
-<header class="background-image-header" style="background-image: url(https://picsum.photos/1920/1080);"></header>
+{% assign date = page.date | date: '%F' %}
+{% assign masthead = 'assets/notes/' | append: date | append: '-' | append: page.slug | append: '/masthead.png' %}
+
+<header class="background-image-header" style="background-image: url({{ masthead | relative_url }}); background-position: {{ page.masthead_align | default: 'center center' }}"></header>
 <header class="meta-header">
     <div class="wrapper">
         <div class="meta-header-content">
