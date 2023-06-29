@@ -6,9 +6,10 @@ layout: page
 <header>
     <h1>Notes</h1>
     <p>Here are some notes I've written down for different things. Think of them as a bunch of Markdown files left in a folder somewhere.</p>
+    <p class="callout callout-info">A bit of a heads up. I'm currently migrating my notes over from Notion. They might be broken here and there, but most important parts should be here ready to go.</p>
 </header>
 
-<section id="active" class="biglist biglist-inset biglist-grid">
+<section id="active" class="biglist biglist-inset">
     <div class="biglist-content">
         {% for note in site.posts %}
             <a href="{{ note.url | relative_url }}" class="biglist-item">
