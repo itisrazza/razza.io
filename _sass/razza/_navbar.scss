@@ -1,8 +1,8 @@
 body > nav {
-    background: #424242;
-    color: #fafafa;
+    background: $color-dark-blue;
+    color: $color-white;
     border-radius: 8px;
-    box-shadow: $box-shadow;
+    box-shadow: $box-shadow-blue;
     overflow: hidden;
 
     .nav-main {
@@ -82,9 +82,18 @@ body > nav {
                     justify-content: center;
                     align-items: center;
                     gap: 8px;
-                    padding: 0 12px;
+                    width: 24px;
+                    height: 24px;
                     font-family: $head-font-family;
-                    font-weight: 700;
+                    font-weight: 750;
+                    color: $color-kinda-yellow;
+                    line-height: 0.8em;
+                    font-size: 14px;
+
+                    &:hover, &:focus {
+                        background-color: $color-kinda-yellow;
+                        color: $color-dark-blue;
+                    }
                 }
             }
         }

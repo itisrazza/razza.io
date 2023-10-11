@@ -2,8 +2,9 @@
     > nav {
         position: relative;
         z-index: 100;
-        background-color: fade-out($color: #424242, $amount: 0.1);
+        background-color: fade-out($color-dark-blue, 0.2);
         backdrop-filter: saturate(180%) blur(20px);
+        box-shadow: $box-shadow-blue;
     }
 
     > header.background-image-header {
@@ -21,14 +22,16 @@
         margin-bottom: 8px;
 
         .meta-header-content {
-            padding: 2em 12px;
-            background-color: fade-out($color: #424242, $amount: 0.1);
+            padding: 2em 16px;
+            background-color: fade-out($color-dark-blue, 0.2);
             backdrop-filter: saturate(180%) blur(20px);
             border-radius: 8px;
-            box-shadow: $box-shadow;
+            box-shadow: $box-shadow-blue;
             display: flex;
             flex-direction: column;
             gap: 0.5em;
+            margin-left: -16px;
+            margin-right: -16px;
 
             .meta-title {
                 font-size: 2em;

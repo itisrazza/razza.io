@@ -4,8 +4,8 @@
 }
 
 body {
-    background: #212121;
-    color: #fafafa;
+    background: $color-dark-blue;
+    color: $color-white;
     line-height: 1.4;
 }
 
@@ -107,8 +107,8 @@ table {
 
 .button {
     display: inline-flex;
-    color: #fafafa;
-    background-color: #424242;
+    color: $color-white;
+    background-color: $color-white-shade;
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 8px;

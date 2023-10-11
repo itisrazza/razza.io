@@ -1,14 +1,21 @@
 @charset "utf-8";
 
-$main-font-family: "Spline Sans", sans-serif;
+$main-font-family: "Inter", sans-serif;
 $head-font-family: "Syne", $main-font-family;
-$mono-font-family: "Spline Sans Mono", monospace;
+$mono-font-family: "IBM Plex Mono", monospace;
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-dark-blue: #101117;
+$color-kinda-yellow: #FFB900;
+$color-white-shade: fade-out($color-white, 0.9);
 
 $sm-break: 480px;
 $md-break: 640px;
 $lg-break: 800px;
 
 $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+$box-shadow-blue: 0 4px 4px fade-out($color-dark-blue, 0.75);
 
 $light-border: 1px solid rgba(255, 255, 255, 0.125);
 
