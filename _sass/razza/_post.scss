@@ -1,5 +1,5 @@
 .layout-post {
-    > nav {
+    > nav, > .wrapper > nav {
         position: relative;
         z-index: 100;
         background-color: fade-out($color-dark-blue, 0.2);

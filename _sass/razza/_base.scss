@@ -14,14 +14,14 @@ code, kbd, pre {
 }
 
 code {
-    background: #424242;
+    background: $color-white-shade;
     border-radius: 4px;
     padding: 2px 4px;
     font-size: smaller;
 }
 
 pre {
-    background-color: #424242;
+    background-color: $color-white-shade;
     padding: 8px;
     overflow-x: auto;
     border-radius: 8px;
@@ -34,7 +34,7 @@ pre {
 }
 
 a {
-    color: #FFB900;
+    color: $color-kinda-yellow;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -81,7 +81,7 @@ table {
 }
 
 .label {
-    background: #424242;
+    background: $color-white-shade;
     border: 2px solid;
     font-size: smaller;
     padding: 2px 6px;

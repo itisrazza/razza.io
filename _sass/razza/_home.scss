@@ -12,20 +12,14 @@
             display: flex;
             flex-direction: column;
             margin: 1em 0;
-            font-weight: 730;
+            font-weight: 750;
             line-height: 100%;
+            line-height: 0.8em;
             font-size: 3em;
+            color: $color-kinda-yellow;
 
             span {
                 display: block;
-            }
-
-            @media screen and (min-width: $md-break) {
-                font-size: 4em;
-            }
-        
-            @media screen and (min-width: $lg-break) {
-                font-size: 6em;
             }
         }
     }
