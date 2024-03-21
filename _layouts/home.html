@@ -61,34 +61,3 @@ layout: default
         </div>
     </section>
 </main>
-
-<div class="wrapper">
-    {% assign sections = site.projects | map: "section" | uniq | sort %}
-    {% for section in sections %}
-        {% assign projects = site.projects | where: "section", section %}
-
-        <h1>{{ section }}</h1>
-        <div class="project-grid">
-            {% for project in projects %}
-                {% assign logo_path = "/assets/logos/" | append: project.slug | append: ".svg" %}
-                {% assign url = project.url | relative_url %}
-                {% if project.external_url %}
-                    {% assign url = project.external_url %}
-                {% endif %}
-
-                <a href="{{ url }}" class="project-button">
-                    <span class="logo">
-                        <img src="{{ logo_path | relative_url }}" alt="" height="64">
-                    </span>
-                    <span class="title" role="heading">{{ project.title }}</span>
-                    <span>{{ project.subtitle }}</span>
-                    <span class="platforms">
-                        {% for platform in project.platforms %}
-                            <span class="label">{{ platform }}</span>
-                        {% endfor %}
-                    </span>
-                </a>
-            {% endfor %}
-        </div>
-    {% endfor %}
-</div>

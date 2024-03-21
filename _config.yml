@@ -6,6 +6,15 @@ title: Raresh Nistor
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://razza.io" # the base hostname & protocol for your site, e.g. http://example.com
 
+collections:
+  projects:
+    name: true
+    output: true
+
+feed:
+  excerpt_only: true
+  author: Raresh Nistor
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

@@ -1,0 +1,24 @@
+.button {
+    display: inline-flex;
+    color: $color-white;
+    background-color: $color-white-shade;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: $box-shadow;
+    transition: box-shadow .1s, color .1s, background-color .1s;
+
+    &:hover, &:focus {
+        background: #fafafa;
+        color: #212121;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+        outline: none;
+    }
+
+    &:active {
+        background: #e0e0e0;
+        color: #212121;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    }
+}

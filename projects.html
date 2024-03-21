@@ -9,34 +9,37 @@ layout: page
     <p>You can find more of them on <a href="https://github.com/itisrazza">my GitHub</a> or in the <a href="https://suite.razza.io/">Razza Suite</a>.</p>
 </header>
 
-{% assign archived_projects = site.data.projects | where: "archived", "true" | sort: "name" %}
-{% assign active_projects = site.data.projects | where: "archived", empty | sort: "name" %}
-
-<section id="active" class="biglist biglist-grid biglist-inset">
-    <div class="biglist-content">
-        {% for project in active_projects %}
-            {% assign icon = 'assets/logos/projects/undefined.svg' %}
-            {% if project.icon %}
-                {% assign icon = 'assets/logos/projects/' | append: project.icon %}
+<div class="wrapper">
+    <div class="project-grid">
+        {% for project in site.projects %}
+            {% assign logo_path = "/assets/logos/projects/" | append: project.slug | append: ".svg" %}
+            {% assign url = project.url | relative_url %}
+            {% if project.external_url %}
+                {% assign url = project.external_url %}
             {% endif %}
 
-            <a href="{{ project.link }}" class="biglist-item">
-                <img src="{{ icon | relative_url }}" alt="" width="32" height="32">
-                <span class="biglist-item-main">
-                    <span class="title">{{ project.name }}</span>
-                    <span class="description">{{ project.description }}</span>
+            <a href="{{ url }}" class="button-3d project-button">
+                <span class="project-logo">
+                    <img src="{{ logo_path | relative_url }}" alt="" height="64">
+                </span>
+                <span class="project-title" role="heading">{{ project.title }}</span>
+                <span class="project-description">{{ project.description }}</span>
+                <span class="project-platforms">
+                    {% for platform in project.platforms %}
+                        <span class="label">{{ platform }}</span>
+                    {% endfor %}
                 </span>
             </a>
         {% endfor %}
     </div>
-</section>
+</div>
 
-<h2>Archived Projects</h2>
+<h2>Older Projects</h2>
 <p>Here are some older projects I'm a bit proud of. You can find the rest on <a href="https://github.com/itisrazza?tab=repositories&q=&type=archived&language=&sort=name">GitHub</a>.</p>
 
-<section id="archived" class="biglist biglist-grid biglist-inset">
+<section class="biglist biglist-grid biglist-inset">
     <div class="biglist-content">
-        {% for project in archived_projects %}
+        {% for project in site.data.projects %}
             {% assign icon = 'assets/logos/projects/undefined.svg' %}
             {% if project.icon %}
                 {% assign icon = 'assets/logos/projects/' | append: project.icon %}

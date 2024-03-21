@@ -1,27 +1,3 @@
-# - name: Razza Suite
-#   description: Collection of tools and utilities for power users and developers
-#   link: https://suite.razza.io/
-#   icon: suite.svg
-
-- name: SuperSize
-  description: Resize windows across multiple displays
-  link: https://github.com/itisrazza/SuperSize
-  icon: supersize.svg
-
-# - name: Beetroot
-#   description: Crowdsourced tunes queue for parties and get-togethers
-#   link: https://suite.razza.io/projects/beetroot/
-#   icon: beetroot.svg
-
-- name: VGAPainter
-  description: Draw and convert images for limited graphics formats
-  link: https://itisrazza.github.io/VGAPainter
-  icon: vgapainter.svg
-
-- name: razza.io
-  description: My own personal website. Now powered by Jekyll.
-  link: https://github.com/itisrazza/razza.io
-
 - name: pybledom
   description: Python library for controlling BLEDOM devices.
   link: https://pypi.org/project/bledom/
@@ -48,6 +24,7 @@
 - name: Homepage
   description: A home page with useful links to my part of the internet.
   link: https://github.com/itisrazza/homepage
+  archived: true
 
 - name: Metlink GTFS Repo
   description: Metlink's Transit Feed, with additional data.
