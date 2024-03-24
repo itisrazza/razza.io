@@ -70,7 +70,7 @@
   description: Blog platform for a high school assignment (2TCD).
   link: https://github.com/itisrazza/wodp-engine
   archived: true
-  icon: wodp_main.png
+  icon: wodp.svg
 
 - name: BetaMuseum
   description: A museum with old software relics (1TCD).
