@@ -19,11 +19,21 @@ It has a few sections:
 
 I'm not a big fan of posting too much of myself on the open web these days, but there will be a few other things added to this site and I find some more free time.
 
-I will end up closing the repo one of these days, but after I factor out the CSS styling and GitHub Actions workflows into their own repos.
-
 [Jekyll]: https://jekyllrb.com/
 [GitHub Pages]: https://pages.github.com/
 
 [Projects]: /projects
 [Notes]: /notes
 [Links]: /links
+
+---
+
+Source code readers. Here's some links for you:
+
+* current Jekyll-powered version lives in [`main`][main] (surprise!)
+* previous React version (2020-2022) lives in [`2022`][2022]
+
+[main]: https://github.com/itisrazza/razza.io/tree/main
+[2022]: https://github.com/itisrazza/razza.io/tree/2022
+
+You might see branches pop up and disappear whenever I do major upgrades or design refreshes (like this one used to live in a branch called `refresh` before it got merged).
