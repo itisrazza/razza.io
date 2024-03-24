@@ -96,4 +96,8 @@
             grid-template-columns: repeat(2, 1fr);
         }
     }
+
+    #notes .biglist-more {
+        justify-content: space-between;
+    }
 }
