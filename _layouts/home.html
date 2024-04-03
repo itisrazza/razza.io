@@ -3,7 +3,7 @@ layout: default
 ---
 
 <header class="wrapper">
-    <h1 class="name"><span>RA<br>ZZ<br>A</span></h1>
+    <h1 class="name"><img src="/assets/logos/projects/razza.io.svg" alt="RAZZA" height="128"></h1>
     <p class="tagline">I'm a software developer. I work on <a href="#">various projects</a> and <a href="#">write notes</a> every now and then.</p>
 </header>
 
@@ -17,32 +17,32 @@ layout: default
     {% endfor %}
 </div>
 
-<main class="wrapper">
-    <a href="/projects" class="home-button">
+<section class="wrapper" id="sections">
+    <a href="/projects" class="home-button card">
         <img src="/assets/home-icons/projects.svg">
         <span>
             <span class="home-button-title">Projects</span>
             <span class="home-button-subtitle">I've worked on</span>
         </span>
     </a>
-    <a href="/notes" class="home-button">
+    <a href="/notes" class="home-button card">
         <img src="/assets/home-icons/notes.svg">
         <span>
             <span class="home-button-title">Notes</span>
             <span class="home-button-subtitle">I've written</span>
         </span>
     </a>
-    <a href="/links" class="home-button">
+    <a href="/links" class="home-button card">
         <img src="/assets/home-icons/links.svg">
         <span>
             <span class="home-button-title">Links</span>
             <span class="home-button-subtitle">to other places</span>
         </span>
     </a>
-</main>
+</section>
 
-<main class="wrapper old-home">
-    <section id="projects" class="biglist">
+<section class="wrapper" id="recent">
+    <div id="projects" class="biglist">
         <h1 class="biglist-heading">Projects</h1>
         <div class="biglist-content">
             {% assign projects = site.data.projects | slice: 0, 5 %}
@@ -65,8 +65,8 @@ layout: default
         <div class="biglist-more">
             <a href="/projects" class="button">See More</a>
         </div>
-    </section>
-    <section id="notes" class="biglist">
+    </div>
+    <div id="notes" class="biglist">
         <h1 class="biglist-heading">Latest Notes</h1>
         <div class="biglist-content">
             {% assign notes = site.posts | slice: 0, 5 %}
@@ -84,5 +84,5 @@ layout: default
             <a href="/feed.xml" class="button" title="Atom Feed"><i class="bi bi-rss-fill"></i></a>
             <a href="/notes" class="button">See More</a>
         </div>
-    </section>
-</main>
+    </div>
+</section>

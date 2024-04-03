@@ -1,12 +1,14 @@
 .layout-home {
-    > header {
+    >header {
         margin-top: 8px;
         margin-bottom: 8px;
 
         .name {
             display: flex;
             flex-direction: column;
-            margin: 1em 0;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 1em 0 0;
             font-weight: 750;
             line-height: 100%;
             line-height: 0.8em;
@@ -20,7 +22,11 @@
         }
     }
 
-    > main:not(.old-home) {
+    >#links {
+        margin: 8px auto;
+    }
+
+    >#sections {
         display: grid;
         gap: 8px;
 
@@ -33,7 +39,7 @@
 
             border: $light-border;
             border-radius: 8px;
-            
+
             padding: 8px;
             flex-grow: 1;
 
@@ -42,7 +48,8 @@
 
             transition: transform .2s, color .2s, background-color .2s;
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
                 background: #fafafa;
                 color: #212121;
                 box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
@@ -69,7 +76,7 @@
         }
 
         @media screen and (min-width: 800px) {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
 
             .home-button {
                 flex-direction: column;
@@ -77,7 +84,7 @@
                 align-items: center;
                 gap: 2px;
 
-                > span {
+                >span {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -87,12 +94,12 @@
         }
     }
 
-    > main.old-home {
+    >#recent {
         display: grid;
         gap: 8px;
-        margin: 1em auto;
+        margin: 8px auto;
 
-        @media screen and (min-width: $md-break) {
+        @media screen and (min-width: $lg-break) {
             grid-template-columns: repeat(2, 1fr);
         }
     }
