@@ -2,20 +2,28 @@
 layout: default
 ---
 
+{% include navbar.html %}
+
 <header class="wrapper">
-    {% assign logo_path = "/assets/logos/" | append: page.slug | append: ".svg" %}
+    <div class="card">
+        {% assign logo_path = "/assets/logos/projects/" | append: page.slug | append: ".svg" %}
 
-    <img src="{{ logo_path | relative_url }}" alt="" height="128" class="logo">
-    <h1 class="title">{{ page.title }}</h1>
-    <p class="tagline">{{ page.subtitle }}</p>
+        <div class="project-meta">
+            <img src="{{ logo_path | relative_url }}" alt="" width="64" class="logo">
+            <div class="project-meta-text">
+                <h1 class="title">{{ page.title }}</h1>
+                <p class="tagline">{{ page.description }}</p>
+            </div>
+        </div>
 
-    {% if page.urls | size != 0 %}
-    <ul class="buttons">
-        {% for url in page.urls %}
-            <li><a href="{{ url.url }}">{{ url.label }}</a></li>
-        {% endfor %}
-    </ul>
-    {% endif %}
+        {% if page.links %}
+            <ul class="project-buttons">
+                {% for link in page.links %}
+                    <li><a href="{{ link.url }}" class="button">{{ link.label }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
 </header>
 
 <main class="wrapper">

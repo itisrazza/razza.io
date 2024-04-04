@@ -3,35 +3,46 @@ layout: default
 ---
 
 <header class="wrapper">
-    <h1 class="name"><span>RA<br>ZZ<br>A</span></h1>
+    <h1 class="name"><img src="/assets/logos/projects/razza.io.svg" alt="RAZZA" height="128"></h1>
     <p class="tagline">I'm a software developer. I work on <a href="#">various projects</a> and <a href="#">write notes</a> every now and then.</p>
 </header>
 
-<div id="links" class="wrapper">
-    {% for link in site.data.links %}
-        {% assign url = link.url %}
-        {% unless url %}
-            {% assign url = link.page | relative_url %}
-        {% endunless %}
-        <a href="{{ url }}" class="button">{{ link.name }}</a> 
-    {% endfor %}
-</div>
+<section class="wrapper" id="sections">
+    <a href="/projects" class="home-button card">
+        <i class="bi bi-hammer"></i>
+        <span>
+            <span class="home-button-title">Projects</span>
+            <span class="home-button-subtitle">I've worked on</span>
+        </span>
+    </a>
+    <a href="/notes" class="home-button card">
+        <i class="bi bi-files"></i>
+        <span>
+            <span class="home-button-title">Notes</span>
+            <span class="home-button-subtitle">I've written</span>
+        </span>
+    </a>
+    <a href="/links" class="home-button card">
+        <i class="bi bi-link"></i>
+        <span>
+            <span class="home-button-title">Links</span>
+            <span class="home-button-subtitle">to other places</span>
+        </span>
+    </a>
+</section>
 
-<main class="wrapper">
-    <section id="projects" class="biglist">
+<section class="wrapper" id="recent">
+    <div id="projects" class="biglist">
         <h1 class="biglist-heading">Projects</h1>
         <div class="biglist-content">
-            {% assign projects = site.data.projects | slice: 0, 5 %}
+            {% assign projects = site.projects | slice: 0, 5 %}
             {% for project in projects %}
-                {% assign icon = 'assets/logos/projects/undefined.svg' %}
-                {% if project.icon %}
-                    {% assign icon = 'assets/logos/projects/' | append: project.icon %}
-                {% endif %}
-
-                <a href="{{ project.link }}" class="biglist-item">
-                    <img src="{{ icon | relative_url }}" alt="" width="32" height="32">
+                {% assign logo_path = "/assets/logos/projects/" | append: project.slug | append: ".svg" %}
+            
+                <a href="{{ project.url | relative_url }}" class="biglist-item">
+                    <img src="{{ logo_path | relative_url }}" alt="" width="32" height="32">
                     <span class="biglist-item-main">
-                        <span class="title">{{ project.name }}</span>
+                        <span class="title">{{ project.title }}</span>
                         <span class="description">{{ project.description }}</span>
                     </span>
                 </a>
@@ -41,8 +52,8 @@ layout: default
         <div class="biglist-more">
             <a href="/projects" class="button">See More</a>
         </div>
-    </section>
-    <section id="notes" class="biglist">
+    </div>
+    <div id="notes" class="biglist">
         <h1 class="biglist-heading">Latest Notes</h1>
         <div class="biglist-content">
             {% assign notes = site.posts | slice: 0, 5 %}
@@ -57,38 +68,8 @@ layout: default
         </div>
 
         <div class="biglist-more">
+            <a href="/feed.xml" class="button" title="Atom Feed"><i class="bi bi-rss-fill"></i></a>
             <a href="/notes" class="button">See More</a>
         </div>
-    </section>
-</main>
-
-<div class="wrapper">
-    {% assign sections = site.projects | map: "section" | uniq | sort %}
-    {% for section in sections %}
-        {% assign projects = site.projects | where: "section", section %}
-
-        <h1>{{ section }}</h1>
-        <div class="project-grid">
-            {% for project in projects %}
-                {% assign logo_path = "/assets/logos/" | append: project.slug | append: ".svg" %}
-                {% assign url = project.url | relative_url %}
-                {% if project.external_url %}
-                    {% assign url = project.external_url %}
-                {% endif %}
-
-                <a href="{{ url }}" class="project-button">
-                    <span class="logo">
-                        <img src="{{ logo_path | relative_url }}" alt="" height="64">
-                    </span>
-                    <span class="title" role="heading">{{ project.title }}</span>
-                    <span>{{ project.subtitle }}</span>
-                    <span class="platforms">
-                        {% for platform in project.platforms %}
-                            <span class="label">{{ platform }}</span>
-                        {% endfor %}
-                    </span>
-                </a>
-            {% endfor %}
-        </div>
-    {% endfor %}
-</div>
+    </div>
+</section>

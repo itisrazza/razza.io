@@ -1,31 +1,3 @@
-- name: Razza Suite
-  description: Collection of tools and utilities for power users and developers
-  link: https://suite.razza.io/
-  icon: suite.svg
-
-- name: SuperSize
-  description: Resize windows across multiple displays
-  link: https://github.com/itisrazza/SuperSize
-  icon: supersize.svg
-
-- name: Beetroot
-  description: Crowdsourced tunes queue for parties and get-togethers
-  link: https://suite.razza.io/projects/beetroot/
-  icon: beetroot.svg
-
-- name: VGAPainter
-  description: Draw and convert images for limited graphics formats
-  link: https://itisrazza.github.io/VGAPainter
-  icon: vgapainter.svg
-
-- name: Annual Fireworks
-  description: Firework animations I stream to celebrate New Year's.
-  link: https://github.com/itisrazza/annual-fireworks
-
-- name: razza.io
-  description: My own personal website. Now powered by Jekyll.
-  link: https://github.com/itisrazza/razza.io
-
 - name: pybledom
   description: Python library for controlling BLEDOM devices.
   link: https://pypi.org/project/bledom/
@@ -52,6 +24,7 @@
 - name: Homepage
   description: A home page with useful links to my part of the internet.
   link: https://github.com/itisrazza/homepage
+  archived: true
 
 - name: Metlink GTFS Repo
   description: Metlink's Transit Feed, with additional data.
@@ -97,7 +70,7 @@
   description: Blog platform for a high school assignment (2TCD).
   link: https://github.com/itisrazza/wodp-engine
   archived: true
-  icon: wodp_main.png
+  icon: wodp.svg
 
 - name: BetaMuseum
   description: A museum with old software relics (1TCD).
@@ -110,3 +83,8 @@
   link: https://github.com/itisrazza/cameradump
   archived: true
   icon: cameradumper.ico
+
+- name: Annual Fireworks
+  description: Firework animations I stream to celebrate New Year's.
+  link: https://github.com/itisrazza/annual-fireworks
+  archived: true

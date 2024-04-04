@@ -1,20 +1,18 @@
 .layout-home {
-    > header {
-        // background: #424242;
-        // padding: 8px;
+    >header {
         margin-top: 8px;
         margin-bottom: 8px;
-        // border-radius: 8px;
-        // box-sizing: border-box;
-        // box-shadow: $box-shadow;
 
         .name {
             display: flex;
             flex-direction: column;
-            margin: 1em 0;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 1em 0 0;
             font-weight: 750;
             line-height: 100%;
             line-height: 0.8em;
+            font-family: $logo-font-family;
             font-size: 3em;
             color: $color-kinda-yellow;
 
@@ -24,73 +22,90 @@
         }
     }
 
-    > main {
+    >#links {
+        margin: 8px auto;
+    }
+
+    >#sections {
         display: grid;
         gap: 8px;
-        margin: 1em auto;
 
-        @media screen and (min-width: $md-break) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-}
-
-.layout-project {
-    > header {
-        background-color: #424242;
-        border-radius: 8px;
-        border-radius: $box-shadow;
-        text-align: center;
-        padding: 2em 0;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        box-shadow: $box-shadow;
-
-        .title {
-            margin: 0;
-        }
-
-        .tagline {
-            margin: 0;
-            margin-top: 1em;
-        }
-
-        .buttons {
+        .home-button {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: unset;
-            padding: unset;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
             gap: 4px;
-            margin-top: 1em;
 
-            li {
-                display: flex;
+            border: $light-border;
+            border-radius: 8px;
 
-                a {
+            padding: 8px;
+            flex-grow: 1;
+
+            text-decoration: none;
+            color: unset;
+
+            transition: transform .2s, color .2s, background-color .2s;
+
+            &:hover,
+            &:focus {
+                background: #fafafa;
+                color: #212121;
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+                transform: scale(1.025);
+                outline: none;
+            }
+
+            &:active {
+                background: #e0e0e0;
+                color: #212121;
+                box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+                transform: translateY(0);
+            }
+
+            i.bi {
+                align-self: center;
+                font-size: 32px;
+            }
+
+            .home-button-title {
+                font-family: $head-font-family;
+                font-size: larger;
+                font-weight: 600;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            grid-template-columns: repeat(3, 1fr);
+
+            .home-button {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 2px;
+
+                >span {
                     display: flex;
-                    color: #fafafa;
-                    background-color: #424242;
-                    text-decoration: none;
-                    padding: 8px 12px;
-                    border-radius: 8px;
-                    border: 1px solid rgba(255, 255, 255, 0.125);
-                    box-shadow: $box-shadow;
-                    transition: box-shadow .2s, color .2s, background-color .2s;
-
-                    &:hover {
-                        background: #fafafa;
-                        color: #212121;
-                        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
-                    }
-
-                    &:active {
-                        background: #e0e0e0;
-                        color: #212121;
-                        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-                    }
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2px;
                 }
             }
         }
+    }
+
+    >#recent {
+        display: grid;
+        gap: 8px;
+        margin: 8px auto;
+
+        @media screen and (min-width: $lg-break) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    #notes .biglist-more {
+        justify-content: space-between;
     }
 }

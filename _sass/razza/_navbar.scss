@@ -1,11 +1,11 @@
 body > nav, body > .wrapper > nav {
-    background: $color-dark-blue;
+    background: $card-background;
     color: $color-white;
     border-radius: 8px;
     box-shadow: $box-shadow-blue;
     overflow: hidden;
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-top: 1em;
+    margin-bottom: 1em;
 
     .nav-main {
         display: flex;
@@ -86,7 +86,7 @@ body > nav, body > .wrapper > nav {
                     gap: 8px;
                     width: 48px;
                     height: 48px;
-                    font-family: $head-font-family;
+                    font-family: $logo-font-family;
                     font-weight: 750;
                     color: $color-kinda-yellow;
                     line-height: 0.8em;
