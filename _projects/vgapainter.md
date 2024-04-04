@@ -12,7 +12,7 @@ links:
 platforms: [ Windows, .NET ]
 ---
 
-<div class="note note-yellow"><b>Update:</b> VGAPainter is planned to be revived and updated in the near future.</div>
+<div class="callout callout-info"><b>Update:</b> VGAPainter is planned to be revived and updated in the near future.</div>
 
 VGAPainter is a 256-color bitmap editor primarily targeting VGA mode 13h. It also supports custom palletes, importing and exporting to true colour formats and a binary bitmap format.
 

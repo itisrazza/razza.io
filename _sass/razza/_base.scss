@@ -62,11 +62,10 @@ blockquote {
 
 table {
     width: 100%;
-    background: #212121;
-    border: 1px solid #424242;
+    background: $color-dark-blue;
     color: #fafafa;
-    border-radius: 8px;
     border-collapse: collapse;
+    overflow: hidden;
 
     tr {
         border: none;
@@ -78,13 +77,13 @@ table {
     }
         
     th {
-        background: #424242;
+        background: $color-table-heading-background;
         border: none;
         border-collapse: collapse;
     }
 
     td {
-        border: 1px solid #424242;
+        border: 1px solid $color-table-border;
         border-collapse: collapse;
     }
 }

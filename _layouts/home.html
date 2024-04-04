@@ -7,33 +7,23 @@ layout: default
     <p class="tagline">I'm a software developer. I work on <a href="#">various projects</a> and <a href="#">write notes</a> every now and then.</p>
 </header>
 
-<div id="links" class="wrapper">
-    {% for link in site.data.links %}
-        {% assign url = link.url %}
-        {% unless url %}
-            {% assign url = link.page | relative_url %}
-        {% endunless %}
-        <a href="{{ url }}" class="button">{{ link.name }}</a> 
-    {% endfor %}
-</div>
-
 <section class="wrapper" id="sections">
     <a href="/projects" class="home-button card">
-        <img src="/assets/home-icons/projects.svg">
+        <i class="bi bi-hammer"></i>
         <span>
             <span class="home-button-title">Projects</span>
             <span class="home-button-subtitle">I've worked on</span>
         </span>
     </a>
     <a href="/notes" class="home-button card">
-        <img src="/assets/home-icons/notes.svg">
+        <i class="bi bi-files"></i>
         <span>
             <span class="home-button-title">Notes</span>
             <span class="home-button-subtitle">I've written</span>
         </span>
     </a>
     <a href="/links" class="home-button card">
-        <img src="/assets/home-icons/links.svg">
+        <i class="bi bi-link"></i>
         <span>
             <span class="home-button-title">Links</span>
             <span class="home-button-subtitle">to other places</span>

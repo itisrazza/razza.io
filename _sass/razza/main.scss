@@ -11,6 +11,10 @@ $color-dark-blue: #101117;
 $color-kinda-yellow: #FFB900;
 $color-white-shade: fade-out($color-white, 0.9);
 
+$color-table-background: $color-dark-blue;
+$color-table-border: lighten($color-dark-blue, 15%);
+$color-table-heading-background: $color-table-border;
+
 $sm-break: 480px;
 $md-break: 640px;
 $lg-break: 800px;
