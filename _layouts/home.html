@@ -35,17 +35,14 @@ layout: default
     <div id="projects" class="biglist">
         <h1 class="biglist-heading">Projects</h1>
         <div class="biglist-content">
-            {% assign projects = site.data.projects | slice: 0, 5 %}
+            {% assign projects = site.projects | slice: 0, 5 %}
             {% for project in projects %}
-                {% assign icon = 'assets/logos/projects/undefined.svg' %}
-                {% if project.icon %}
-                    {% assign icon = 'assets/logos/projects/' | append: project.icon %}
-                {% endif %}
-
-                <a href="{{ project.link }}" class="biglist-item">
-                    <img src="{{ icon | relative_url }}" alt="" width="32" height="32">
+                {% assign logo_path = "/assets/logos/projects/" | append: project.slug | append: ".svg" %}
+            
+                <a href="{{ project.url | relative_url }}" class="biglist-item">
+                    <img src="{{ logo_path | relative_url }}" alt="" width="32" height="32">
                     <span class="biglist-item-main">
-                        <span class="title">{{ project.name }}</span>
+                        <span class="title">{{ project.title }}</span>
                         <span class="description">{{ project.description }}</span>
                     </span>
                 </a>
