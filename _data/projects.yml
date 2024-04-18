@@ -1,3 +1,9 @@
+- name: Property Card Generator
+  description: Script for generating Monopoly-inspired property cards.
+  link: https://github.com/itisrazza/monopoly-pcard-gen
+  icon: monopoly-pcard.svg
+  archived: true
+  
 - name: pybledom
   description: Python library for controlling BLEDOM devices.
   link: https://pypi.org/project/bledom/
