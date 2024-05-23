@@ -4,3 +4,8 @@
     border-radius: 8px;
     box-sizing: $box-shadow;
 }
+
+.num {
+    font-feature-settings: "tnum";
+    text-align: right;
+}
