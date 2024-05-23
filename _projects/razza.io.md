@@ -1,7 +1,6 @@
 ---
 title: razza.io
-description: Landing page for a few different things about Razza
-link: https://github.com/itisrazza/SuperSize
+description: About this website
 layout: project
 platforms: [ Web ]
 links:
@@ -37,3 +36,6 @@ Source code readers. Here's some links for you:
 [2022]: https://github.com/itisrazza/razza.io/tree/2022
 
 You might see branches pop up and disappear whenever I do major upgrades or design refreshes (like this one used to live in a branch called `refresh` before it got merged).
+
+When I happen to rework how the website as a whole works, `main` will be branched to `20XX` (whichever year that happened) and a new branch will take it's place.
+
