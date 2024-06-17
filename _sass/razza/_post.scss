@@ -1,73 +1,74 @@
 .layout-post {
-    > nav, > .wrapper > nav {
-        position: relative;
-        z-index: 100;
-        background-color: fade-out($color-dark-blue, 0.2);
-        backdrop-filter: saturate(180%) blur(20px);
-        box-shadow: $box-shadow-blue;
-    }
+  .nav-controller {
+    background-color: fade-out($color-dark-blue, 0.2);
+    backdrop-filter: blur(14px) brightness(110%);
+    position: relative;
+    z-index: 1;
+  }
 
-    > header.background-image-header {
-        position: fixed;
-        top: 0; left: 0; right: 0;
-        height: 300px;
-        mask-image: linear-gradient(to bottom, #000000, transparent);
-        background-position: center;
-        background-size: cover;
-    }
-    
-    > header.meta-header {
-        position: relative;
-        margin-top: 8px;
-        margin-bottom: 8px;
+  > header.background-image-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    mask-image: linear-gradient(to bottom, #000000, transparent);
+    background-position: center;
+    background-size: cover;
+  }
 
-        .meta-header-content {
-            padding: 2em 16px;
-            background-color: fade-out($color-dark-blue, 0.2);
-            backdrop-filter: saturate(180%) blur(20px);
-            border-radius: 8px;
-            box-shadow: $box-shadow-blue;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5em;
-            margin-left: -16px;
-            margin-right: -16px;
+  > header.meta-header {
+    position: relative;
+    margin-top: 8px;
+    margin-bottom: 8px;
 
-            .meta-title {
-                font-size: 2em;
-                margin: 0;
-            }
+    .meta-header-content {
+      padding: 2em 16px;
+      background-color: fade-out($color-dark-blue, 0.2);
+      backdrop-filter: saturate(180%) blur(20px);
+      border-radius: 8px;
+      box-shadow: $box-shadow-blue;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      margin-left: -16px;
+      margin-right: -16px;
 
-            .meta-date {
-                margin: 0;
-            }
+      .meta-title {
+        font-size: 2em;
+        margin: 0;
+      }
 
-            ul.meta-categories {
-                display: flex;
-                padding: unset;
-                margin: unset;
-                list-style: none;
-                gap: 4px;
+      .meta-date {
+        margin: 0;
+      }
 
-                li {
-                    font-size: smaller;
-                    background-color: rgba(255, 255, 255, 0.8);
-                    color: black;
-                    padding: 4px 8px;
-                    border-radius: 4px;
-                }
-            }
+      ul.meta-categories {
+        display: flex;
+        padding: unset;
+        margin: unset;
+        list-style: none;
+        gap: 4px;
+
+        li {
+          font-size: smaller;
+          background-color: rgba(255, 255, 255, 0.8);
+          color: black;
+          padding: 4px 8px;
+          border-radius: 4px;
         }
+      }
     }
+  }
 
-    > main {
-        position: relative;
+  > main {
+    position: relative;
 
-        p > img:only-child {
-            display: block;
-            margin: 0 auto;
-            text-align: center;
-            max-width: 80%;
-        }
+    p > img:only-child {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 80%;
     }
+  }
 }

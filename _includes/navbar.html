@@ -1,16 +1,29 @@
-<div class="wrapper">
-    <nav>
-        <ul class="nav-main">
-            <li><a href="/" class="brand">RA<br>ZZ<br>A</a></li>
-            <label for="navbar-expand-button" class="nav-expand-label"><i class="bi bi-chevron-down"></i></label>
-        </ul>
-        <div class="nav-expandable">
-            <input type="checkbox" id="navbar-expand-button" class="nav-expand-button">
-            <ul class="nav-expandee">
-                <!-- <li><a href="/about">About</a></li> -->
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/notes">Notes</a></li>
-            </ul>
-        </div>
-    </nav>
+<nav>
+  <div class="nav-close">
+    <button
+      data-nav-action="close"
+      onclick="document.querySelector('body > nav').classList.remove('is-open')"
+    >
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/projects">Projects</a></li>
+    <li><a href="/notes">Notes</a></li>
+    <li><a href="/links">Links</a></li>
+  </ul>
+</nav>
+
+<div class="wrapper nav-controller-wrapper">
+  <div class="nav-controller">
+    <button
+      data-nav-action="open"
+      onclick="document.querySelector('body > nav').classList.add('is-open')"
+    >
+      <i class="bi bi-list"></i>
+    </button>
+    <a href="/"><i class="bi bi-house"></i> Home</a>
+  </div>
 </div>
