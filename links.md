@@ -5,6 +5,12 @@ title: Links
 
 # Links
 
+## Elsewhere
+
+* [YouTube](https://youtube.com/@itisrazza)
+* [GitHub](https://github.com/itisrazza)
+* [Twitter](https://x.com/itisrazza)
+
 ## Friends
 
 * [Joel Freeman](https://jxel.dev/) / [FREEMXN](https://linktr.ee/freemxn)

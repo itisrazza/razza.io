@@ -1,14 +1,13 @@
 :root {
   font-family: $main-font-family;
-  font-size: 14px;
   font-variation-settings: "ss01" 1;
-  font-feature-settings: "cv01", "cv02", "cv03", "cv04", "cv10", "ss07", "ss08";
+  // font-feature-settings: "cv01", "cv02", "cv03", "cv04", "cv10", "ss07", "ss08";
 }
 
 body {
   background: $color-dark-blue;
   color: $color-white;
-  line-height: 1.4;
+  line-height: 1.3;
   margin: unset;
 }
 
@@ -55,7 +54,8 @@ h4,
 h5,
 h6 {
   font-family: $head-font-family;
-  font-weight: 700;
+  font-stretch: 80%;
+  font-weight: 800;
   margin-top: 1em;
   margin-bottom: 0.5em;
 }
@@ -104,6 +104,7 @@ table {
   padding: 2px 6px;
   outline: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 4px;
+  font-variation-settings: "opsz" 10;
 }
 
 .wrapper {
@@ -130,6 +131,7 @@ body > footer {
   align-items: center;
   font-size: smaller;
   margin-top: 0.5em;
+  font-variation-settings: "opsz" 10;
 
   .nz {
     display: flex;

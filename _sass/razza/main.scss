@@ -1,9 +1,8 @@
 @charset "utf-8";
 
-$main-font-family: "Inter", sans-serif;
-$head-font-family: "Lora", $main-font-family;
-$mono-font-family: "IBM Plex Mono", monospace;
-$logo-font-family: "Syne", sans-serif;
+$main-font-family: "NunitoSans", sans-serif;
+$head-font-family: "NunitoSans", $main-font-family;
+$mono-font-family: "CommitMono", monospace;
 
 $color-white: #FFFFFF;
 $color-black: #000000;
@@ -42,3 +41,21 @@ $card-color: $color-white;
       , "razza/projects"
       , "razza/utilities"
       ;
+
+//
+
+@font-face {
+      font-family: CommitMono;
+      src: url("/assets/fonts/commit-mono/commit-mono.woff2");
+}
+
+@font-face {
+      font-family: NunitoSans;
+      src: url("/assets/fonts/nunito-sans/NunitoSans.ttf");
+}
+
+@font-face {
+      font-family: NunitoSans;
+      font-style: italic;
+      src: url("/assets/fonts/nunito-sans/NunitoSans-Italic.ttf");
+}

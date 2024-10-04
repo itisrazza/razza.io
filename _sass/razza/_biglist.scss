@@ -1,96 +1,95 @@
 .biglist {
-    background: $color-white-shade;
-    color: #fafafa;
-    border-radius: 8px;
-    box-shadow: $box-shadow;
-    padding: 8px;
+  background: $color-white-shade;
+  color: #fafafa;
+  border-radius: 8px;
+  box-shadow: $box-shadow;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+
+  &.biglist-inset {
+    background: unset;
+    color: unset;
+    box-shadow: unset;
+    padding: unset;
+  }
+
+  .biglist-heading {
+    margin: unset;
+    font-size: smaller;
+    font-family: $main-font-family;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .biglist-content {
     display: flex;
     flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
 
-    &.biglist-inset {
-        background: unset;
-        color: unset;
-        box-shadow: unset;
-        padding: unset;
-    }
+    .biglist-item {
+      display: flex;
+      border: $light-border;
+      padding: 8px;
+      border-radius: 8px;
+      color: unset;
+      text-decoration: none;
+      align-items: center;
+      gap: 8px;
 
-    .biglist-heading {
-        margin: unset;
-        font-size: smaller;
-        font-family: $main-font-family;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-    }
+      &:hover,
+      &:focus {
+        background: rgba(255, 255, 255, 0.06125);
+        border-color: #e0e0e0;
+        outline: 1px solid #e0e0e0;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+      }
 
-    .biglist-content {
+      &:active {
+        background: rgba(255, 255, 255, 0.0625);
+        border-color: #808080;
+        outline: 1px solid #808080;
+      }
+
+      .biglist-item-main {
         display: flex;
         flex-direction: column;
         gap: 4px;
-        flex-grow: 1;
 
-        .biglist-item {
-            display: flex;
-            border: $light-border;
-            padding: 8px;
-            border-radius: 8px;
-            color: unset;
-            text-decoration: none;
-            align-items: center;
-            gap: 8px;
-            transition: transform .2s, color .2s, background-color .2s;
-
-            &:hover, &:focus {
-                background: #fafafa;
-                color: #212121;
-                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
-                transform: scale(1.025);
-                outline: none;
-            }
-
-            &:active {
-                background: #e0e0e0;
-                color: #212121;
-                box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-                transform: translateY(0);
-            }
-
-            .biglist-item-main {
-                display: flex;
-                flex-direction: column;
-                gap: 4px;
-
-                .title {
-                    font-family: $head-font-family;
-                    font-size: larger;
-                    font-weight: 600;
-                }
-            }
+        .title {
+          font-family: $head-font-family;
+          font-size: larger;
+          font-stretch: 80%;
+          font-weight: 800;
         }
+      }
     }
+  }
 
-    .biglist-more {
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 4px;
-        justify-self: flex-end;
+  .biglist-more {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+    justify-self: flex-end;
 
-        .button {
-            box-shadow: none;
-        }
+    .button {
+      box-shadow: none;
     }
+  }
 
-    &.biglist-grid {
-        .biglist-content {
-            display: grid;
-            gap: 8px;
-        
-            @media screen and (min-width: $md-break) {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        
-            @media screen and (min-width: $lg-break) {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
-        }
+  &.biglist-grid {
+    .biglist-content {
+      display: grid;
+      gap: 8px;
+
+      @media screen and (min-width: $md-break) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      @media screen and (min-width: $lg-break) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
     }
+  }
 }

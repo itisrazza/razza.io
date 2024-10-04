@@ -12,7 +12,6 @@
             font-weight: 750;
             line-height: 100%;
             line-height: 0.8em;
-            font-family: $logo-font-family;
             font-size: 3em;
             color: $color-kinda-yellow;
 
@@ -46,22 +45,18 @@
             text-decoration: none;
             color: unset;
 
-            transition: transform .2s, color .2s, background-color .2s;
-
             &:hover,
             &:focus {
-                background: #fafafa;
-                color: #212121;
+                background: rgba(255, 255, 255, 0.06125);
+                border-color: #e0e0e0;
+                outline: 1px solid #e0e0e0;
                 box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
-                transform: scale(1.025);
-                outline: none;
             }
 
             &:active {
-                background: #e0e0e0;
-                color: #212121;
-                box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-                transform: translateY(0);
+                background: rgba(255, 255, 255, 0.0625);
+                border-color: #808080;
+                outline: 1px solid #808080;
             }
 
             i.bi {
@@ -73,6 +68,8 @@
                 font-family: $head-font-family;
                 font-size: larger;
                 font-weight: 600;
+                font-stretch: 80%;
+                font-weight: 800;
             }
         }
 

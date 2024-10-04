@@ -12,6 +12,7 @@ links:
     url: https://ripper.razza.io/
   - label: RipperWare
     url: https://github.com/itisrazza/ripperware
+published: false
 ---
 
 > Ripper is still a work in progress. Follow this page for updates.
@@ -38,7 +39,7 @@ Here's the current things left to do:
 
 ![](/assets/images/ripper/block-diagram.svg)
 
-The architecture is pretty much as simple as it gets. The Raspberry Pi is connected to a powered USB hub, which is then connected to a DVD drive through an appropiate adaptor cable. 
+The architecture is pretty much as simple as it gets. The Raspberry Pi is connected to a powered USB hub, which is then connected to a DVD drive through an appropiate adaptor cable.
 
 # Software
 
@@ -79,4 +80,3 @@ Here's a list of thing I had to go bought and ended up in the project.
   text-align: right;
 }
 </style>
-
