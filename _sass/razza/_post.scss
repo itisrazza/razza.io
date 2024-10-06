@@ -1,11 +1,4 @@
 .layout-post {
-  .nav-controller {
-    background-color: fade-out($color-dark-blue, 0.2);
-    backdrop-filter: blur(14px) brightness(110%);
-    position: relative;
-    z-index: 1;
-  }
-
   > header.background-image-header {
     position: fixed;
     top: 0;
@@ -24,10 +17,7 @@
 
     .meta-header-content {
       padding: 2em 16px;
-      background-color: fade-out($color-dark-blue, 0.2);
-      backdrop-filter: saturate(180%) blur(20px);
       border-radius: 8px;
-      box-shadow: $box-shadow-blue;
       display: flex;
       flex-direction: column;
       gap: 0.5em;

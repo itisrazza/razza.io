@@ -7,7 +7,6 @@ body > .wrapper > nav {
   position: fixed;
   left: 4px;
   right: 4px;
-  bottom: 4px;
   top: 4px;
 
   background: fade-out($color-dark-blue, 0.05);
@@ -72,12 +71,12 @@ body > .wrapper > nav {
     bottom: unset;
     right: unset;
     left: calc(50vw - (0.8 * $md-break) / 2 - 17px);
-    top: 0;
+    top: 8px;
   }
 
   @media screen and (min-width: $lg-break) {
     left: calc(50vw - 720px / 2 - 17px);
-    top: 0;
+    top: 8px;
   }
 }
 
@@ -106,7 +105,7 @@ body > .wrapper > nav {
 
 .nav-controller-wrapper {
   position: sticky;
-  top: 0;
+  top: 8px;
   z-index: 999;
 }
 
@@ -116,13 +115,15 @@ body > .wrapper > nav {
   align-items: stretch;
   overflow: hidden;
 
+  font-weight: 600;
+  font-stretch: 80%;
+
   background-color: fade-out($color-dark-blue, 0.2);
   backdrop-filter: blur(14px) brightness(110%);
   color: $color-white;
 
   border: 1px solid rgba(255, 255, 255, 0.125);
-  border-top: none;
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px;
 
   > * {
     transition: box-shadow 0.1s, color 0.1s, background-color 0.1s;
@@ -155,5 +156,10 @@ body > .wrapper > nav {
     justify-content: center;
     align-items: center;
     padding-inline: 12px;
+
+    & + a {
+
+      border-left: 1px solid rgba(255, 255, 255, 0.125);
+    }
   }
 }
