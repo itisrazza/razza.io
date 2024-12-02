@@ -11,6 +11,12 @@ body {
   margin: unset;
 }
 
+b,
+strong {
+  font-weight: normal;
+  font-variation-settings: "wght" 700;
+}
+
 hr {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -55,7 +61,8 @@ h5,
 h6 {
   font-family: $head-font-family;
   font-stretch: 80%;
-  font-weight: 600;
+  font-weight: normal;
+  font-variation-settings: "wght" 600;
   margin-top: 1em;
   margin-bottom: 0.5em;
 }
@@ -98,7 +105,7 @@ table {
 
 .label {
   font-size: smaller;
-  font-weight: 500;
+  font-variation-settings: "wght" 500;
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
   padding: 2px 6px;
@@ -123,7 +130,7 @@ table {
   }
 }
 
-body > footer {
+body>footer {
   border-top: 1px solid #424242;
   padding: 0.5em 0;
   display: flex;
@@ -141,7 +148,7 @@ body > footer {
   }
 }
 
-main > p > img {
+main>p>img {
   max-width: 100%;
   text-align: center;
 }

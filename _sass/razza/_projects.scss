@@ -3,7 +3,7 @@
     margin-top: 1em;
     margin-bottom: 1em;
 
-    > div {
+    >div {
       display: flex;
       flex-direction: column;
       gap: 1em;
@@ -16,7 +16,7 @@
       align-items: center;
       gap: 16px;
 
-      > img {
+      >img {
         flex-grow: 0;
         flex-shrink: 0;
       }
@@ -95,28 +95,29 @@
       outline: 1px solid #808080;
     }
 
-    > * {
+    >* {
       display: block;
     }
 
-    > .project-logo {
+    >.project-logo {
       text-align: left;
     }
 
-    > .project-title {
+    >.project-title {
       text-align: left;
 
       font-family: $head-font-family;
       font-size: larger;
       font-stretch: 80%;
-      font-weight: 600;
+
+      font-variation-settings: "wght" 600;
     }
 
-    > .project-description {
+    >.project-description {
       flex-grow: 1;
     }
 
-    > .project-platforms {
+    >.project-platforms {
       margin-top: 1em;
       display: flex;
       justify-content: flex-start;

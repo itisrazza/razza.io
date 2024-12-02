@@ -1,5 +1,5 @@
-body > nav,
-body > .wrapper > nav {
+body>nav,
+body>.wrapper>nav {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -37,16 +37,16 @@ body > .wrapper > nav {
     margin-inline: 8px;
   }
 
-  > header {
+  >header {
     padding-inline: 8px;
   }
 
-  > ul {
+  >ul {
     list-style: none;
     padding: 0;
     margin: 0;
 
-    > li {
+    >li {
       a {
         display: flex;
         justify-content: flex-start;
@@ -115,7 +115,8 @@ body > .wrapper > nav {
   align-items: stretch;
   overflow: hidden;
 
-  font-weight: 600;
+
+  font-variation-settings: "wght" 600;
   font-stretch: 80%;
 
   background-color: fade-out($color-dark-blue, 0.2);
@@ -125,7 +126,7 @@ body > .wrapper > nav {
   border: 1px solid rgba(255, 255, 255, 0.125);
   border-radius: 8px;
 
-  > * {
+  >* {
     transition: box-shadow 0.1s, color 0.1s, background-color 0.1s;
 
     &:hover {
@@ -136,7 +137,7 @@ body > .wrapper > nav {
     }
   }
 
-  > button {
+  >button {
     appearance: none;
     border: unset;
     background: unset;
@@ -148,7 +149,7 @@ body > .wrapper > nav {
     cursor: pointer;
   }
 
-  > a {
+  >a {
     color: unset;
     text-decoration: none;
     display: flex;
@@ -157,7 +158,7 @@ body > .wrapper > nav {
     align-items: center;
     padding-inline: 12px;
 
-    & + a {
+    &+a {
 
       border-left: 1px solid rgba(255, 255, 255, 0.125);
     }

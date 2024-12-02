@@ -9,7 +9,8 @@
             justify-content: flex-start;
             align-items: flex-start;
             margin: 1em 0 0;
-            font-weight: 750;
+
+            font-variation-settings: "wght" 750;
             line-height: 100%;
             line-height: 0.8em;
             font-size: 3em;
@@ -67,9 +68,11 @@
             .home-button-title {
                 font-family: $head-font-family;
                 font-size: larger;
-                font-weight: 600;
+
+                font-variation-settings: "wght" 600;
                 font-stretch: 80%;
-                font-weight: 600;
+
+                font-variation-settings: "wght" 600;
             }
         }
 
