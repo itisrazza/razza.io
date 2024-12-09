@@ -1,7 +1,7 @@
 :root {
   font-family: $main-font-family;
-  font-variation-settings: "ss01" 1;
-  // font-feature-settings: "cv01", "cv02", "cv03", "cv04", "cv10", "ss07", "ss08";
+  width: auto;
+  overflow-x: hidden;
 }
 
 body {
@@ -9,6 +9,8 @@ body {
   color: $color-white;
   line-height: 1.3;
   margin: unset;
+  width: auto;
+  overflow-x: hidden;
 }
 
 b,

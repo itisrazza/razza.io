@@ -1,3 +1,5 @@
+@use "sass:color";
+
 body>nav,
 body>.wrapper>nav {
   display: flex;
@@ -9,7 +11,7 @@ body>.wrapper>nav {
   right: 4px;
   top: 4px;
 
-  background: fade-out($color-dark-blue, 0.05);
+  background: color.scale($color-dark-blue, $alpha: -5%);
   color: $color-white;
 
   border: 1px solid rgba(255, 255, 255, 0.125);
@@ -119,7 +121,8 @@ body>.wrapper>nav {
   font-variation-settings: "wght" 600;
   font-stretch: 80%;
 
-  background-color: fade-out($color-dark-blue, 0.2);
+  background-color: color.scale($color-dark-blue, $alpha: -20%);
+  ;
   backdrop-filter: blur(14px) brightness(110%);
   color: $color-white;
 
