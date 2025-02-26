@@ -1,8 +1,11 @@
+@use "razza/vars";
+@use "razza/colors";
+
 .card {
-    background-color: $card-background;
-    color: $card-color;
+    background-color: vars.$card-background;
+    color: vars.$card-color;
     border-radius: 8px;
-    box-sizing: $box-shadow;
+    box-sizing: vars.$box-shadow;
 }
 
 .num {

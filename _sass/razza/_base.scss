@@ -1,12 +1,19 @@
+@use "razza/vars";
+@use "razza/colors";
+
 :root {
-  font-family: $main-font-family;
+  --background-color: #{colors.$background-light};
+  --foreground-color: #{colors.$black};
+
+  font-family: vars.$main-font-family;
+  font-variation-settings: vars.$body-font-variations;
   width: auto;
   overflow-x: hidden;
 }
 
 body {
-  background: $color-dark-blue;
-  color: $color-white;
+  background: var(--background-color);
+  color: var(--foreground-color);
   line-height: 1.3;
   margin: unset;
   width: auto;
@@ -27,18 +34,18 @@ hr {
 code,
 kbd,
 pre {
-  font-family: $mono-font-family;
+  font-family: vars.$mono-font-family;
 }
 
 code {
-  background: $color-white-shade;
+  background: colors.$white-shade;
   border-radius: 4px;
   padding: 2px 4px;
   font-size: smaller;
 }
 
 pre {
-  background-color: $color-white-shade;
+  background-color: colors.$white-shade;
   padding: 8px;
   overflow-x: auto;
   border-radius: 8px;
@@ -52,7 +59,7 @@ pre {
 }
 
 a {
-  color: $color-kinda-yellow;
+  color: colors.$accent-light;
 }
 
 h1,
@@ -61,7 +68,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $head-font-family;
+  font-family: vars.$head-font-family;
   font-stretch: 80%;
   font-weight: normal;
   font-variation-settings: "wght" 600;
@@ -78,7 +85,7 @@ blockquote {
 
 table {
   width: 100%;
-  background: $color-dark-blue;
+  background: colors.$background-dark;
   color: #fafafa;
   border-collapse: collapse;
   overflow: hidden;
@@ -94,13 +101,13 @@ table {
   }
 
   th {
-    background: $color-table-heading-background;
+    background: colors.$table-heading-background;
     border: none;
     border-collapse: collapse;
   }
 
   td {
-    border: 1px solid $color-table-border;
+    border: 1px solid colors.$table-border;
     border-collapse: collapse;
   }
 }
@@ -123,11 +130,11 @@ table {
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: $md-break) {
-    width: 0.8 * $md-break;
+  @media screen and (min-width: vars.$md-break) {
+    width: 0.8 * vars.$md-break;
   }
 
-  @media screen and (min-width: $lg-break) {
+  @media screen and (min-width: vars.$lg-break) {
     width: 720px;
   }
 }
@@ -162,7 +169,7 @@ main>p>img {
   background: #616161;
   color: #fafafa;
   border-radius: 8px;
-  box-shadow: $box-shadow;
+  box-shadow: vars.$box-shadow;
   border-left: 4px solid #03a9f4;
 
   // &.note-yellow {

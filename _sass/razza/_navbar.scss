@@ -1,4 +1,6 @@
 @use "sass:color";
+@use "razza/vars";
+@use "razza/colors";
 
 body>nav,
 body>.wrapper>nav {
@@ -11,13 +13,13 @@ body>.wrapper>nav {
   right: 4px;
   top: 4px;
 
-  background: color.scale($color-dark-blue, $alpha: -5%);
-  color: $color-white;
+  background: color.scale(colors.$background-dark, $alpha: -5%);
+  color: colors.$white;
 
   border: 1px solid rgba(255, 255, 255, 0.125);
   border-radius: 8px;
 
-  box-shadow: $box-shadow-blue;
+  box-shadow: vars.$box-shadow-blue;
   overflow: hidden;
   backdrop-filter: blur(14px) brightness(110%);
   transform-origin: top left;
@@ -27,7 +29,7 @@ body>.wrapper>nav {
   transition: opacity 0.2s, transform 0.2s;
   z-index: 1000;
   gap: 8px;
-  box-shadow: $box-shadow;
+  box-shadow: vars.$box-shadow;
 
   &.is-open {
     pointer-events: unset;
@@ -61,22 +63,22 @@ body>.wrapper>nav {
         border-radius: 8px;
 
         &:hover {
-          background: $color-white;
-          color: $color-black;
+          background: colors.$white;
+          color: colors.$black;
         }
       }
     }
   }
 
-  @media screen and (min-width: $md-break) {
+  @media screen and (min-width: vars.$md-break) {
     width: 320px;
     bottom: unset;
     right: unset;
-    left: calc(50vw - (0.8 * $md-break) / 2 - 17px);
+    left: calc(50vw - (0.8 * vars.$md-break) / 2 - 17px);
     top: 8px;
   }
 
-  @media screen and (min-width: $lg-break) {
+  @media screen and (min-width: vars.$lg-break) {
     left: calc(50vw - 720px / 2 - 17px);
     top: 8px;
   }
@@ -84,8 +86,8 @@ body>.wrapper>nav {
 
 [data-nav-action="close"] {
   appearance: none;
-  background-color: $card-background;
-  color: $color-white;
+  background-color: vars.$card-background;
+  color: colors.$white;
   border: none;
   display: flex;
   align-items: center;
@@ -100,7 +102,7 @@ body>.wrapper>nav {
   transition: box-shadow 0.1s, color 0.1s, background-color 0.1s;
 
   &:hover {
-    background-color: $color-white;
+    background-color: colors.$white;
     color: black;
   }
 }
@@ -121,10 +123,10 @@ body>.wrapper>nav {
   font-variation-settings: "wght" 600;
   font-stretch: 80%;
 
-  background-color: color.scale($color-dark-blue, $alpha: -20%);
+  background-color: color.scale(colors.$background-dark, vars.$alpha: -20%);
   ;
   backdrop-filter: blur(14px) brightness(110%);
-  color: $color-white;
+  color: colors.$white;
 
   border: 1px solid rgba(255, 255, 255, 0.125);
   border-radius: 8px;

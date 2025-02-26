@@ -1,0 +1,15 @@
+@use "sass:color";
+
+$white: #FFFFFF;
+$black: #000000;
+
+$background-light: #E5EBFF;
+$background-dark: #101117;
+
+$accent-light: #FFB900;
+$accent-dark: #9A4D00;
+$white-shade: color.scale($white, $alpha: -90%);
+
+$table-background: $background-dark;
+$table-border: lighten($background-dark, 15%);
+$table-heading-background: $table-border;

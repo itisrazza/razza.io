@@ -1,8 +1,11 @@
+@use "razza/vars";
+@use "razza/colors";
+
 .biglist {
-  background: $color-white-shade;
+  background: colors.$white-shade;
   color: #fafafa;
   border-radius: 8px;
-  box-shadow: $box-shadow;
+  box-shadow: vars.$box-shadow;
   padding: 8px;
   display: flex;
   flex-direction: column;
@@ -17,7 +20,7 @@
   .biglist-heading {
     margin: unset;
     font-size: smaller;
-    font-family: $main-font-family;
+    font-family: vars.$main-font-family;
     text-transform: uppercase;
     margin-bottom: 8px;
   }
@@ -30,7 +33,7 @@
 
     .biglist-item {
       display: flex;
-      border: $light-border;
+      border: vars.$light-border;
       padding: 8px;
       border-radius: 8px;
       color: unset;
@@ -58,7 +61,7 @@
         gap: 4px;
 
         .title {
-          font-family: $head-font-family;
+          font-family: vars.$head-font-family;
           font-size: larger;
           font-stretch: 80%;
 
@@ -84,11 +87,11 @@
       display: grid;
       gap: 8px;
 
-      @media screen and (min-width: $md-break) {
+      @media screen and (min-width: vars.$md-break) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      @media screen and (min-width: $lg-break) {
+      @media screen and (min-width: vars.$lg-break) {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
     }
