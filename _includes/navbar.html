@@ -1,32 +1,9 @@
-<nav>
-  <div class="nav-close">
-    <button
-      data-nav-action="close"
-      onclick="document.querySelector('body > nav').classList.remove('is-open')"
-    >
-      <i class="bi bi-x-lg"></i>
-    </button>
-  </div>
-
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/projects">Projects</a></li>
-    <li><a href="/notes">Notes</a></li>
-    <li><a href="/links">Links</a></li>
-  </ul>
-</nav>
-
-<div class="wrapper nav-controller-wrapper">
-  <div class="nav-controller">
-    <button
-      data-nav-action="open"
-      onclick="document.querySelector('body > nav').classList.add('is-open')"
-    >
-      <i class="bi bi-list"></i>
-    </button>
-    <a href="/"><i class="bi bi-house"></i> Home</a>
-    {% if layout.navhome %}
-      <a href="{{ layout.navhome.href }}">{{ layout.navhome.title }}</a>
-    {% endif %}
-  </div>
+<div class="wrapper">
+  <nav>
+    <ul class="nav-links">
+      {%- for item in site.data.nav -%}
+      <li><a href="{{ item.url | relative_url }}">{{ item.label }}</a></li>
+      {%- endfor -%}
+    </ul>
+  </nav>
 </div>
