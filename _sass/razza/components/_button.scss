@@ -3,26 +3,30 @@
 
 .button {
     display: inline-flex;
-    color: colors.$white;
-    background-color: colors.$white-shade;
-    text-decoration: none;
     padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    box-shadow: vars.$box-shadow;
-    transition: box-shadow .1s, color .1s, background-color .1s;
 
-    &:hover,
-    &:focus {
-        background: #fafafa;
-        color: #212121;
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
-        outline: none;
-    }
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+
+    text-decoration: none;
+
+    border: 1px solid var(--inverse-background-color);
+    border-radius: 0.5em;
+
+    transition: box-shadow .1s, transform .1s;
+
+    box-shadow: 2px 2px 0px var(--inverse-background-color);
+    transform: translate(-2px, -2px);
 
     &:active {
-        background: #e0e0e0;
-        color: #212121;
-        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 0px var(--inverse-background-color);
+        transform: translate(0, 0);
+    }
+}
+
+@mixin disable-button-animation {
+    .button {
+        box-shadow: none;
+        transform: none;
     }
 }

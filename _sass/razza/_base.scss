@@ -63,13 +63,10 @@ table {
 
 .label {
   font-size: smaller;
-  font-variation-settings: "wght" 500;
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
-  padding: 2px 6px;
-  outline: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 0.25em 0.5em;
   border-radius: 4px;
-  font-variation-settings: "opsz" 10;
+  background-color: var(--inverse-background-color);
+  color: var(--inverse-foreground-color);
 }
 
 body>footer {

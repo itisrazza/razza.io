@@ -1,4 +1,5 @@
 @use "razza/typography";
+@use "razza/components/button";
 
 body>header,
 body>.wrapper>header {
@@ -9,4 +10,5 @@ body>.wrapper>header {
     border-radius: 0.5em;
 
     @include typography.marginless-headings;
+    @include button.disable-button-animation;
 }
