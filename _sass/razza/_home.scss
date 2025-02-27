@@ -1,5 +1,6 @@
 @use "razza/vars";
 @use "razza/colors";
+@use "razza/typography";
 
 .layout-home {
     >header {
@@ -69,7 +70,6 @@
             }
 
             .home-button-title {
-                font-family: vars.$head-font-family;
                 font-size: larger;
 
                 font-variation-settings: "wght" 600;

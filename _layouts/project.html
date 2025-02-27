@@ -1,14 +1,12 @@
 ---
 layout: default
 navhome:
-  title: <i class="bi bi-hammer"></i> Projects
-  href: /notes
+title: <i class="bi bi-hammer"></i> Projects
+href: /notes
 ---
 
-{% include navbar.html %}
-
-<header class="wrapper">
-    <div class="card">
+<div class="wrapper">
+    <header>
         {% assign logo_path = "/assets/logos/projects/" | append: page.slug | append: ".svg" %}
 
         <div class="project-meta">
@@ -20,15 +18,17 @@ navhome:
         </div>
 
         {% if page.links %}
-            <ul class="project-buttons">
-                {% for link in page.links %}
-                    <li><a href="{{ link.url }}" target="_blank" class="button">{{ link.label }}</a></li>
-                {% endfor %}
-            </ul>
+        <ul class="project-buttons">
+            {% for link in page.links %}
+            <li><a href="{{ link.url }}" target="_blank" class="button">{{ link.label }}</a></li>
+            {% endfor %}
+        </ul>
         {% endif %}
-    </div>
-</header>
+    </header>
+</div>
 
 <main class="wrapper">
-    {{ content }}
+    <div class="content-inset">
+        {{ content }}
+    </div>
 </main>

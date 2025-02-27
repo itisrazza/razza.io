@@ -1,0 +1,25 @@
+@use "razza/vars";
+
+.wrapper {
+    width: 80%;
+    min-width: 300px;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: vars.$md-break) {
+        width: 0.8 * vars.$md-break;
+    }
+
+    @media screen and (min-width: vars.$lg-break) {
+        width: 720px;
+    }
+}
+
+@mixin content-inset {
+    padding-inline: 1em;
+}
+
+.content-inset {
+    @include content-inset();
+}

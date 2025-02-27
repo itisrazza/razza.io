@@ -1,11 +1,18 @@
 @charset "utf-8";
 
+// basic html styling
 @use "razza/base";
+@use "razza/layout";
+
+// common page templates
+@use "razza/header";
 
 @use "razza/utilities";
 @use "razza/highlight";
+
 @use "razza/components/button";
 @use "razza/components/button-3d";
+
 @use "razza/callout";
 @use "razza/navbar";
 @use "razza/biglist";

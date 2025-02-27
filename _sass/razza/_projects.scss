@@ -1,22 +1,19 @@
 @use "razza/vars";
 @use "razza/colors";
+@use "razza/layout";
 
 .layout-project {
   header {
-    margin-top: 1em;
-    margin-bottom: 1em;
-
-    >div {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      padding: 16px;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5em;
 
     .project-meta {
       display: flex;
       justify-content: flex-start;
-      align-items: center;
+      align-items: flex-start;
       gap: 16px;
 
       >img {
@@ -41,16 +38,16 @@
         }
       }
     }
+  }
 
-    .project-buttons {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      list-style: none;
-      margin: unset;
-      padding: unset;
-      gap: 8px;
-    }
+  .project-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: unset;
+    padding: unset;
+    gap: 8px;
   }
 }
 
@@ -76,26 +73,26 @@
     align-items: stretch;
     gap: 4px;
 
-    border: vars.$light-border;
     color: unset;
     text-decoration: none;
-    padding: 8px;
+
+    border: 1px solid var(--inverse-background-color);
     border-radius: 8px;
-    box-shadow: vars.$box-shadow;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+    outline: none;
+
+    padding: 1em;
+
+    transition: box-shadow .1s, transform .1s;
 
     &:hover,
     &:focus {
-      background: rgba(255, 255, 255, 0.06125);
-      border-color: #e0e0e0;
-      outline: 1px solid #e0e0e0;
-      box-shadow: vars.$box-shadow;
+      box-shadow: 2px 2px 0px var(--inverse-background-color);
+      transform: translate(-2px, -2px);
     }
 
     &:active {
-      background: rgba(255, 255, 255, 0.0625);
-      border-color: #808080;
-      outline: 1px solid #808080;
+      transform: unset;
+      box-shadow: unset;
     }
 
     >* {
@@ -109,7 +106,6 @@
     >.project-title {
       text-align: left;
 
-      font-family: vars.$head-font-family;
       font-size: larger;
       font-stretch: 80%;
 

@@ -2,18 +2,6 @@
 @use "razza/colors";
 
 //
-// font families
-//
-
-$main-font-family: "NunitoSans", sans-serif;
-$head-font-family: "NunitoSans", $main-font-family;
-$mono-font-family: "CommitMono", monospace;
-
-$common-font-variations: "YTLC" 540;
-$body-font-variations: $common-font-variations, "opsz" 8, "wght" 400;
-$head-font-variations: $common-font-variations, "wght" 800, "wdth" 110;
-
-//
 // breakpoints
 //
 

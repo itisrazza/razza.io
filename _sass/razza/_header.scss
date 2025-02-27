@@ -1,0 +1,12 @@
+@use "razza/typography";
+
+body>header,
+body>.wrapper>header {
+    background-color: var(--inverse-background-color);
+    color: var(--inverse-foreground-color);
+
+    padding: 1em 1.5em;
+    border-radius: 0.5em;
+
+    @include typography.marginless-headings;
+}

@@ -13,3 +13,41 @@ $white-shade: color.scale($white, $alpha: -90%);
 $table-background: $background-dark;
 $table-border: lighten($background-dark, 15%);
 $table-heading-background: $table-border;
+
+@mixin light-colors {
+    --background-color: #{$background-light};
+    --foreground-color: #{$black};
+    --link-color: #{$accent-dark};
+
+    --inverse-background-color: #{$background-dark};
+    --inverse-foreground-color: #{$background-light};
+    --inverse-link-color: #{$accent-light};
+}
+
+@mixin dark-colors {
+    --background-color: #{$background-dark};
+    --foreground-color: #{$white};
+    --link-color: #{$accent-light};
+
+    --inverse-background-color: #{$background-light};
+    --inverse-foreground-color: #{$background-dark};
+    --inverse-link-color: #{$accent-dark};
+}
+
+:root {
+    @include light-colors();
+}
+
+.inverse {
+    @include dark-colors();
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        @include dark-colors();
+    }
+
+    .inverse {
+        @include light-colors();
+    }
+}

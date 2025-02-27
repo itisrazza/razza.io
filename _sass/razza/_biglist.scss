@@ -1,5 +1,6 @@
 @use "razza/vars";
 @use "razza/colors";
+@use "razza/typography";
 
 .biglist {
   background: colors.$white-shade;
@@ -20,7 +21,6 @@
   .biglist-heading {
     margin: unset;
     font-size: smaller;
-    font-family: vars.$main-font-family;
     text-transform: uppercase;
     margin-bottom: 8px;
   }
@@ -33,26 +33,29 @@
 
     .biglist-item {
       display: flex;
-      border: vars.$light-border;
-      padding: 8px;
-      border-radius: 8px;
-      color: unset;
-      text-decoration: none;
       align-items: center;
       gap: 8px;
 
+      color: unset;
+      text-decoration: none;
+
+      border: 1px solid var(--inverse-background-color);
+      border-radius: 8px;
+      outline: none;
+
+      padding: 1em;
+
+      transition: box-shadow .1s, transform .1s;
+
       &:hover,
       &:focus {
-        background: rgba(255, 255, 255, 0.06125);
-        border-color: #e0e0e0;
-        outline: 1px solid #e0e0e0;
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+        box-shadow: 2px 2px 0px var(--inverse-background-color);
+        transform: translate(-2px, -2px);
       }
 
       &:active {
-        background: rgba(255, 255, 255, 0.0625);
-        border-color: #808080;
-        outline: 1px solid #808080;
+        transform: unset;
+        box-shadow: unset;
       }
 
       .biglist-item-main {
@@ -61,7 +64,6 @@
         gap: 4px;
 
         .title {
-          font-family: vars.$head-font-family;
           font-size: larger;
           font-stretch: 80%;
 

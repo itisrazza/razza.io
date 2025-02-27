@@ -1,0 +1,129 @@
+@use "razza/vars";
+
+$body-font: "NunitoSans", sans-serif;
+$mono-font: "CommitMono", monospace;
+
+$common-font-variations: "YTLC" 540;
+$body-font-variations: $common-font-variations, "opsz" 8, "wght" 400;
+$head-font-variations: $common-font-variations, "wght" 800, "wdth" 110;
+
+:root {
+    font-family: $body-font;
+    font-variation-settings: $body-font-variations;
+}
+
+body {
+    line-height: 1.3;
+}
+
+//
+// simple styling
+//
+
+b,
+strong {
+    font-weight: normal;
+    font-variation-settings: "wght" 700;
+}
+
+//
+// code and monospace blocks
+//
+
+code,
+pre {
+    font-family: $mono-font;
+}
+
+code {
+    // TODO: change to new <pre>-specific colour vars
+    background: var(--inverse-background-color);
+    color: var(--inverse-foreground-color);
+
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 0.9em;
+}
+
+pre {
+    // TODO: change to new <pre>-specific colour vars
+    background: var(--inverse-background-color);
+    color: var(--inverse-foreground-color);
+
+    padding: 8px;
+    overflow-x: auto;
+    border-radius: 8px;
+
+    code {
+        background: unset;
+        border-radius: unset;
+        padding: unset;
+        font-size: 1em;
+    }
+}
+
+//
+// headings
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    font-variation-settings: $head-font-variations;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1.125em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+@mixin marginless-headings {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-block: 0;
+    }
+}
+
+//
+// blockquote
+//
+
+blockquote {
+    border: 1px solid var(--inverse-background-color);
+    border-radius: 0.5em;
+    padding: 0.25em 1em;
+
+    p {
+        margin: 0.25em;
+    }
+}
