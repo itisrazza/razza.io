@@ -17,6 +17,10 @@ links:
 
 Beetroot solves the question of "who's on aux?" whenever someone asks to queue a song. It is similar to [SharePlay] and [Spotify Jams], but allows music from multiple sources to be queued.
 
+<div style="text-align:center">
+  <img src="{{ '/assets/images/beetroot/client-feb-2025.png' | relative_url }}" alt="Screenshot of Beetroot Player with a few tracks in the queue." style="max-width:100%">
+</div>
+
 [SharePlay]: https://support.apple.com/en-nz/guide/iphone/iphb657eb791/ios
 [Spotify Jams]: https://support.spotify.com/us/article/jam
 
