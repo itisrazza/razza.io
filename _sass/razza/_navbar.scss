@@ -117,12 +117,7 @@ body>.wrapper>nav {
   align-items: stretch;
   overflow: hidden;
 
-
-  font-variation-settings: "wght" 600;
-  font-stretch: 80%;
-
   background-color: color.scale($color-dark-blue, $alpha: -20%);
-  ;
   backdrop-filter: blur(14px) brightness(110%);
   color: $color-white;
 

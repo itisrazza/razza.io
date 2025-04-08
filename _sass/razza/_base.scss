@@ -1,5 +1,7 @@
 :root {
   font-family: $main-font-family;
+  font-variation-settings: "Ytlc" 540, "wgth" 400, "opsz" 8;
+  letter-spacing: -0.0125em;
   width: auto;
   overflow-x: hidden;
 }
@@ -62,9 +64,8 @@ h4,
 h5,
 h6 {
   font-family: $head-font-family;
-  font-stretch: 80%;
   font-weight: normal;
-  font-variation-settings: "wght" 600;
+  font-variation-settings: "Ytlc" 540, "wght" 800, "wdth" 110;
   margin-top: 1em;
   margin-bottom: 0.5em;
 }
@@ -107,13 +108,11 @@ table {
 
 .label {
   font-size: smaller;
-  font-variation-settings: "wght" 500;
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
   padding: 2px 6px;
   outline: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 4px;
-  font-variation-settings: "opsz" 10;
 }
 
 .wrapper {
@@ -140,7 +139,6 @@ body>footer {
   align-items: center;
   font-size: smaller;
   margin-top: 0.5em;
-  font-variation-settings: "opsz" 10;
 
   .nz {
     display: flex;
