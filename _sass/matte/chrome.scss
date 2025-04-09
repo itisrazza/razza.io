@@ -1,12 +1,39 @@
-body > .page-chrome {
-  border: 1px solid var(--colour-foreground);
-  border-radius: 0.5rem;
+$width-l: 800px;
+$width-m: 640px;
+$width-s: 100%;
 
+$breakpoint-l: 820px;
+$breakpoint-m: 660px;
+
+body > .page-chrome {
   padding: 0.5rem;
+  margin-inline: auto;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
   gap: 0.5rem;
+
+  max-width: $width-s;
+
+  @media screen and (min-width: $breakpoint-m) {
+    border: 1px solid var(--colour-foreground);
+    border-radius: 0.5rem;
+
+    margin-block: 32px;
+
+    max-width: $width-m;
+  }
+
+  @media screen and (min-width: $breakpoint-l) {
+    max-width: $width-l;
+  }
+
+  > footer {
+    font-size: 0.875rem;
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
 }

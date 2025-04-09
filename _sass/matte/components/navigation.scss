@@ -1,9 +1,18 @@
+@use "button.scss";
+@use "../chrome";
+
 .page-chrome > nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
   padding-inline: 0.5rem;
+
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .nav-links {
     display: flex;
@@ -16,7 +25,8 @@
     gap: 0.25rem;
 
     li {
-      display: flex;
+      display: grid;
+      align-items: stretch;
 
       a {
         display: flex;
@@ -34,6 +44,52 @@
           border-radius: 1e99rem;
         }
       }
+    }
+  }
+
+  #navigation-toggle {
+    display: none;
+  }
+
+  .navigation-toggle-hint {
+    display: none;
+  }
+
+  @media screen and (max-width: chrome.$breakpoint-m) {
+    flex-direction: column;
+    padding-inline: unset;
+    gap: 0.5rem;
+
+    label[for="navigation-toggle"] {
+      @include button.button();
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    #navigation-toggle:checked ~ .nav-links {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--colour-foreground);
+      border-radius: 0.5rem;
+      gap: unset;
+      align-items: stretch;
+      overflow: hidden;
+
+      a {
+        border-radius: unset;
+      }
+    }
+
+    .navigation-toggle-hint {
+      display: unset;
     }
   }
 }
