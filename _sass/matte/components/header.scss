@@ -1,0 +1,19 @@
+@use "../colours";
+
+.page-chrome > header {
+  background: var(--colour-foreground);
+  color: var(--colour-background);
+
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  border-radius: 0.5rem;
+
+  > * {
+    margin-block: unset;
+  }
+}

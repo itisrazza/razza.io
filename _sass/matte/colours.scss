@@ -1,0 +1,29 @@
+$positive: #fafafa;
+$negative: #101117;
+$accent-light: #008cff;
+$accent-dark: #ffb900;
+
+@mixin light-scheme {
+  --colour-background: #{$positive};
+  --colour-foreground: #{$negative};
+  --colour-accent: #{$accent-light};
+}
+
+@mixin dark-scheme {
+  --colour-background: #{$negative};
+  --colour-foreground: #{$positive};
+  --colour-accent: #{$accent-dark};
+}
+
+:root {
+  @include light-scheme();
+
+  background-color: var(--colour-background);
+  color: var(--colour-foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark-scheme();
+  }
+}

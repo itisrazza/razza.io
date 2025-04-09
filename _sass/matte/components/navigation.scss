@@ -1,0 +1,39 @@
+.page-chrome > nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding-inline: 0.5rem;
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    list-style: none;
+    padding: unset;
+    margin: unset;
+    gap: 0.25rem;
+
+    li {
+      display: flex;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: unset;
+
+        &.current,
+        &:hover,
+        &:active {
+          background: var(--colour-foreground);
+          color: var(--colour-background);
+          border-radius: 1e99rem;
+        }
+      }
+    }
+  }
+}
