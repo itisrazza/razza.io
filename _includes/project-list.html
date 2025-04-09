@@ -8,6 +8,11 @@
             <span class="title">{{ project.title }}</span>
             <span class="description">{{ project.description }}</span>
         </span>
+        <span class="labels">
+            {% for platform in project.platforms %}
+            <span class="label">{{ platform }}</span>
+            {% endfor %}
+        </span>
     </a>
     {% endfor %}
 </div>

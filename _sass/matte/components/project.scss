@@ -28,6 +28,7 @@
     .project-tile-meta {
       display: flex;
       flex-direction: column;
+      flex-grow: 1;
 
       >.title {
         @include typography.heading("h5");
@@ -49,6 +50,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
+      flex-grow: 1;
 
       >.title {
         @include typography.heading("h6");

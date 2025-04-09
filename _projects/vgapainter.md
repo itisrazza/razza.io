@@ -9,14 +9,14 @@ links:
     url: https://www.microsoft.com/store/apps/9NLF1CTQ6Z49
   - label: GitHub
     url: https://github.com/thegreatrazz/VGAPainter
-platforms: [ Windows, .NET ]
+platforms: [ Windows ]
 ---
 
 <div class="callout callout-info"><b>Update:</b> VGAPainter is planned to be revived and updated in the near future.</div>
 
 VGAPainter is a 256-color bitmap editor primarily targeting VGA mode 13h. It also supports custom palletes, importing and exporting to true colour formats and a binary bitmap format.
 
-This was created as an experiment and means of generating visuals capable of display in MS-DOS. But it can also be used in making pixel art for other systems as well. 
+This was created as an experiment and means of generating visuals capable of display in MS-DOS. But it can also be used in making pixel art for other systems as well.
 
 # System Requirements
 

@@ -10,7 +10,7 @@ nav_tag: notes
     <p>{{ page.date | date: "%B %e, %Y" }}</p>
     <ul class="header-labels">
         {% for category in page.categories %}
-        <li>{{ category }}</li>
+        <li class="label">{{ category }}</li>
         {% endfor %}
     </ul>
 </header>
