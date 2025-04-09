@@ -1,24 +1,44 @@
 ---
 title: Notes
-layout: page
+layout: chrome
+nav_tag: notes
 ---
 
 <header>
     <h1>Notes</h1>
-    <p>Here are some notes I've written down for different things. Think of them as a bunch of Markdown files left in a folder somewhere.</p>
-    <p>Also, there's an <a href="/feed.xml"><i class="bi bi-rss-fill"></i> Atom Feed</a> if that's your thing.</p>
-    <p class="callout callout-info">A bit of a heads up. I'm currently migrating my notes over from Notion. They might be broken here and there, but most important parts should be here ready to go.</p>
+    <p>Here are some notes I've written down for different things. Think of them as a bunch of Markdown files left in a
+        folder somewhere.</p>
+    <ul class="header-buttons">
+        <li><a href="{{ '/feed.xml' | relative_url }}" class="button"><i class="bi bi-rss"></i> Atom Feed</a></li>
+    </ul>
 </header>
+
+{% assign year_groups = "" %}
+{% for post in site.posts %}
+{% assign year = post.date | date: "%Y" %}
+{% assign year_groups = year_groups | append: year | append: "," %}
+{% endfor %}
+{% assign year_groups = year_groups | split: "," | uniq %}
+
+{% for year_group in year_groups %}
+<section id="{{year_group}}">
+    <header class="chrome-inset">
+        <h2>{{ year_group }}</h2>
+    </header>
+    <main class="note-list">
+        {% for note in site.posts %}
+        {% assign note_year = note.date | date: "%Y" %}
+        {% if note_year == year_group %}
+        {% include note-tile.html %}
+        {% endif %}
+        {% endfor %}
+    </main>
+</section>
+{% endfor %}
 
 <section id="active" class="biglist biglist-inset">
     <div class="biglist-content">
         {% for note in site.posts %}
-            <a href="{{ note.url | relative_url }}" class="biglist-item">
-                <span class="biglist-item-main">
-                    <span class="title">{{ note.title }}</span>
-                    <span class="description">{{ note.date | date: "%B %e, %Y" }}</span>
-                </span>
-            </a>
         {% endfor %}
     </div>
 </section>
