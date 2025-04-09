@@ -7,12 +7,20 @@ $accent-dark: #ffb900;
   --colour-background: #{$positive};
   --colour-foreground: #{$negative};
   --colour-accent: #{$accent-light};
+
+  --colour-background-swap: #{$negative};
+  --colour-foreground-swap: #{$positive};
+  --colour-accent-swap: #{$accent-dark};
 }
 
 @mixin dark-scheme {
   --colour-background: #{$negative};
   --colour-foreground: #{$positive};
   --colour-accent: #{$accent-dark};
+
+  --colour-background-swap: #{$positive};
+  --colour-foreground-swap: #{$negative};
+  --colour-accent-swap: #{$accent-light};
 }
 
 :root {

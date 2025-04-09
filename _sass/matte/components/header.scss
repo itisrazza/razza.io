@@ -1,8 +1,12 @@
 @use "../colours";
 
-.page-chrome > header {
-  background: var(--colour-foreground);
-  color: var(--colour-background);
+.page-chrome>header {
+  --colour-background: var(--colour-background-swap);
+  --colour-foreground: var(--colour-foreground-swap);
+  --colour-accent: var(--colour-accent-swap);
+
+  background: var(--colour-background);
+  color: var(--colour-foreground);
 
   padding: 1rem 1.5rem;
 
@@ -13,7 +17,19 @@
 
   border-radius: 0.5rem;
 
-  > * {
+  >* {
     margin-block: unset;
+  }
+
+  .header-buttons {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    gap: 0.5rem;
+
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+    list-style: none;
   }
 }

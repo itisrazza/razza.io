@@ -1,56 +1,37 @@
 ---
 title: Projects
-layout: page
+layout: chrome
+permalink: /projects
+nav_tag: projects
 ---
 
 <header>
     <h1>Projects</h1>
-    <p>Here's a subset of my projects you might be interested in.</p>
 </header>
 
-<div class="wrapper">
-    <div class="project-grid">
-        {% for project in site.projects %}
-            {% assign logo_path = "/assets/logos/projects/" | append: project.slug | append: ".svg" %}
-            {% assign url = project.url | relative_url %}
-            {% if project.external_url %}
-                {% assign url = project.external_url %}
-            {% endif %}
+<section>
+    {%- include project-list.html -%}
+</section>
 
-            <a href="{{ url }}" class="button-3d project-button">
-                <span class="project-logo">
-                    <img src="{{ logo_path | relative_url }}" alt="" height="64">
-                </span>
-                <span class="project-title" role="heading">{{ project.title }}</span>
-                <span class="project-description">{{ project.description }}</span>
-                <span class="project-platforms">
-                    {% for platform in project.platforms %}
-                        <span class="label">{{ platform }}</span>
-                    {% endfor %}
-                </span>
-            </a>
-        {% endfor %}
-    </div>
-</div>
-
-<h2>One-offs and Archived Projects</h2>
-<p>Here are some projects I've either done as a one-off, or made when I had a lot more time on my hands. There's more on <a href="https://github.com/itisrazza?tab=repositories&q=&type=archived&language=&sort=name">GitHub</a>.</p>
-
-<section class="biglist biglist-grid biglist-inset">
-    <div class="biglist-content">
+<section id="archived">
+    <header class="chrome-inset">
+        <h2>One-offs & Archived</h2>
+        <p>Below are some projects I had completed and am not longer updating.</p>
+    </header>
+    <main class="project-list">
         {% for project in site.data.projects %}
-            {% assign icon = 'assets/logos/projects/undefined.svg' %}
-            {% if project.icon %}
-                {% assign icon = 'assets/logos/projects/' | append: project.icon %}
-            {% endif %}
+        {% assign icon = 'assets/logos/projects/undefined.svg' %}
+        {% if project.icon %}
+        {% assign icon = 'assets/logos/projects/' | append: project.icon %}
+        {% endif %}
 
-            <a href="{{ project.link }}" class="biglist-item">
-                <img src="{{ icon | relative_url }}" alt="" width="32" height="32">
-                <span class="biglist-item-main">
-                    <span class="title">{{ project.name }}</span>
-                    <span class="description">{{ project.description }}</span>
-                </span>
-            </a>
+        <a href="{{ project.link }}" class="miniproject-tile">
+            <img src="{{ icon | relative_url }}" alt="" width="32" height="32">
+            <span class="miniproject-tile-meta">
+                <span class="title">{{ project.name }}</span>
+                <span class="description">{{ project.description }}</span>
+            </span>
+        </a>
         {% endfor %}
-    </div>
+    </main>
 </section>

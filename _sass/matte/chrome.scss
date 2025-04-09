@@ -5,7 +5,11 @@ $width-s: 100%;
 $breakpoint-l: 820px;
 $breakpoint-m: 660px;
 
-body > .page-chrome {
+@mixin inset() {
+  padding-inline: 1.25rem;
+}
+
+body>.page-chrome {
   padding: 0.5rem;
   margin-inline: auto;
 
@@ -30,10 +34,14 @@ body > .page-chrome {
     max-width: $width-l;
   }
 
-  > footer {
+  >footer {
     font-size: 0.875rem;
     padding: 0.5rem 1.5rem;
     display: flex;
     justify-content: space-between;
+  }
+
+  .chrome-inset {
+    @include inset();
   }
 }

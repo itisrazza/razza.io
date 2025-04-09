@@ -23,13 +23,35 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 0.5rem;
+    padding: 1rem;
 
     .project-tile-meta {
       display: flex;
       flex-direction: column;
 
-      > .title {
+      >.title {
         @include typography.heading("h5");
+      }
+    }
+  }
+
+  .miniproject-tile {
+    @include button.button();
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+
+    .miniproject-tile-meta {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      >.title {
+        @include typography.heading("h6");
       }
     }
   }

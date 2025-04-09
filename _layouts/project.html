@@ -1,34 +1,24 @@
 ---
-layout: default
-navhome:
-  title: <i class="bi bi-hammer"></i> Projects
-  href: /notes
+layout: chrome
+nav_tag: projects
 ---
 
-{% include navbar.html %}
+<header>
+    {% assign logo_path = "/assets/logos/projects/" | append: page.slug | append: ".svg" %}
 
-<header class="wrapper">
-    <div class="card">
-        {% assign logo_path = "/assets/logos/projects/" | append: page.slug | append: ".svg" %}
+    <img src="{{ logo_path | relative_url }}" alt="" width="64" class="logo">
+    <h1>{{ page.title }}</h1>
+    <p class="tagline">{{ page.description }}</p>
 
-        <div class="project-meta">
-            <img src="{{ logo_path | relative_url }}" alt="" width="64" class="logo">
-            <div class="project-meta-text">
-                <h1 class="title">{{ page.title }}</h1>
-                <p class="tagline">{{ page.description }}</p>
-            </div>
-        </div>
-
-        {% if page.links %}
-            <ul class="project-buttons">
-                {% for link in page.links %}
-                    <li><a href="{{ link.url }}" target="_blank" class="button">{{ link.label }}</a></li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </div>
+    {% if page.links %}
+    <ul class="header-buttons">
+        {% for link in page.links %}
+        <li><a href="{{ link.url }}" target="_blank" class="button">{{ link.label }}</a></li>
+        {% endfor %}
+    </ul>
+    {% endif %}
 </header>
 
-<main class="wrapper">
+<main class="chrome-inset">
     {{ content }}
 </main>
