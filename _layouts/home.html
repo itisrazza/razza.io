@@ -1,11 +1,14 @@
 ---
 layout: chrome
+nav_tag: home
 ---
 
 <header class="page-header">
     <h1>Raresh Nistor</h1>
-    <p>I’m a software developer. This is the place where I link to <a href="{{ 'projects' | relative_url }}">projects I’ve worked on</a>,
-        <a href="{{ 'notes' | relative_url }}">some of my notes</a> and how you can get in touch with me.</p>
+    <p>I’m a software developer. This is the place where I link to <a href="{{ 'projects' | relative_url }}">projects
+            I’ve worked on</a>,
+        <a href="{{ 'notes' | relative_url }}">some of my notes</a> and how you can get in touch with me.
+    </p>
 </header>
 
 <section class="home-links">
@@ -53,10 +56,10 @@ layout: chrome
     <main class="home-note-list">
         {% assign notes = site.posts | slice: 0, 5 %}
         {% for note in notes %}
-            <a href="{{ note.url | relative_url }}">
-                <span class="title">{{ note.title }}</span>
-                <span class="date">{{ note.date | date: "%B %e, %Y" }}</span>
-            </a>
+        <a href="{{ note.url | relative_url }}">
+            <span class="title">{{ note.title }}</span>
+            <span class="date">{{ note.date | date: "%B %e, %Y" }}</span>
+        </a>
         {% endfor %}
     </main>
     <footer>

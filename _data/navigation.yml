@@ -1,0 +1,12 @@
+- tag: home
+  label: Home
+  path: /
+- tag: projects
+  label: Projects
+  path: /projects
+- tag: notes
+  label: Notes
+  path: /notes
+- tag: about
+  label: About
+  path: /about

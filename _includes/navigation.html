@@ -1,13 +1,17 @@
 <nav>
-    <input type="checkbox" checked id="navigation-toggle">
+    <input type="checkbox" id="navigation-toggle">
     <label for="navigation-toggle">
         {%- include navlogo.html -%}
         <div class="navigation-toggle-hint"><i class="bi bi-list"></i></div>
     </label>
     <ul class="nav-links">
-        <li><a href="#" class="current">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Notes</a></li>
-        <li><a href="#">About</a></li>
+        {% for navigation in site.data.navigation %}
+        {% assign page_tag = page.nav_tag | default: layout.nav_tag | default: 'home' %}
+        {% assign classes = '' %}
+        {% if page_tag == navigation.tag %}
+        {% assign classes = 'class="current"' %}
+        {% endif %}
+        <li><a href="{{ navigation.path | relative_url }}" {{ classes }}>{{ navigation.label }}</a></li>
+        {% endfor %}
     </ul>
 </nav>
