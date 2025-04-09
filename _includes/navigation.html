@@ -6,7 +6,7 @@
     </label>
     <ul class="nav-links">
         {% for navigation in site.data.navigation %}
-        {% assign page_tag = page.nav_tag | default: layout.nav_tag | default: 'home' %}
+        {% assign page_tag = page.nav_tag | default: layout.nav_tag %}
         {% assign classes = '' %}
         {% if page_tag == navigation.tag %}
         {% assign classes = 'class="current"' %}
