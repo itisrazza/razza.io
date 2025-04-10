@@ -1,7 +1,7 @@
-@use "button.scss";
 @use "../chrome";
+@use "button";
 
-.page-chrome > nav {
+.page-chrome>nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -74,7 +74,7 @@
       display: none;
     }
 
-    #navigation-toggle:checked ~ .nav-links {
+    #navigation-toggle:checked~.nav-links {
       display: flex;
       flex-direction: column;
       border: 1px solid var(--colour-foreground);

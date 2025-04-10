@@ -29,4 +29,8 @@ the website at some point.
 P.S. if you're interested in the how this site is built, see
 [its project page](projects/razza.io).
 
+P.P.S. also check out [links]<!-- , [uses] and [now] -->.
+
+[links]: links
+
 [^4]: stuff like 3D printing, woodworking etc.

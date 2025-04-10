@@ -2,7 +2,7 @@
 layout: post
 title: Keeping dotfiles in sync
 date: 2025-04-09
-categories: linux dotfiles
+categories: notes dotfiles
 ---
 
 I wipe my systems, especially on Linux where data protability is much easier

@@ -7,6 +7,15 @@ $mono-font-family: "Commit Mono", "Berkeley Mono", monospace;
 $body-base-variations: "YTLC" 540, "opsz" 8;
 $heading-base-varations: "YTLC" 540, "wdth" 110;
 
+//
+
+:root {
+  font-family: $body-font-family;
+  font-variation-settings: $body-base-variations;
+}
+
+// headings
+
 $heading-sizes: (
   "h1": 2rem,
   "h2": 1.75rem,
@@ -18,50 +27,26 @@ $heading-sizes: (
 
 @mixin heading($size) {
   font-family: $heading-font-family;
+  font-size: map.get($heading-sizes, $size);
   font-weight: normal;
   font-variation-settings: $heading-base-varations, "wght" 800;
+
   margin-block: unset;
-  font-size: map.get($heading-sizes, $size);
 }
 
-//
+@each $level, $size in $heading-sizes {
 
-:root {
-  font-family: $body-font-family;
-  font-variation-settings: $body-base-variations;
+  .text-#{$level},
+  #{$level} {
+    @include heading($level);
+  }
+
+  article #{$level} {
+    margin-block: 1em 0.5em;
+  }
 }
 
-// headings
-
-.text-h1,
-h1 {
-  @include heading("h1");
-}
-
-.text-h2,
-h2 {
-  @include heading("h2");
-}
-
-.text-h3,
-h3 {
-  @include heading("h3");
-}
-
-.text-h4,
-h4 {
-  @include heading("h4");
-}
-
-.text-h5,
-h5 {
-  @include heading("h5");
-}
-
-.text-h6,
-h6 {
-  @include heading("h6");
-}
+// text utility classes
 
 .text-smaller {
   font-size: 0.875rem;
