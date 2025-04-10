@@ -1,12 +1,13 @@
 @use "colours";
 @use "typography";
 @use "chrome";
+@use "code";
 
 @use "components";
 @use "pages";
 
 @font-face {
-  font-family: CommitMono;
+  font-family: "Commit Mono";
   src: url("/assets/fonts/commit-mono/commit-mono.woff2");
 }
 

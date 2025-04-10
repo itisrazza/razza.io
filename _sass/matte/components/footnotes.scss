@@ -1,0 +1,25 @@
+.footnotes {
+    font-size: 0.875rem;
+
+    ol {
+        display: flex;
+        flex-direction: column;
+        margin: unset;
+        padding: unset;
+        padding-inline-start: 2rem;
+
+        li {
+            p {
+                margin-block: unset;
+            }
+        }
+    }
+}
+
+.footnote {
+    text-decoration: none;
+}
+
+.reversefootnote {
+    text-decoration: none;
+}
