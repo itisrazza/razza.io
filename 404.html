@@ -1,29 +1,12 @@
 ---
 permalink: /404.html
-layout: page
+layout: chrome
 ---
 
-<div class="wrapper">
-  <div class="card">
-    <p class="emoji">❔</p>
-    <h1>404 Not Found</h1>
-    <p>Whatever you're looking for, it's not here.</p>
-    <p>Maybe <a href="/">head back home</a> and find your way from there.</p>
-  </div>
-</div>
-
-<style>
-  .card {
-    padding: 8px;
-    text-align: center;
-    margin: 1em 0;
-  }
-
-  .card h1, .card p {
-    margin: 8px;
-  }
-
-  .emoji {
-    font-size: 48px;
-  }
-</style>
+<section style="text-align: center;">
+  <h1>
+    <img src="{{ 'assets/404.png' | relative_url }}" alt="404 Not Found" width="80%">
+  </h1>
+  <p>The page you're looking for doesn't exist.</p>
+  <p>It's worth <a href="{{ '/' | relative_url  }}">heading back home</a> and finding your way from there.</p>
+</section>

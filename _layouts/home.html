@@ -1,75 +1,66 @@
 ---
-layout: default
+layout: chrome
+nav_tag: home
 ---
 
-<header class="wrapper">
-    <h1 class="name"><img src="/assets/logos/projects/razza.io.svg" alt="RAZZA" height="128"></h1>
-    <p class="tagline">I'm a software developer. I work on <a href="#">various projects</a> and <a href="#">write notes</a> every now and then.</p>
+<header class="page-header">
+    <h1>Raresh Nistor</h1>
+    <p>I’m a software developer. This is the place where I link to <a href="{{ 'projects' | relative_url }}">projects
+            I’ve worked on</a>,
+        <a href="{{ 'notes' | relative_url }}">some of my notes</a> and how you can get in touch with me.
+    </p>
 </header>
 
-<section class="wrapper" id="sections">
-    <a href="/projects" class="home-button card">
-        <i class="bi bi-hammer"></i>
-        <span>
-            <span class="home-button-title">Projects</span>
-            <span class="home-button-subtitle">I've worked on</span>
-        </span>
-    </a>
-    <a href="/notes" class="home-button card">
-        <i class="bi bi-files"></i>
-        <span>
-            <span class="home-button-title">Notes</span>
-            <span class="home-button-subtitle">I've written</span>
-        </span>
-    </a>
-    <a href="/links" class="home-button card">
-        <i class="bi bi-link"></i>
-        <span>
-            <span class="home-button-title">Links</span>
-            <span class="home-button-subtitle">to other places</span>
-        </span>
-    </a>
+<section class="home-links">
+    <div class="home-section-links">
+        <a href="{{ 'projects' | relative_url }}">
+            <span class="home-section-link-icon"><i class="bi bi-hammer"></i></span>
+            <span class="home-section-link-label">Projects</span>
+        </a>
+        <a href="{{ 'notes' | relative_url }}">
+            <span class="home-section-link-icon"><i class="bi bi-files"></i></span>
+            <span class="home-section-link-label">Notes</span>
+        </a>
+    </div>
+    <div class="home-personal-links">
+        <div class="home-social-links">
+            <a href="https://github.com/itisrazza"><i class="bi bi-github"></i></a>
+            <a href="https://linkedin.com/in/rareshn"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:raresh@nistor.email"> <i class="bi bi-send"></i> </a>
+            <a href="{{ 'links' | relative_url }}"><i class="bi bi-three-dots"></i></a>
+        </div>
+        <div class="home-about-links">
+            <a href="{{ 'about' | relative_url }}">About</a>
+            <!-- <a href="{{ 'uses' | relative_url }}">Uses</a> -->
+            <!-- <a href="{{ 'now' | relative_url }}">Now</a> -->
+        </div>
+    </div>
 </section>
 
-<section class="wrapper" id="recent">
-    <div id="projects" class="biglist">
-        <h1 class="biglist-heading">Projects</h1>
-        <div class="biglist-content">
-            {% assign projects = site.projects | slice: 0, 5 %}
-            {% for project in projects %}
-                {% assign logo_path = "/assets/logos/projects/" | append: project.slug | append: ".svg" %}
-            
-                <a href="{{ project.url | relative_url }}" class="biglist-item">
-                    <img src="{{ logo_path | relative_url }}" alt="" width="32" height="32">
-                    <span class="biglist-item-main">
-                        <span class="title">{{ project.title }}</span>
-                        <span class="description">{{ project.description }}</span>
-                    </span>
-                </a>
-            {% endfor %}
-        </div>
+<section class="home-list">
+    <header>
+        <h2 class="text-h6">Projects</h2>
+    </header>
+    <main>
+        {%- include project-list.html -%}
+    </main>
+    <footer>
+        <a href="{{ 'projects' | relative_url }}" class="button">More <i class="bi bi-arrow-up-right"></i></a>
+    </footer>
+</section>
 
-        <div class="biglist-more">
-            <a href="/projects" class="button">See More</a>
-        </div>
-    </div>
-    <div id="notes" class="biglist">
-        <h1 class="biglist-heading">Latest Notes</h1>
-        <div class="biglist-content">
-            {% assign notes = site.posts | slice: 0, 5 %}
-            {% for note in notes %}
-                <a href="{{ note.url | relative_url }}" class="biglist-item">
-                    <span class="biglist-item-main">
-                        <span class="title">{{ note.title }}</span>
-                        <span class="date">{{ note.date | date: "%B %e, %Y" }}</span>
-                    </span>
-                </a>
-            {% endfor %}
-        </div>
-
-        <div class="biglist-more">
-            <a href="/feed.xml" class="button" title="Atom Feed"><i class="bi bi-rss-fill"></i></a>
-            <a href="/notes" class="button">See More</a>
-        </div>
-    </div>
+<section class="home-list">
+    <header>
+        <h2 class="text-h6">Notes</h2>
+    </header>
+    <main class="note-list">
+        {% assign notes = site.posts | slice: 0, 5 %}
+        {% for note in notes %}
+        {% include note-tile.html %}
+        {% endfor %}
+    </main>
+    <footer>
+        <a href="/feed.xml" class="button" title="Atom Feed"><i class="bi bi-rss-fill"></i></a>
+        <a href="{{ 'notes' | relative_url }}" class="button">More <i class="bi bi-arrow-up-right"></i></a>
+    </footer>
 </section>

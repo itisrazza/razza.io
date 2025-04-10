@@ -1,0 +1,37 @@
+$positive: #fafafa;
+$negative: #101117;
+$accent-light: #006ec8;
+$accent-dark: #ffb900;
+
+@mixin light-scheme {
+  --colour-background: #{$positive};
+  --colour-foreground: #{$negative};
+  --colour-accent: #{$accent-light};
+
+  --colour-background-swap: #{$negative};
+  --colour-foreground-swap: #{$positive};
+  --colour-accent-swap: #{$accent-dark};
+}
+
+@mixin dark-scheme {
+  --colour-background: #{$negative};
+  --colour-foreground: #{$positive};
+  --colour-accent: #{$accent-dark};
+
+  --colour-background-swap: #{$positive};
+  --colour-foreground-swap: #{$negative};
+  --colour-accent-swap: #{$accent-light};
+}
+
+:root {
+  @include light-scheme();
+
+  background-color: var(--colour-background);
+  color: var(--colour-foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark-scheme();
+  }
+}

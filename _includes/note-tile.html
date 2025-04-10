@@ -1,0 +1,9 @@
+<a href="{{ note.url | relative_url }}" class="note-tile">
+    <span class="title">{{ note.title }}</span>
+    <span class="date">{{ note.date | date: "%B %e, %Y" }}</span>
+    <span class="labels">
+        {% for category in note.categories %}
+        <span class="label">{{ category }}</span>
+        {% endfor %}
+    </span>
+</a>

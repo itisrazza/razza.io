@@ -1,31 +1,21 @@
 ---
-layout: default
-navhome:
-  title: <i class="bi bi-files"></i> Notes
-  href: /notes
+layout: chrome
+nav_tag: notes
 ---
 
-{% include navbar.html %}
-
 {% assign date = page.date | date: '%F' %}
-{% assign masthead = 'assets/notes/' | append: date | append: '-' | append: page.slug | append: '/masthead.png' %}
 
-<header class="background-image-header" style="background-image: url({{ masthead | relative_url }}); background-position: {{ page.masthead_align | default: 'center center' }}"></header>
-<header class="meta-header">
-    <div class="wrapper">
-        <div class="meta-header-content">
-            <h1 class="meta-title">{{ page.title }}</h1>
-            <p class="meta-date">{{ page.date | date: "%B %e, %Y" }}</p>
-            <ul class="meta-categories">
-                {% for category in page.categories %}
-                    <li>{{ category }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
+<header>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.date | date: "%B %e, %Y" }}</p>
+    <ul class="header-labels">
+        {% for category in page.categories %}
+        <li class="label">{{ category }}</li>
+        {% endfor %}
+    </ul>
 </header>
 
-<main class="wrapper">
+<main class="chrome-inset">
     {{ content }}
 </main>
 

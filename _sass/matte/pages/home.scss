@@ -1,0 +1,94 @@
+@use "../components/button.scss";
+@use "../typography.scss";
+@use "../chrome.scss";
+
+.layout-home {
+  .home-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .home-section-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+
+      a {
+        @include button.button();
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+
+        .home-section-link-icon {
+          font-size: 32px;
+        }
+
+        .home-section-link-label {
+          @include typography.heading("h6");
+        }
+      }
+    }
+
+    .home-personal-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 0.5rem;
+
+      .home-social-links {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        gap: 0.5rem;
+
+        a {
+          @include button.button();
+        }
+      }
+
+      .home-about-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        a {
+          @include button.button();
+        }
+      }
+    }
+
+    @media screen and (min-width: chrome.$breakpoint-m) {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  .home-list {
+    border: 1px solid var(--colour-foreground);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+
+    >header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 1rem;
+    }
+
+    >footer {
+      display: flex;
+      gap: 0.25rem;
+      justify-content: flex-end;
+    }
+  }
+
+
+}

@@ -8,34 +8,40 @@ links:
     url: https://github.com/itisrazza/razza.io
 ---
 
-This website is an amalgamation of HTML, CSS and Markdown files which gets assembled by [Jekyll] and then hosted on [GitHub Pages]. This page acts as the colophon.
+## Technology
 
-It has a few sections:
-
-* **[Projects]** - links to things I've worked on over the years
-* **[Notes]** - brain dumps of things I keep forgetting (and scraps from old blogs)
-* **[Links]** - to other people's sites I find interesting
-
-I'm not a big fan of posting too much of myself on the open web these days, but there will be a few other things added to this site and I find some more free time.
+This website is built with [Jekyll] and is hosted on [GitHub Pages]. It uses a
+custom theme written largely by hand with HTML and [SCSS].
 
 [Jekyll]: https://jekyllrb.com/
 [GitHub Pages]: https://pages.github.com/
+[SCSS]: https://sass-lang.com/
 
-[Projects]: /projects
-[Notes]: /notes
-[Links]: /links
+HTML and CSS does the heavy lifting here, with the only JS scripts being for
+analytics and an easter egg when you open the development console.
 
----
+I had opted for Jekyll primarily so I can publish content to this website using
+Markdown. I had previously used React until 2023[^old-react], but decided to switch so
+I didn't have to build all the infrastructure needed to handle all that.
 
-Source code readers. Here's some links for you:
+[^old-react]: the old React-based one lives on the [`2022` branch](https://github.com/itisrazza/razza.io/tree/2022)
 
-* current Jekyll-powered version lives in [`main`][main] (surprise!)
-* previous React version (2020-2022) lives in [`2022`][2022]
+## Design
 
-[main]: https://github.com/itisrazza/razza.io/tree/main
-[2022]: https://github.com/itisrazza/razza.io/tree/2022
+I had some up with a mini design system for my own personal branding on the
+internet, which I use to guide the design on projects not needing their own
+style guides.
 
-You might see branches pop up and disappear whenever I do major upgrades or design refreshes (like this one used to live in a branch called `refresh` before it got merged).
+It started out with a logo and selection of fonts and kinda grew from there.
+I created a mockup in [Figma] before implementing in code.
 
-When I happen to rework how the website as a whole works, `main` will be branched to `20XX` (whichever year that happened) and a new branch will take it's place.
+[Figma]: https://www.figma.com/design/4DOj6e0gjkjN80ejJBvFqr/Razza-Design?node-id=3-25&t=WsewlEItHQ3YZFem-1
 
+For typography, the main body text is [Nunito Sans] with the lower case height
+increased and optical size reduced[^razza-sans]. For monospace text, I use
+[Commit Mono].
+
+[^razza-sans]: in other projects where variable font support is limited, you may see a "Razza Sans" instead
+
+[Nunito Sans]: https://fonts.google.com/specimen/Nunito+Sans
+[Commit Mono]: https://commitmono.com/

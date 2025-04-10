@@ -1,0 +1,7 @@
+@use "typography";
+
+code,
+kbd,
+pre {
+    font-family: typography.$mono-font-family;
+}

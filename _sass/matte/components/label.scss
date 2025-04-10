@@ -1,0 +1,15 @@
+.label {
+    font-size: 0.875rem;
+
+    background-color: var(--colour-foreground);
+    color: var(--colour-background);
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.lables {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    gap: 0.25rem;
+}

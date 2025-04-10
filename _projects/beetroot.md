@@ -4,8 +4,7 @@ description: Crowdsourced tunes queue for parties and get-togethers
 layout: project
 platforms:
   - Desktop
-  - iOS
-  - Android
+  - Web
 links:
   - label: Website
     url: https://beetroot.live/

@@ -3,8 +3,6 @@ layout: page
 title: Links
 ---
 
-# Links
-
 ## Elsewhere
 
 * [YouTube](https://youtube.com/@itisrazza)
@@ -30,10 +28,9 @@ Tilde communities are PAUs (Public Access UNIX) systems and their communities. T
 
 * [tildeverse](https://tildeverse.org/)
 * [tilde.town](http://tilde.town/)
-    * [~razza](http://tilde.town/~razza/)
+  * [~razza](http://tilde.town/~razza/)
 
 ## Interesting Projects
-
 
 ## Referral Links
 

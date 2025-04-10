@@ -1,0 +1,18 @@
+<div class="project-list">
+    {% for project in site.projects %}
+    {% assign logo_path = "/assets/logos/projects/" | append: project.slug | append: ".svg" %}
+
+    <a href="{{ project.url | relative_url }}" class="project-tile">
+        <img src="{{ logo_path | relative_url }}" alt="" width="64" height="64">
+        <span class="project-tile-meta">
+            <span class="title">{{ project.title }}</span>
+            <span class="description">{{ project.description }}</span>
+        </span>
+        <span class="labels">
+            {% for platform in project.platforms %}
+            <span class="label">{{ platform }}</span>
+            {% endfor %}
+        </span>
+    </a>
+    {% endfor %}
+</div>

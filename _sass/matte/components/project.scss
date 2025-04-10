@@ -1,0 +1,60 @@
+@use "button";
+@use "../typography";
+@use "../chrome";
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @media screen and (min-width: chrome.$breakpoint-m) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: chrome.$breakpoint-l) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-tile {
+    @include button.button();
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+
+    .project-tile-meta {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      >.title {
+        @include typography.heading("h5");
+      }
+    }
+  }
+
+  .miniproject-tile {
+    @include button.button();
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+
+    .miniproject-tile-meta {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-grow: 1;
+
+      >.title {
+        @include typography.heading("h6");
+      }
+    }
+  }
+}
