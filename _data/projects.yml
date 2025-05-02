@@ -1,9 +1,15 @@
+- name: Semafor
+  description: A traffic light to let others know whenever I'm in a meeting.
+  link: https://github.com/itisrazza/semafor
+  icon: semafor.png
+  archived: true
+
 - name: Property Card Generator
   description: Script for generating Monopoly-inspired property cards.
   link: https://github.com/itisrazza/monopoly-pcard-gen
   icon: monopoly-pcard.svg
   archived: true
-  
+
 - name: pybledom
   description: Python library for controlling BLEDOM devices.
   link: https://pypi.org/project/bledom/
