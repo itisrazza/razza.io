@@ -83,3 +83,20 @@ same commands and environments. Here are some tricks I use to make them easier
 to move about.
 
 ### Split up your dotfiles
+
+Instead of having a single `.bashrc` or `.zshrc` file, consider splitting up
+your files. I've adapted this convention from how daemons on Linux tend to
+separate out their files.
+
+In your `.bashrc` you only need the following snippet.
+
+```bash
+for include in $HOME/.bashrc.d/*.bash; do
+    source "$include"
+done
+```
+
+You can now store things in their specific file, aliases goes in
+`99-aliases.bash`, your environment managers in another file, etc.
+
+They should also be easier to check in and out of Git.
