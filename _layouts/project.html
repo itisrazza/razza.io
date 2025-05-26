@@ -4,23 +4,32 @@ nav_tag: projects
 ---
 
 <header>
-    {% assign logo_path = "/assets/logos/projects/" | append: page.slug | append: ".svg" %}
+  {% assign logo_path = "/assets/logos/projects/" | append: page.slug | append:
+  ".svg" %}
 
-    <img src="{{ logo_path | relative_url }}" alt="" width="64" class="logo">
-    <h1>{{ page.title }}</h1>
-    <p class="tagline">{{ page.description }}</p>
+  <img
+    src="{{ logo_path | relative_url }}"
+    alt=""
+    width="64"
+    height="64"
+    class="logo"
+  />
+  <h1>{{ page.title }}</h1>
+  <p class="tagline">{{ page.description }}</p>
 
-    {% if page.links %}
-    <ul class="header-buttons">
-        {% for link in page.links %}
-        <li><a href="{{ link.url }}" target="_blank" class="button">{{ link.label }}</a></li>
-        {% endfor %}
-    </ul>
-    {% endif %}
+  {% if page.links %}
+  <ul class="header-buttons">
+    {% for link in page.links %}
+    <li>
+      <a href="{{ link.url }}" target="_blank" class="button"
+        >{{ link.label }}</a
+      >
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 </header>
 
 <main class="chrome-inset">
-    <article>
-        {{ content }}
-    </article>
+  <article>{{ content }}</article>
 </main>
