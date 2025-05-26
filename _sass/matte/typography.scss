@@ -35,7 +35,6 @@ $heading-sizes: (
 }
 
 @each $level, $size in $heading-sizes {
-
   .text-#{$level},
   #{$level} {
     @include heading($level);
