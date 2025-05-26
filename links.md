@@ -5,16 +5,19 @@ title: Links
 
 ## Elsewhere
 
-* [YouTube](https://youtube.com/@itisrazza)
 * [GitHub](https://github.com/itisrazza)
-* [Twitter](https://x.com/itisrazza)
+* [LinkedIn](https://linkedin.com/in/rareshn)
+* [YouTube](https://youtube.com/@itisrazza)
 
 ## Friends
 
 * [Joel Freeman](https://jxel.dev/) / [FREEMXN](https://linktr.ee/freemxn)
 * [Joe Hodges](https://hephxtus.github.io/)
-* [Joe Ogle](https://www.joglemusic.com/)
 * [Tim McDermott](https://diarmada.com/)
+
+## People I've worked with
+
+* [Ryan Forgie](https://ryanforgie.com/)
 
 ## Other People
 

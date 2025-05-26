@@ -4,63 +4,69 @@ nav_tag: home
 ---
 
 <header class="page-header">
-    <h1>Raresh Nistor</h1>
-    <p>I’m a software developer. This is the place where I link to <a href="{{ 'projects' | relative_url }}">projects
-            I’ve worked on</a>,
-        <a href="{{ 'notes' | relative_url }}">some of my notes</a> and how you can get in touch with me.
-    </p>
+  <h1>Raresh Nistor</h1>
+  <p>
+    I’m a software developer. This is the place where I link to
+    <a href="{{ 'projects' | relative_url }}">projects I’ve worked on</a>,
+    <a href="{{ 'notes' | relative_url }}">some of my notes</a> and how you can
+    get in touch with me.
+  </p>
 </header>
 
 <section class="home-links">
-    <div class="home-section-links">
-        <a href="{{ 'projects' | relative_url }}">
-            <span class="home-section-link-icon"><i class="bi bi-hammer"></i></span>
-            <span class="home-section-link-label">Projects</span>
-        </a>
-        <a href="{{ 'notes' | relative_url }}">
-            <span class="home-section-link-icon"><i class="bi bi-files"></i></span>
-            <span class="home-section-link-label">Notes</span>
-        </a>
+  <div class="home-section-links">
+    <a href="{{ 'projects' | relative_url }}">
+      <span class="home-section-link-icon"><i class="bi bi-hammer"></i></span>
+      <span class="home-section-link-label">Projects</span>
+    </a>
+    <a href="{{ 'notes' | relative_url }}">
+      <span class="home-section-link-icon"><i class="bi bi-files"></i></span>
+      <span class="home-section-link-label">Notes</span>
+    </a>
+  </div>
+  <div class="home-personal-links">
+    <div class="home-social-links">
+      <a href="https://github.com/itisrazza"><i class="bi bi-github"></i></a>
+      <a href="https://linkedin.com/in/rareshn">
+        <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="mailto:raresh@nistor.email"><i class="bi bi-send"></i> </a>
+      <a href="{{ 'links' | relative_url }}">
+        <i class="bi bi-three-dots"></i>
+      </a>
     </div>
-    <div class="home-personal-links">
-        <div class="home-social-links">
-            <a href="https://github.com/itisrazza"><i class="bi bi-github"></i></a>
-            <a href="https://linkedin.com/in/rareshn"><i class="bi bi-linkedin"></i></a>
-            <a href="mailto:raresh@nistor.email"> <i class="bi bi-send"></i> </a>
-            <a href="{{ 'links' | relative_url }}"><i class="bi bi-three-dots"></i></a>
-        </div>
-        <div class="home-about-links">
-            <a href="{{ 'about' | relative_url }}">About</a>
-            <!-- <a href="{{ 'uses' | relative_url }}">Uses</a> -->
-            <!-- <a href="{{ 'now' | relative_url }}">Now</a> -->
-        </div>
+    <div class="home-about-links">
+      <a href="{{ 'about' | relative_url }}">About</a>
     </div>
+  </div>
 </section>
 
 <section class="home-list">
-    <header>
-        <h2 class="text-h6">Projects</h2>
-    </header>
-    <main>
-        {%- include project-list.html -%}
-    </main>
-    <footer>
-        <a href="{{ 'projects' | relative_url }}" class="button">More <i class="bi bi-arrow-up-right"></i></a>
-    </footer>
+  <header>
+    <h2 class="text-h6">Projects</h2>
+  </header>
+  <main>{%- include project-list.html -%}</main>
+  <footer>
+    <a href="{{ 'projects' | relative_url }}" class="button"
+      >More <i class="bi bi-arrow-up-right"></i
+    ></a>
+  </footer>
 </section>
 
 <section class="home-list">
-    <header>
-        <h2 class="text-h6">Notes</h2>
-    </header>
-    <main class="note-list">
-        {% assign notes = site.posts | slice: 0, 5 %}
-        {% for note in notes %}
-        {% include note-tile.html %}
-        {% endfor %}
-    </main>
-    <footer>
-        <a href="/feed.xml" class="button" title="Atom Feed"><i class="bi bi-rss-fill"></i></a>
-        <a href="{{ 'notes' | relative_url }}" class="button">More <i class="bi bi-arrow-up-right"></i></a>
-    </footer>
+  <header>
+    <h2 class="text-h6">Notes</h2>
+  </header>
+  <main class="note-list">
+    {% assign notes = site.posts | slice: 0, 5 %} {% for note in notes %} {%
+    include note-tile.html %} {% endfor %}
+  </main>
+  <footer>
+    <a href="/feed.xml" class="button" title="Atom Feed">
+      <i class="bi bi-rss-fill"></i>
+    </a>
+    <a href="{{ 'notes' | relative_url }}" class="button">
+      More <i class="bi bi-arrow-up-right"> </i>
+    </a>
+  </footer>
 </section>
