@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How I keep my code clean
-date: 2025-05-26
+date: 2025-06-23
 categories: notes dev
 ---
 
