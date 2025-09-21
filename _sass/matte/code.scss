@@ -12,7 +12,7 @@ pre {
 code {
   border-radius: 0.25em;
   font-size: 0.875em;
-  border: 1px solid var(--colour-background-swap);
+  border: 1px solid var(--colour-edge);
   padding: 0.0625em 0.25em;
 }
 
@@ -22,7 +22,7 @@ pre {
   border-radius: 0.5rem;
   font-size: 0.875rem;
   overflow-x: auto;
-  border: 1px solid var(--colour-background-swap);
+  border: 1px solid var(--colour-edge);
 
   code {
     font-size: 1em;
