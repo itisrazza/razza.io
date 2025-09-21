@@ -1,7 +1,8 @@
 @use "../chrome";
+@use "../focus.scss";
 @use "button";
 
-.page-chrome>nav {
+.page-chrome > nav {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -46,6 +47,8 @@
         &:hover {
           border-color: var(--colour-edge);
         }
+
+        @include focus.hide-for-mouse();
       }
     }
   }
@@ -87,12 +90,12 @@
     }
 
     #navigation-toggle:checked {
-      &~label[for="navigation-toggle"] {
+      & ~ label[for="navigation-toggle"] {
         border-end-start-radius: 0;
         border-end-end-radius: 0;
       }
 
-      &~.nav-links {
+      & ~ .nav-links {
         background-color: var(--colour-background-elevated);
         display: flex;
         flex-direction: column;

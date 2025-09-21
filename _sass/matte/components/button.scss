@@ -1,3 +1,5 @@
+@use "../focus";
+
 @mixin button {
   box-sizing: content-box;
   background: var(--colour-background-elevated);
@@ -19,6 +21,8 @@
   &:active {
     background: var(--colour-edge);
   }
+
+  @include focus.hide-for-mouse();
 }
 
 .button {
