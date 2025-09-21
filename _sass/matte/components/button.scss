@@ -1,24 +1,23 @@
 @mixin button {
-  border: 1px solid var(--colour-foreground);
+  box-sizing: content-box;
+  background: var(--colour-background-elevated);
+
+  border: 1px solid var(--colour-edge);
   border-radius: 0.5rem;
   color: unset;
-  box-shadow: 1px 1px 0 var(--colour-foreground);
   text-decoration: none;
   padding: 0.5rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.1s linear, box-shadow 0.1s linear;
   gap: 0.25rem;
 
   &:hover {
-    transform: translate(-1px, -1px);
-    box-shadow: 2px 2px 0 var(--colour-foreground);
+    outline: 1px solid var(--colour-edge);
   }
 
   &:active {
-    transform: translate(1px, 1px);
-    box-shadow: 0 0 0 var(--colour-foreground);
+    background: var(--colour-edge);
   }
 }
 

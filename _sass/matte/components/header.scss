@@ -1,11 +1,7 @@
 @use "../colours";
 
 .page-chrome>header {
-  --colour-background: var(--colour-background-swap);
-  --colour-foreground: var(--colour-foreground-swap);
-  --colour-accent: var(--colour-accent-swap);
-
-  background: var(--colour-background);
+  background: var(--colour-background-elevated);
   color: var(--colour-foreground);
 
   padding: 1rem 1.5rem;

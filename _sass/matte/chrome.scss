@@ -22,9 +22,6 @@ body>.page-chrome {
   max-width: $width-s;
 
   @media screen and (min-width: $breakpoint-m) {
-    border: 1px solid var(--colour-foreground);
-    border-radius: 0.5rem;
-
     margin-block: 32px;
 
     max-width: $width-m;

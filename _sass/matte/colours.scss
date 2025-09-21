@@ -1,26 +1,41 @@
-$positive: #fafafa;
-$negative: #101117;
-$accent-light: #006ec8;
-$accent-dark: #ffb900;
+$light-background: oklch(0.95 0 0);
+$light-background-elevated: oklch(0.80 0.124 1.0);
+$light-edge: oklch(0.80 0.125 1.0);
+$light-foreground: oklch(0 0 0);
+$light-accent: oklch(0.5369 0.162672 252.4239);
+
+$dark-background: oklch(0.2 0.015 275.0);
+$dark-background-elevated: oklch(0.3 0.02 275.0);
+$dark-edge: oklch(0.5 0.02 275.0);
+$dark-foreground: oklch(1 0 0);
+$dark-accent: oklch(0.8 0.2 80);
 
 @mixin light-scheme {
-  --colour-background: #{$positive};
-  --colour-foreground: #{$negative};
-  --colour-accent: #{$accent-light};
+  --colour-background: #{$light-background};
+  --colour-background-elevated: #{$light-background-elevated};
+  --colour-foreground: #{$light-foreground};
+  --colour-edge: #{$light-edge};
+  --colour-accent: #{$light-accent};
 
-  --colour-background-swap: #{$negative};
-  --colour-foreground-swap: #{$positive};
-  --colour-accent-swap: #{$accent-dark};
+  --colour-background-swap: #{$dark-background};
+  --colour-background-elevated-swap: #{$dark-background-elevated};
+  --colour-foreground-swap: #{$dark-foreground};
+  --colour-edge-swap: #{$dark-edge};
+  --colour-accent-swap: #{$dark-accent};
 }
 
 @mixin dark-scheme {
-  --colour-background: #{$negative};
-  --colour-foreground: #{$positive};
-  --colour-accent: #{$accent-dark};
+  --colour-background: #{$dark-background};
+  --colour-background-elevated: #{$dark-background-elevated};
+  --colour-foreground: #{$dark-foreground};
+  --colour-edge: #{$dark-edge};
+  --colour-accent: #{$dark-accent};
 
-  --colour-background-swap: #{$positive};
-  --colour-foreground-swap: #{$negative};
-  --colour-accent-swap: #{$accent-light};
+  --colour-background-swap: #{$light-background};
+  --colour-background-elevated-swap: #{$light-background-elevated};
+  --colour-foreground-swap: #{$light-foreground};
+  --colour-edge-swap: #{$light-edge};
+  --colour-accent-swap: #{$light-accent};
 }
 
 :root {
