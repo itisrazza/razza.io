@@ -8,11 +8,6 @@ nav_tag: notes
 <header>
     <h1>{{ page.title }}</h1>
     <p>{{ page.date | date: "%B %e, %Y" }}</p>
-    <ul class="header-labels">
-        {% for category in page.categories %}
-        <li class="label">{{ category }}</li>
-        {% endfor %}
-    </ul>
 </header>
 
 <main class="chrome-inset">
