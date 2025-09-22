@@ -9,7 +9,7 @@ $breakpoint-m: 660px;
   padding-inline: 1.25rem;
 }
 
-body>.page-chrome {
+body > .page-chrome {
   padding: 0.5rem;
   margin-inline: auto;
 
@@ -31,7 +31,7 @@ body>.page-chrome {
     max-width: $width-l;
   }
 
-  >footer {
+  > footer {
     font-size: 0.875rem;
     padding: 0.5rem 1.5rem;
     display: flex;

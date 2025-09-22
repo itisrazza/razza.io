@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Making Services on Linux (systemd)"
-date:   2020-01-10
+title: "Making Services on Linux (systemd)"
+date: 2020-01-10
 categories: notes linux
 ---
 
@@ -36,7 +36,7 @@ to log in as the server account and then change to its home folder.
 
 Lastly it's a good idea to create a shell script which starts the server. This is useful in the case of a Minecraft server since it runs on top of Java and we can pass flags to it easily.
 
-[Example Minecraft Server wrapper script](/assets/notes/2020-01-10-making-systemd-services/start.sh)
+{% include download-card.html label='Example Minecraft Server wrapper script' type='Shell Script' link='/assets/notes/2020-01-10-making-systemd-services/start.sh' %}
 
 Write that script of your game server executable and make it executable with
 
@@ -69,7 +69,7 @@ WantedBy=multi-user.target
 
 The file above describes the unit called "Minecraft Server" (`Description=Minecraft Server`), which we want to load after the computer connected to a network (`After=network.target`).
 
-This unit manages a simple service which runs as the user "minecraft" and runs the start script we made in the home folder. The server will always restarts if it's stopped without user control. 
+This unit manages a simple service which runs as the user "minecraft" and runs the start script we made in the home folder. The server will always restarts if it's stopped without user control.
 
 For more information you can consult the [`systemd.service`](https://manpages.debian.org/buster/systemd/systemd.service.5.en.html) man page.
 

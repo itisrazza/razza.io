@@ -1,0 +1,29 @@
+@use "button";
+
+.download-card {
+  @include button.button;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+
+  .chrome-inset & {
+    margin-inline: -0.5rem;
+  }
+
+  .download-card-meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .download-card-title {
+      font-weight: 600;
+    }
+
+    .download-card-type {
+      font-size: 0.9em;
+    }
+  }
+}
