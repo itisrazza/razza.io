@@ -1,13 +1,9 @@
 ---
 layout: post
-title:  "Setting up a Virtual Machine"
-date:   2019-03-22
-categories: notes medium
+title: "Setting up a Virtual Machine"
+date: 2019-03-22
+categories: notes
 ---
-
-<aside>
-🕒 This note has been written and published [on Medium](https://medium.com/@thegreatrazz/setting-up-a-virtual-machine-f06550ef496d) some time ago in March 22, 2019. Things have most definitely changed over time, like re-joining in 2020, but changing how I use Facebook.
-</aside>
 
 I’ve finally started uni, and it’s been a lot of fun so far. I keep seeing students trying to get some programming and cybersecurity tools working on an existing Windows or macOS system.
 
@@ -17,13 +13,18 @@ That’s good and all until you run into an issue that takes longer to solve tha
 
 For this guide, I picked Xubuntu and VirtualBox.
 
-***[Xubuntu](http://xubuntu.org/)*** is a derivative of [Ubuntu](http://ubuntu.com/). It’s lighter weight and for weaker laptops (like mine) it’s more usable since slideshow displays aren’t fun to deal with.
+**_[Xubuntu](http://xubuntu.org/)_** is a derivative of [Ubuntu](http://ubuntu.com/). It’s lighter weight and for weaker laptops (like mine) it’s more usable since slideshow displays aren’t fun to deal with.
 
-***[VirtualBox](http://virtualbox.org/)*** is a hypervisor. It lets you run a computer inside your computer. It also keeps the stuff we’re doing on Xubuntu to stay in the VirtualBox container so that it doesn’t mess up our actual computer.
+**_[VirtualBox](http://virtualbox.org/)_** is a hypervisor. It lets you run a computer inside your computer. It also keeps the stuff we’re doing on Xubuntu to stay in the VirtualBox container so that it doesn’t mess up our actual computer.
 
 Note: If you are on Windows, open up Task Manager (`Ctrl`+`Shift`+`Esc`) and click “More details.” After that choose the “Performance” tab and under CPU, make sure Virtualisation is “Enabled.”
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled.png)
+<div style="text-align:center">
+  <img
+    src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled.png' | relative_url }}"
+    alt="Screenshot of Task Manager on the Performance tab. Virtualisation is enabled." style="max-width:100%"
+  >
+</div>
 
 If it isn’t, check the Appendix at the end of the article.
 
@@ -33,15 +34,21 @@ Download VirtualBox from [their website](https://www.virtualbox.org/wiki/Downlo
 
 ## **Windows**
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%201.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%201.png)
+<div style="text-align:center">
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%201.png' | relative_url }}" alt="Screenshot of the VirtualBox Setup Wizard start page." style="max-width:100%">
+</div>
 
 After the download finishes, run the installer and go through it as normal.
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%202.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%202.png)
+<div style="text-align:center">
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%202.png' | relative_url }}" alt="Screenshot of Windows Security prompt requesting installation of VirtualBox drivers." style="max-width:100%">
+</div>
 
 It will warn you about possible network disruptions, that’s normal. You can keep going. It might also ask about drivers, it’s OK to install them. (You can stop this from showing up again by trusting Oracle’s certificate.)
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%203.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%203.png)
+<div style="text-align:center">
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%203.png' | relative_url }}" alt="Screenshot of VirtualBox's manager interface." style="max-width:100%">
+</div>
 
 After all of that, VirtualBox will start. This is what it looks like:
 
@@ -65,11 +72,15 @@ After it’s done, you should have a “[xubuntu-18.04.2-desktop-amd64.iso](http
 
 ## Creating the Virtual Machine
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%204.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%204.png)
+<div style="text-align:center">
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%204.png' | relative_url }}" alt="Screenshot of VirtualBox's manager interface. The &quot;New&quot; button is highlighted." style="max-width:100%">
+</div>
 
 Now that VirtualBox is set up, you need to create a VM. To do that you need to click on “New.”
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%205.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%205.png)
+<div style="text-align:center">
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%205.png' | relative_url }}" alt="Screenshot of the Create VM wizard on the memory size page." style="max-width:100%">
+</div>
 
 When a new window comes up you can name your virtual machine however you want.
 
@@ -83,24 +94,31 @@ Finish that off and you should be back to the main VirtualBox window.
 
 ## Installing Xubuntu
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%206.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%206.png)
+<div style="text-align:center">
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%206.png' | relative_url }}" alt="Screenshot of the Select start-up disk prompt. Open file button highlighted." style="max-width:100%">
+</div>
 
 You should now start your virtual machine, it will come up with a prompt asking you to insert a start-up disk. Press the folder icon to browser for the ISO file that was downloaded earlier. Press “Start” after you selected the right ISO.
 
 > Note: If your keyboard and mouse get stuck in the virtual machine, you can press the Right Control key (or the Left Command key if you’re on Mac) to unlock them.
-> 
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%207.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%207.png)
+<div style="text-align:center">Shelt
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%207.png' | relative_url }}" alt="Screenshot of the Xubuntu installer. 1: The language selector is highlighted. 2: The &quot;Install Xubuntu&quot; button is highlighted." style="max-width:100%">
+</div>
 
 After starting the Virtual Machine and waiting for a bit… you should get to the installer.
 
 Then choose the language and then “Install Xubuntu.” Go through the installer as normal, going through Keyboard Layout and finally reaching “Updates and other software.”
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%208.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%208.png)
+<div style="text-align:center">
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%208.png' | relative_url }}" alt="Screenshot of the Xubuntu installer, &quot;Updates and other software&quot; page. Selected checkbox labelled &quot;Download updated while installing Xubuntu&quot; is highlighted. The &quot;Continue&quot; button is also highlighted." style="max-width:100%">
+</div>
 
-Here, you can choose whether you want to install updates while installing and if you want to install third-party software. You should check both, the installation may take longer but saves time afterwards by not needing to do it then.
+Here, you can choose whether you want to install updates while installing and if you want to install third-party software. You should check both, the installation may take longer but saves time afterwards by not needing to do it afterwards.
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%209.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%209.png)
+<div style="text-align:center">
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%209.png' | relative_url }}" alt="Screenshot of the Xubuntu installer, &quot;Installation type&quot; page. The &quot;Install Now&quot; button is highlighted." style="max-width:100%">
+</div>
 
 After that, you can “Install Now.” If you’re installing this in anything other than a newly created virtual machine, *it will delete any and all existing data on the computer/virtual machine*.
 
@@ -108,19 +126,25 @@ It will ask one more time to see if you’re *really sure.*
 
 After that it will ask you about time zones and finally user accounts.
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%2010.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%2010.png)
+<div style="text-align:center">
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%2010.png' | relative_url }}" alt="Screenshot of the Xubuntu installer, &quot;Who are you?&quot; page. The user name, computer name, password is filled in." style="max-width:100%">
+</div>
 
 Fill it up however you want, if there’s something wrong… the installer will tell you. Once your done, click on “Continue.”
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%2011.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%2011.png)
+<div style="text-align:center">
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%2011.png' | relative_url }}" alt="Screenshot of the Xubuntu installer installation page." style="max-width:100%">
+</div>
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%2012.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%2012.png)
+<div style="text-align:center">
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%2012.png' | relative_url }}" alt="Screenshot of the Xubuntu desktop." style="max-width:100%">
+</div>
 
 After that’s done, it will prompt you to restart and you should see a login screen from where you should log in.
 
 # **Installing Guest Additions**
 
-*Adapted from [TecMint: How to Install VirtualBox Guest Additions in Ubuntu](https://www.tecmint.com/install-virtualbox-guest-additions-in-ubuntu/).*
+_Adapted from [TecMint: How to Install VirtualBox Guest Additions in Ubuntu](https://www.tecmint.com/install-virtualbox-guest-additions-in-ubuntu/)._
 
 After installing Xubuntu, you may notice that the screen size is pretty small. You can set up the VM so the resolution matches the window size. It will also enable support for using clipboards and drag-and-dropping files.
 
@@ -130,9 +154,19 @@ After the system finished `apt update`-ing, you can now type in `sudo apt inst
 
 It will ask you if you really want to install it, type `Y` and Enter. It will install the things needed by Guest Additions.
 
-![/assets/notes/2019-03-22-virtual-machine-setup/Untitled%2013.png](/assets/notes/2019-03-22-virtual-machine-setup/Untitled%2013.png)
+<div style="text-align:center">
+  <img
+    src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/Untitled%2013.png' | relative_url }}"
+    alt="Screenshot of the VirtualBox window, with the &quot;Devices&quot; menu open and mouse hovering the &quot;Install Guest Additions CD&quot; menu item."
+    style="max-width:100%">
+</div>
 
-![https://miro.medium.com/max/1600/1*Wy_38UCkLJ5hFYyd6o14SQ.png](https://miro.medium.com/max/1600/1*Wy_38UCkLJ5hFYyd6o14SQ.png)
+<div style="text-align:center">
+  <img
+    src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/vbox-ga-2.png' | relative_url }}"
+    alt="Screenshot of the File Manager showing the Guest Additions disc contents. With the mouse hovering over &quot;Open Terminal Here&quot; in the right-click context menu."
+    style="max-width:100%">
+</div>
 
 Now go to “Devices” and then click on “Insert Guest Additions CD image…”
 
@@ -140,13 +174,15 @@ A disk icon should show be on the desktop. Open up the CD drive and in there, ri
 
 Once the new terminal is up, type `./autorun.sh` and press Enter. A new window should now show up and log progress.
 
-Once “Press Return to close window…” shows up, you only need to restart the virtual machine.
+Once “Press Return to close window…” shows up, press Enter and restart the virtual machine.
 
 # **Using Xubuntu**
 
 Xubuntu’s default screen layout is a lot like Windows’s with the exception that the task bar (which here is called the “panel”) is at the top as opposed to the bottom.
 
-![https://miro.medium.com/max/800/1*WiB9AlVck2vyNsdMfRmHew.png](https://miro.medium.com/max/800/1*WiB9AlVck2vyNsdMfRmHew.png)
+<div style="text-align:center">
+  <img src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/vbox-ga-2.png' | relative_url }}" alt="https://miro.medium.com/max/800/1*WiB9AlVck2vyNsdMfRmHew.png" style="max-width:100%">
+</div>
 
 The mouse on the top-left (called the “Whisker Menu,”) is the place where you start applications and turn off your computer.
 
@@ -156,21 +192,37 @@ If you know how to use Windows, I’m sure you can figure the rest out.
 
 If you need more help, please take a look at the [Xubuntu User Guide](https://docs.xubuntu.org/1804/user/C/guide-desktop.html).
 
-# **Closing Comments**
-
-You now have a virtual machine running Xubuntu, have fun. I may make this a bit of a series with various issues I come across and having a try at explaining them. And also, how to use Linux in various ways.
-
 # **Appendix: Windows Virtualisation Support**
 
-![https://miro.medium.com/max/1332/1*M3L3hMsHojViM7j-pg94Rg.png](https://miro.medium.com/max/1332/1*M3L3hMsHojViM7j-pg94Rg.png)
+<div style="text-align:center">
+  <img
+    src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/appendix-windows-taskmgr.png' | relative_url }}"
+    alt="Screenshot of Task Manager on the Performance tab. Virtualisation is disabled, but the CPU has Hyper-V support."
+    style="max-width:100%">
+</div>
 
 Most modern computers support virtualisation and is just simply disabled by default. If your computer says Virtualisation is “disabled” but has support for Hyper-V, you need to enable it.
 
-![https://miro.medium.com/max/1872/1*yIQXYQcTGtcLy6WN3zoqPQ.png](https://miro.medium.com/max/1872/1*yIQXYQcTGtcLy6WN3zoqPQ.png)
+<div style="text-align:center">
+  <img
+    src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/appendix-windows-reboot.png' | relative_url }}"
+    alt="Screenshot of the Windows settings app in &quot;Update & Security&quot; with the Advanced start-up &quot;Restart now&quot; button highlighted."
+    style="max-width:100%">
+</div>
 
-![https://miro.medium.com/max/8256/1*5tjmK4JZ8R8I5jn6LxPYhA.jpeg](https://miro.medium.com/max/8256/1*5tjmK4JZ8R8I5jn6LxPYhA.jpeg)
+<div style="text-align:center">
+  <img
+    src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/appendix-windows-re.jpeg' | relative_url }}"
+    alt="Windows restarted in the recovery environment. Troubleshoot is selected."
+    style="max-width:100%">
+</div>
 
-![https://miro.medium.com/max/8256/1*xXGwZZNz-66rAklU05yvTA.jpeg](https://miro.medium.com/max/8256/1*xXGwZZNz-66rAklU05yvTA.jpeg)
+<div style="text-align:center">
+  <img
+    src="{{ '/assets/notes/2019-03-22-virtual-machine-setup/appendix-bios-options.jpeg' | relative_url }}"
+    alt="HP firmware settings with Virtualisation Technology (VTx) selected."
+    style="max-width:100%">
+</div>
 
 The way you do it different from computer to computer. If’s worth looking into your BIOS (or what is under Windows 10 called “firmware settings.”)
 
