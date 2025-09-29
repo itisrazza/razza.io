@@ -30,13 +30,12 @@ nav_tag: home
       <a href="https://linkedin.com/in/rareshn">
         <i class="bi bi-linkedin"></i>
       </a>
-      <a href="mailto:raresh@nistor.email"><i class="bi bi-send"></i> </a>
-      <a href="{{ 'links' | relative_url }}">
-        <i class="bi bi-three-dots"></i>
-      </a>
+      <a href="mailto:raresh@nistor.email"><i class="bi bi-envelope-at"></i> </a>
     </div>
     <div class="home-about-links">
-      <a href="{{ 'about' | relative_url }}">About</a>
+      <a href="{{ 'about'     | relative_url }}"><i class="bi bi-person-fill"></i> About</a>
+      <a href="{{ 'links'     | relative_url }}"><i class="bi bi-link"></i> Links</a>
+      <a href="{{ 'uses'      | relative_url }}"><i class="bi bi-hammer"></i> Uses</a>
     </div>
   </div>
 </section>
@@ -47,9 +46,7 @@ nav_tag: home
   </header>
   <main>{%- include project-list.html -%}</main>
   <footer>
-    <a href="{{ 'projects' | relative_url }}" class="button"
-      >More <i class="bi bi-arrow-up-right"></i
-    ></a>
+    <a href="{{ 'projects' | relative_url }}" class="button">More <i class="bi bi-arrow-up-right"></i></a>
   </footer>
 </section>
 
@@ -58,8 +55,10 @@ nav_tag: home
     <h2 class="text-h6">Notes</h2>
   </header>
   <main class="note-list">
-    {% assign notes = site.posts | slice: 0, 5 %} {% for note in notes %} {%
-    include note-tile.html %} {% endfor %}
+    {%- assign notes = site.posts | slice: 0, 5 -%}
+    {%- for note in notes -%}
+      {%- include note-tile.html -%}
+    {%- endfor -%}
   </main>
   <footer>
     <a href="/feed.xml" class="button" title="Atom Feed">
