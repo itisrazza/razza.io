@@ -11,32 +11,10 @@ layout: chrome
     </ul>
 </header>
 
-{% assign year_groups = "" %}
-{% for post in site.posts %}
-{% assign year = post.date | date: "%Y" %}
-{% assign year_groups = year_groups | append: year | append: "," %}
-{% endfor %}
-{% assign year_groups = year_groups | split: "," | uniq %}
+{% assign notes = site.notes | reverse %}
 
-{% for year_group in year_groups %}
-<section id="{{year_group}}">
-    <header class="chrome-inset">
-        <h2>{{ year_group }}</h2>
-    </header>
-    <main class="note-list">
-        {% for note in site.posts %}
-        {% assign note_year = note.date | date: "%Y" %}
-        {% if note_year == year_group %}
-        {% include note-tile.html %}
-        {% endif %}
-        {% endfor %}
-    </main>
-</section>
-{% endfor %}
-
-<section id="active" class="biglist biglist-inset">
-    <div class="biglist-content">
-        {% for note in site.posts %}
-        {% endfor %}
-    </div>
-</section>
+<main class="note-list">
+  {% for note in notes %}
+    {% include note-tile.html %}
+  {% endfor %}
+</main>

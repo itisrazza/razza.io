@@ -12,6 +12,9 @@ collections:
   projects:
     name: true
     output: true
+  notes:
+    name: true
+    output: true
 
 feed:
   excerpt_only: true

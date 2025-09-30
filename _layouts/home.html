@@ -55,7 +55,7 @@ nav_tag: home
     <h2 class="text-h6">Notes</h2>
   </header>
   <main class="note-list">
-    {%- assign notes = site.posts | slice: 0, 5 -%}
+    {%- assign notes = site.notes | reverse | slice: 0, 5 -%}
     {%- for note in notes -%}
       {%- include note-tile.html -%}
     {%- endfor -%}
