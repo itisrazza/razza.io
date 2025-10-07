@@ -76,6 +76,14 @@ SSH keys up. You can simply clone the repository with the `--bare` argument.
 git clone --bare git@github.com:itisrazza/dotfiles.git ~/src/itisrazza/dotfiles
 ```
 
+You can then use the standard Git commands to restore the files, on a new
+system, I generally make a backup of the default configs just in case and do a
+hard reset.
+
+```bash
+git --git-dir=/abs/path/to/dotfiles --work-dir=$HOME reset --hard
+```
+
 ## Tips for dotfile management
 
 Now that dotfiles are used across multiple systems, they may not offer the
@@ -100,3 +108,14 @@ You can now store things in their specific file, aliases goes in
 `99-aliases.bash`, your environment managers in another file, etc.
 
 They should also be easier to check in and out of Git.
+
+# Real world example
+
+Here's a real world example, my own dotfiles. This isn't a complete picture,
+but this shows some common settings I apply to my command-line tools.
+
+{% include big-link.html
+           icon='bi bi-github'
+           title='itisrazza/dotfiles'
+           subtitle="A subset of my own dotfiles split across multiple computers"
+ %}
