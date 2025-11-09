@@ -1,0 +1,54 @@
+---
+layout: chrome
+---
+
+<header>
+  <h1>Gallery</h1>
+</header>
+
+<section class="gallery-tiles">
+  {% for image in site.data.gallery %}
+  <a href="#show-{{ image.id }}">
+    <img src="{{ 'assets/gallery/thumbs/' | append: image.id | append: '.jpg' | relative_url }}" alt="{{ image.title }}" loading="lazy">
+    <span class="image-title">{{ image.title }}</span>
+  </a>
+  {% endfor %}
+</section>
+
+<div class="lightboxes">
+  {% for image in site.data.gallery %}
+    <div id="show-{{ image.id }}" class="lightbox">
+      <div class="lightbox-content">
+        <a href="#" class="lightbox-close"><i class="bi bi-x-lg"></i></a>
+        <div class="lightbox-image">
+          <img src="{{ 'assets/gallery/' | append: image.id | append: '.jpg' | relative_url }}" alt="{{ image.title }}" loading="lazy">
+        </div>
+        <div class="lightbox-meta">
+          <div class="lightbox-meta-row">
+            <div class="lightbox-meta-key">Title</div>
+            <div class="lightbox-meta-value">{{ image.title }}</div>
+          </div>
+          <div class="lightbox-meta-row">
+            <div class="lightbox-meta-key">Camera</div>
+            <div class="lightbox-meta-value">
+              <img src="{{ 'assets/images/cameras/' | append: image.camera | append: '.png' | relative_url }}" alt="" width="24" height="24" loading="lazy">
+              {{ site.data.cameras[image.camera].name }}
+            </div>
+          </div>
+          {% if image.location %}
+          <div class="lightbox-meta-row">
+            <div class="lightbox-meta-key">Location</div>
+            <div class="lightbox-meta-value">
+              {% if image.location.link %}<a href="{{ image.location.link }}" target="_blank">{% endif %}
+                {{ image.location.name }}
+              {% if image.location.link %}</a>{% endif %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{{ content }}

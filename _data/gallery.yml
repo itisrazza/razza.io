@@ -1,0 +1,22 @@
+- id: cape-kidnappers
+  title: Cape Kidnappers
+  location:
+    name: Cape Kidnappers
+  camera: iphone-15-pro
+
+- id: lake-taupo
+  title: Lake Taupo
+  location:
+    name: Turangi
+  camera: iphone-11
+
+- id: thorndon-motorway
+  title: Thorndon Motorway
+  location:
+    name: Thorndon, Wellington (Pōneke)
+    link: "https://maps.app.goo.gl/7BWvt6wLjjsRsVyt5"
+  camera: canon-powershot-g7x-mk2
+
+- id: morning-haze
+  title: Morning haze
+  camera: olympus-pen-e-p5
