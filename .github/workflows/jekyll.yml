@@ -31,7 +31,7 @@ jobs:
       - name: Install additional dependencies
         run: sudo apt-get update -y && sudo apt-get install imagemagick -y
       - name: Run pre-build scripts
-        run: bash _scripts/generate-gallery-thumbnails.sh
+        run: bash _scripts/generate.sh
       - name: Build with Jekyll
         run: npm run build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:

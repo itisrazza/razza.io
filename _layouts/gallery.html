@@ -11,6 +11,7 @@ layout: chrome
 <section class="gallery-tiles">
   {% for image in site.data.gallery %}
   <a href="#show-{{ image.id }}">
+    <div id="anchor-{{ image.id }}" class="image-anchor"></div>
     <img src="{{ 'assets/gallery/thumbs/' | append: image.id | append: '.jpg' | relative_url }}" alt="{{ image.title }}" loading="lazy">
     <span class="image-title">{{ image.title }}</span>
   </a>
@@ -21,7 +22,7 @@ layout: chrome
   {% for image in site.data.gallery %}
     <div id="show-{{ image.id }}" class="lightbox">
       <div class="lightbox-content">
-        <a href="#" class="lightbox-close"><i class="bi bi-x-lg"></i></a>
+        <a href="#anchor-{{ image.id }}" class="lightbox-close"><i class="bi bi-x-lg"></i></a>
         <div class="lightbox-image">
           <img src="{{ 'assets/gallery/' | append: image.id | append: '.jpg' | relative_url }}" alt="{{ image.title }}" loading="lazy">
         </div>
