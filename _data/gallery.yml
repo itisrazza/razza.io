@@ -1,3 +1,31 @@
+- id: waituna-west-garage
+  title: Waituna West Garage
+  location:
+    name: Waituna West, Manawatū-Whanganui, NZ
+    link: https://maps.app.goo.gl/vUYn7NUneNVyLbfv9
+  camera: canon-powershot-g7x-mk2
+
+- id: manawatu-bliss
+  title: Stormy Point Lookout
+  location:
+    name: "Stormy\xA0Point\xA0Lookout, Manawatū-Whanganui, NZ"
+    link: https://maps.app.goo.gl/xPmtdZJ4oz58guFH7
+  camera: canon-powershot-g7x-mk2
+
+- id: ohakune-bliss
+  title: Ohakune bliss
+  location:
+    name: SH49 near Ohakune, NZ
+    link: "https://maps.app.goo.gl/rFF7aP9b4mdjKKpSA"
+  camera: canon-powershot-g7x-mk2
+
+- id: ohakune-carrot
+  title: Ohakune carrot
+  location:
+    name: Ohakune, NZ
+    link: "https://maps.app.goo.gl/rFF7aP9b4mdjKKpSA"
+  camera: canon-powershot-g7x-mk2
+
 - id: cape-kidnappers
   title: Cape Kidnappers
   location:
@@ -13,7 +41,7 @@
 - id: thorndon-motorway
   title: Thorndon Motorway
   location:
-    name: Thorndon, Wellington (Pōneke)
+    name: Thorndon, Wellington, NZ
     link: "https://maps.app.goo.gl/7BWvt6wLjjsRsVyt5"
   camera: canon-powershot-g7x-mk2
 

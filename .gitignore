@@ -1,8 +1,14 @@
+# jekyll
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# generated javascript
 assets/script.js
 assets/script.js.map
 node_modules/
+
+# generated assets
+assets/gallery/thumbs/

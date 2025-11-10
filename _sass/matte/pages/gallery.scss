@@ -57,6 +57,9 @@
   .lightboxes {
     .lightbox {
       display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
 
       position: fixed;
       top: 0;
@@ -103,6 +106,7 @@
         }
 
         .lightbox-image {
+          flex-grow: 1;
           background: black;
 
           img {
@@ -144,7 +148,7 @@
 
           .lightbox-meta {
             overflow-y: auto;
-            min-width: 16rem; 
+            min-width: 16rem;
           }
         }
       }
@@ -155,5 +159,3 @@
     }
   }
 }
-
-
