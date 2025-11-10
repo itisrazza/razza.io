@@ -32,6 +32,13 @@
     name: Cape Kidnappers
   camera: iphone-15-pro
 
+- id: wgtn-cable-car
+  title: Wellington Cable Car
+  location:
+    name: Kelburn, Wellington, NZ
+    link: https://maps.app.goo.gl/dRpsqohMnAjxu5qc6
+  camera: canon-powershot-g7x-mk2
+
 - id: lake-taupo
   title: Lake Taupo
   location:
