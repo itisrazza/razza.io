@@ -16,10 +16,12 @@
 
   &:hover {
     outline: 1px solid var(--colour-edge);
+    text-decoration: none;
   }
 
   &:active {
     background: var(--colour-edge);
+    text-decoration: none;
   }
 
   @include focus.hide-for-mouse();
