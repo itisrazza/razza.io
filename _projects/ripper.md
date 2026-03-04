@@ -13,6 +13,7 @@ links:
   - label: RipperWare
     url: https://github.com/itisrazza/ripperware
 published: false
+wip: true
 ---
 
 > Ripper is still a work in progress. Follow this page for updates.

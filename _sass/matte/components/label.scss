@@ -5,11 +5,16 @@
     color: var(--colour-background);
     padding: 0.125rem 0.5rem;
     border-radius: 0.25rem;
+
+    &.label-wip {
+        background-color: var(--colour-accent);
+    }
 }
 
-.lables {
+.labels {
     display: flex;
     flex-flow: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
     gap: 0.25rem;
 }

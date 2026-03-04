@@ -9,6 +9,7 @@ links:
   - label: GitHub
     url: https://github.com/itisrazza/blue
 published: false
+wip: true
 ---
 
 Blue is small runtime with the goal of adding modulal functionality to

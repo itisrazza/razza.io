@@ -2,7 +2,7 @@
 
 @mixin button {
   box-sizing: content-box;
-  background: var(--colour-background-elevated);
+  background-color: var(--colour-background-elevated);
 
   border: 1px solid var(--colour-edge);
   border-radius: 0.5rem;

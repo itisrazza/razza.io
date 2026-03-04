@@ -1,7 +1,7 @@
 @use "../colours";
 
 .page-chrome>header {
-  background: var(--colour-background-elevated);
+  background-color: var(--colour-background-elevated);
   color: var(--colour-foreground);
 
   padding: 1rem 1.5rem;

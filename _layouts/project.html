@@ -3,7 +3,7 @@ layout: chrome
 nav_tag: projects
 ---
 
-<header>
+<header {% if page.wip %}class="bg-wip"{% endif %}>
   {% assign logo_path = "/assets/logos/projects/" | append: page.slug | append:
   ".svg" %}
 
@@ -28,6 +28,8 @@ nav_tag: projects
     {% endfor %}
   </ul>
   {% endif %}
+
+  {% if page.wip %}<span class="label label-wip">Work in progress</span>{% endif %}
 </header>
 
 <main class="chrome-inset">

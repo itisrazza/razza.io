@@ -15,3 +15,7 @@
 body {
   margin: 0;
 }
+
+.bg-wip {
+  background-image: repeating-linear-gradient(to bottom right, var(--colour-background-elevated), var(--colour-background-elevated) 10px, var(--colour-background) 10px, var(--colour-background) 20px);
+}

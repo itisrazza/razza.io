@@ -2,7 +2,7 @@
     {% for project in site.projects %}
     {% assign logo_path = "/assets/logos/projects/" | append: project.slug | append: ".svg" %}
 
-    <a href="{{ project.url | relative_url }}" class="project-tile">
+    <a href="{{ project.url | relative_url }}" class="project-tile {% if project.wip %}bg-wip{% endif %}">
         <img src="{{ logo_path | relative_url }}" alt="" width="64" height="64">
         <span class="project-tile-meta">
             <span class="title">{{ project.title }}</span>
