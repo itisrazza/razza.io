@@ -16,6 +16,9 @@ collections:
   notes:
     name: true
     output: true
+  travels:
+    name: true
+    output: true
 
 feed:
   excerpt_only: true

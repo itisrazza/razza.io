@@ -1,0 +1,5 @@
+<a href="#show-{{ image.id }}">
+  <div id="anchor-{{ image.id }}" class="image-anchor"></div>
+  <img src="{{ '/assets/gallery/thumbs/' | append: image.id | append: '.jpg' | relative_url }}" alt="{{ image.title }}" loading="lazy">
+  <div class="image-title">{{ image.title }}</div>
+</a>

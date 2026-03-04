@@ -38,6 +38,11 @@ $heading-sizes: (
   .text-#{$level},
   #{$level} {
     @include heading($level);
+
+    .alt-title {
+      font-size: 0.8em;
+      opacity: 0.6;
+    }
   }
 
   article #{$level} {
