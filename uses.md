@@ -13,9 +13,8 @@ subtitle: |
 ### Operating system
 
 * **Linux**[^gnupluslinux]
-  * **[Fedora]**[^ohsnap] for desktops (where things have to be stable)
-  * **[Debian]**[^ohsnap] for servers (where things have to be even more stable)
-  * **[Arch Linux]** for fun
+  * **[Arch Linux]** for high-contact devices (desktop & laptops)
+  * **[Debian]** for servers (where things have to be stable)
 * **Windows**[^windows]
 
 [Debian]: https://debian.org/
@@ -27,17 +26,16 @@ familiar with the way it works over the years and decided to take the full
 plunge as the daily driver on my desktop in August 2025.
 
 [^gnupluslinux]: some people may want it to be called GNU/Linux or GNU+Linux, but I'm not into libre purism.
-[^ohsnap]: used to be Ubuntu, but not a big fan of snaps.
 [^windows]: now permanenly relegated to my slower, secondary SSD.
 
 
 #### Desktop environment
 
-On Linux, my go-to desktop environment is **[GNOME]**. It is a good middle
-ground between the desktop-oriented environment of the 90s and 2000s and
-the extreme abstraction and simplification present on mobile platforms.
+On Linux, my go-to desktop environment is **[KDE]**. It retains the desktop
+metaphor and way of working I had become accustomed to ever since I started
+using computers, and everything tends to be fairly well integrated.
 
-Also, honourable mentions to [KDE], [XFCE], [Niri] and [i3], where I've also
+Also, honourable mentions to [GNOME], [XFCE], [Niri] and [i3], where I've also
 spent a good amount of time.
 
 [GNOME]: http://gnome.org/
@@ -113,7 +111,7 @@ spent a good amount of time.
   </tr>
   <tr>
     <th rowspan="2">OS</th>
-    <td><a href="https://fedoraproject.org/kde/" target="_blank">Fedora Workstation KDE</a></td>
+    <td><a href="https://archlinux.org/" target="_blank">Arch Linux</a></td>
     <td rowspan="2"><a href="https://archlinux.org/" target="_blank">Arch Linux</a></td>
   </tr>
   <tr>
@@ -131,7 +129,7 @@ spent a good amount of time.
   </tr>
   <tr>
     <th>GPU</th>
-    <td>AMD Radeon RX 580</td>
+    <td>AMD Radeon RX 7800 XT</td>
     <td><i>(integrated)</i></td>
   </tr>
 </table>
@@ -146,12 +144,11 @@ allocated budget when I was looking at [off-lease laptops at my local
 electronics retailer](https://www.pbtech.co.nz/category/computers/exleased/laptops).
 
 At the moment, my laptop is a glorified terminal for web services and
-remote shell connections to my desktop or development virtual machine. So it
-tends to run more experimental software.
+remote shell connections to my desktop or development virtual machine.
 
 Onto peripherals:
 
-* **Keyboard:** [Logitech G512 Carbon Lightsync](https://www.pbtech.co.nz/product/KEYLOG4253602/Logitech-G512-CARBON-LIGHTSYNC-RGB-Clicky-Mechanic) &mdash; 
+* **Keyboard:** [Logitech G512 Carbon Lightsync](https://www.pbtech.co.nz/product/KEYLOG4253602/Logitech-G512-CARBON-LIGHTSYNC-RGB-Clicky-Mechanic) &mdash;
   I found to prefer clickier mechnical keyboards, and tend to use 102 of the 104 keys PC keyboards have had since 1995.
 * **Mouse:** [Logitech MX Vertical](https://www.pbtech.co.nz/product/MSELOG4393045/Logitech-MX-Vertical-Advanced-Ergonomic-Wireless-M) &mdash;
   Most mice I've had in the past are too small for my hands, this one was the first comfortable one I've had.
@@ -180,7 +177,7 @@ Onto peripherals:
   </tr>
   <tr>
     <th>OS</th>
-    <td><a href="https://www.proxmox.com/en/" target="_blank">Proxmox Virtual Environment</a></td>
+    <td>Debian</td>
     <td><i>(todo)</i></td>
   </tr>
   <tr>
@@ -195,23 +192,25 @@ Onto peripherals:
   </tr>
   <tr>
     <th>GPU</th>
-    <td>NVIDIA GeForce GTS 450</td>
+    <td>AMD Radeon RX 580</td>
     <td></td>
   </tr>
 </table>
 
-My homelab is effectively a Proxmox datacenter. I use it to store my
-personal&nbsp;data and library[^library].
+I'm working on building out my homelab to store personal&nbsp;data and library[^library],
+and plan to also add capabilities for running development tools remotely, play
+around with cloud tooling, and just toying around with networking.
 
 Marte was built with components that had been rotated out of my desktop when
-they were upgraded, with the GPU serving only as a framebuffer card.
+they were upgraded, with the GPU used for video transcoding and AI inference
+tasks.
 
 Ceres (currently not in use) is a proper server with its only shortcoming being
 having 2.5" (laptop-sized) drive bays instead of the more common 3.5". I plan
 for it to be a dedicated NAS once I get an array of SSDs to use with it,
 leaving Marte to be an application server.
 
-[^library]: collection of software, games, books, and media 
+[^library]: collection of software, games, books, and media
 
 
 ## Services
@@ -220,7 +219,6 @@ Here are some services I use and get a lot of value from:
 
 * [**Proton**](https://pr.tn/ref/5BB3E8N0QM80)[^referral] &mdash; email, cloud storage, VPN proxies
 * [**Bitwarden**](https://bitwarden.com) &mdash; (mostly) open source and good value for $10/year
-* [**Vultr**](https://www.vultr.com/?ref=9807211)[^referral]
+* [**Vultr**](https://www.vultr.com/?ref=9807211)[^referral] &mdash; web hosting
 
 [^referral]: this is a referral link.
-
