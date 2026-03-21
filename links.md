@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Links
+nav_tag: about
 ---
 
 ## Elsewhere

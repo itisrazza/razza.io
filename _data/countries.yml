@@ -1,0 +1,55 @@
+nz:
+  label: New Zealand &middot; Aotearoa
+  en: New Zealand
+  ro: Noua Zeelandă
+  mi: Aotearoa
+  native: Aotearoa
+
+au:
+  label: Australia
+  en: Australia
+  ro: Australia
+  mi: Ahitereiria
+  native: Australia
+
+ro:
+  label: România
+  en: Romania
+  ro: România
+  mi: Romeinia
+  native: România
+
+md:
+  label: Moldova (Republic)
+  en: Moldova
+  ro: Republica Moldova
+  mi: Morotawa
+  native: Republica Moldova
+
+de:
+  label: Deutschland &middot; Germany
+  en: Germany
+  ro: Germania
+  mi: Tiamana
+  native: Deutschland
+
+fr:
+  label: France
+  en: France
+  ro: Franța
+  mi: Wīwī
+  native: France
+
+gb:
+  label: United Kingdom
+  en: United Kingdom
+  ro: Regatul Unit
+  mi:
+  native: United Kingdom
+
+ua:
+  label: Ukraine &middot; Україна
+  en: Ukraine
+  ro: Ucraina
+  mi: Ūkareinga
+  native: Україна

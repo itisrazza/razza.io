@@ -3,6 +3,12 @@ layout: page
 title: About
 permalink: /about
 nav_tag: about
+
+links:
+  - label: Uses
+    url: /uses
+  - label: Links
+    url: /links
 ---
 
 My name is Rareș&nbsp;Nistor[^1], I also go by Razza. I'm a
@@ -28,10 +34,3 @@ the website at some point.
 
 P.S. if you're interested in the how this site is built, see
 [its project page](projects/razza.io).
-
-P.P.S. also check out [links] and [uses].
-
-[links]: links
-[uses]: uses
-
-[^4]: stuff like 3D printing, woodworking etc.

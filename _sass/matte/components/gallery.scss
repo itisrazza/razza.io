@@ -1,5 +1,6 @@
 @use "../focus";
 @use "../chrome";
+@use "../colours.scss";
 
 .gallery-tiles {
   display: grid;
@@ -60,9 +61,11 @@
 
 .lightboxes {
   .lightbox {
-    display: none;
+    @include colours.dark-scheme();
+
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: stretch;
 
     position: fixed;
@@ -71,21 +74,30 @@
     right: 0;
     bottom: 0;
 
-    backdrop-filter: saturate(150%) blur(32px);
     background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    opacity: 0;
+
+    transform: scale(0.9);
+    border-radius: 2rem;
+
+    will-change: opacity, transform;
+    transition: opacity 0.25s, transform 0.25s, border-radius 0.25s;
+    backdrop-filter: saturate(150%) blur(32px);
     overflow: hidden;
 
+    pointer-events: none;
+
     .lightbox-content {
-      display: flex;
+      display: contents;
       flex-direction: column;
 
       margin: 2rem;
       overflow-x: hidden;
       overflow-y: auto;
 
-      background: var(--colour-background);
-      color: var(--colour-foreground);
-      border-radius: 0.5rem;
+      will-change: transform;
+      transition: transform 0.2s;
 
       .lightbox-close {
         display: flex;
@@ -97,7 +109,7 @@
 
         position: fixed;
         top: 1rem;
-        right: 1rem;
+        left: 1rem;
         border-radius: 50%;
 
         background: rgba(0, 0, 0, 0.8);
@@ -112,7 +124,7 @@
 
       .lightbox-image {
         flex-grow: 1;
-        background: black;
+        padding: 2rem;
 
         img {
           width: 100%;
@@ -146,20 +158,28 @@
           }
         }
       }
+    }
 
-      @media screen and (min-width: chrome.$breakpoint-l) {
-        flex-direction: row;
-        overflow: hidden;
+    @media screen and (min-width: chrome.$breakpoint-l) {
+      flex-direction: row;
+      overflow: hidden;
 
-        .lightbox-meta {
-          overflow-y: auto;
-          min-width: 16rem;
-        }
+      .lightbox-meta {
+        overflow-y: auto;
+        min-width: 16rem;
+      }
+
+      .lightbox-image {
+        padding: 1rem;
       }
     }
 
     &:target {
-      display: flex;
+      opacity: 1;
+      pointer-events: all;
+
+      transform: scale(1.0);
+      border-radius: 0;
     }
   }
 }

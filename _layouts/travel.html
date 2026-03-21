@@ -1,0 +1,31 @@
+---
+layout: chrome
+nav_tag: travels
+---
+
+<header>
+  <h1>{{ page.title }} {% if page.alt_title %}<div class="alt-title">{{ page.alt_title }}</div>{% endif %}</h1>
+  <p class="country-label"><img src="/assets/icons/countries/{{ page.country }}.svg"> {{ site.data.countries[page.country].label }}</p>
+</header>
+
+<main class="chrome-inset">
+  <article>{{ content }}</article>
+</main>
+
+<section id="gallery">
+  <h2 class="chrome-inset">Gallery</h2>
+  <div class="gallery-tiles">
+    {% for image in site.data.gallery %}
+      {% assign suffixed = image.travel | append: ".md" %}
+      {% if page.name == suffixed %}
+        {% include gallery-tile.html %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="lightboxes">
+    {% for image in site.data.gallery %}
+      {% include gallery-lightbox.html %}
+    {% endfor %}
+  </div>
+</section>

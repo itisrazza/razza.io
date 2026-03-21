@@ -1,12 +1,24 @@
 - tag: home
+  icon: house
   label: Home
   path: /
 - tag: projects
+  icon: hammer
   label: Projects
   path: /projects
 - tag: notes
+  icon: files
   label: Notes
   path: /notes
+- tag: gallery
+  icon: images
+  label: Gallery
+  path: /gallery
+- tag: travels
+  icon: compass
+  label: Travels
+  path: /travels
 - tag: about
+  icon: person-fill
   label: About
   path: /about

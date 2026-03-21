@@ -4,13 +4,7 @@ nav_tag: home
 ---
 
 <header class="page-header">
-  <h1>Raresh Nistor</h1>
-  <p>
-    I’m a software developer. This is the place where I link to
-    <a href="{{ 'projects' | relative_url }}">projects I’ve worked on</a>,
-    <a href="{{ 'notes' | relative_url }}">some of my notes</a> and how you can
-    get in touch with me.
-  </p>
+  <h1 data-ref="name">Rareș Nistor</h1>
 </header>
 
 <section class="home-links">
@@ -26,6 +20,10 @@ nav_tag: home
     <a href="{{ 'gallery' | relative_url }}">
       <span class="home-section-link-icon"><i class="bi bi-images"></i></span>
       <span class="home-section-link-label">Gallery</span>
+    </a>
+    <a href="{{ 'travels' | relative_url }}">
+      <span class="home-section-link-icon"><i class="bi bi-compass"></i></span>
+      <span class="home-section-link-label">Travels</span>
     </a>
   </div>
   <div class="home-personal-links">
@@ -73,3 +71,24 @@ nav_tag: home
     </a>
   </footer>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const NAMES = [ "Rareș Nistor", "Raresh Nistor" ];
+    let selectedName = 0;
+
+    const nameElement = document.querySelector("[data-ref='name']");
+
+    if (nameElement == null) {
+      console.error("Can't find element to change the name on");
+      return;
+    }
+
+    const changeName = () => {
+      selectedName = (selectedName + 1) % NAMES.length;
+      nameElement.innerText = NAMES[selectedName];
+    };
+
+    nameElement.addEventListener("click", () => changeName());
+  });
+</script>

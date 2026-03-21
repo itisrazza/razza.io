@@ -4,7 +4,7 @@
     name: Governor's Bay, Christchurch, NZ
     link: https://maps.app.goo.gl/otiZaMzaCD7zUkNL8
   camera: canon-powershot-g7x-mk2
-  travel: 2025-christchurch
+  travel: christchurch
 
 - id: give-way-to-ruins
   title: Give Way to Ruins
@@ -12,7 +12,7 @@
     name: Avonside Green Zone, Christchurch, NZ
     link: https://maps.app.goo.gl/a9Scug2nfAYY7Ze46
   camera: canon-powershot-g7x-mk2
-  travel: 2025-christchurch
+  travel: christchurch
 
 - id: red-zone-poles
   title: Abandoned Poles
@@ -20,7 +20,7 @@
     name: Avonside Green Zone, Christchurch, NZ
     link: https://maps.app.goo.gl/a9Scug2nfAYY7Ze46
   camera: canon-powershot-g7x-mk2
-  travel: 2025-christchurch
+  travel: christchurch
 
 - id: waituna-west-garage
   title: Waituna West Garage

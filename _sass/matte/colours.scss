@@ -50,3 +50,11 @@ $dark-accent: oklch(0.8 0.2 80);
     @include dark-scheme();
   }
 }
+
+.scheme-light {
+  @include light-scheme();
+}
+
+.scheme-dark {
+  @include dark-scheme();
+}

@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: stretch;
   padding-inline: 0.5rem;
+  view-transition-name: navigation;
 
   label {
     display: flex;
@@ -38,6 +39,8 @@
         color: unset;
         border: 2px solid transparent;
         border-radius: 1e99rem;
+        gap: 0.5em;
+        min-width: 2em;
 
         &.current,
         &:active {
@@ -46,6 +49,14 @@
 
         &:hover {
           border-color: var(--colour-edge);
+        }
+
+        .navigation-label {
+          display: none;
+        }
+
+        .navigation-label-expanded {
+          display: inline;
         }
 
         @include focus.hide-for-mouse();
@@ -112,6 +123,10 @@
 
           &.current {
             background-color: var(--colour-edge);
+          }
+
+          .navigation-label {
+            display: inline;
           }
         }
       }

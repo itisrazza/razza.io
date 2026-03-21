@@ -1,0 +1,48 @@
+@use "../components/button";
+@use "../typography";
+
+.layout-travel .page-chrome {
+  > header {
+
+  }
+}
+
+.country-label {
+  background-color: var(--colour-background);
+  color: var(--colour-foreground);
+
+  display: inline-flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-self: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.8rem;
+
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+
+  img {
+    height: 1rem;
+  }
+}
+
+.travel-tile {
+  @include button.button();
+
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.125rem;
+
+  >.title {
+    @include typography.heading("h6");
+
+    .alt-title {
+      opacity: 0.6;
+
+      &::before { content: '(' }
+      &::after { content: ')' }
+    }
+  }
+}

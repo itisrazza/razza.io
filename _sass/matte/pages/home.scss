@@ -3,6 +3,11 @@
 @use "../chrome.scss";
 
 .layout-home {
+  [data-ref='name'] {
+    cursor: pointer;
+    user-select: none;
+  }
+
   .home-links {
     display: flex;
     flex-direction: column;
@@ -10,7 +15,7 @@
 
     .home-section-links {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 0.5rem;
 
       a {

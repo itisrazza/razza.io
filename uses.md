@@ -1,6 +1,8 @@
 ---
 layout: page
 permalink: /uses
+nav_tag: about
+
 title: Uses
 subtitle: |
   A non-exhaustive list of things I use day-to-day I think is worth sharing.
