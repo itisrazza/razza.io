@@ -2,6 +2,6 @@
     <span class="country-label"><img src="/assets/icons/countries/{{ travel.country }}.svg"> {{ site.data.countries[travel.country].label }}</span>
     <span class="title">
         <span class="title">{{ travel.title }}</span>
-        {{ if travel.alt_title }}<span class="alt-title">{{ travel.alt_title }}</span>{{ endif }}
+        {% if travel.alt_title %}<span class="alt-title">{{ travel.alt_title }}</span>{% endif %}
     </span>
 </a>
