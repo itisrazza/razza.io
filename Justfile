@@ -14,9 +14,9 @@ js:
 thumbs:
     ./_scripts/generate-gallery-thumbnails.sh
 
-# Jekyll production build
+# Jekyll production build (set BASEURL env var to pass --baseurl)
 jekyll:
-    bundle exec jekyll build
+    bundle exec jekyll build ${BASEURL:+--baseurl "$BASEURL"}
 
 # Development server: esbuild watch + gallery watch + Jekyll serve
 serve: thumbs js

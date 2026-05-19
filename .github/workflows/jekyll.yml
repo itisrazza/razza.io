@@ -16,10 +16,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Just
+        uses: extractions/setup-just@v2
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: npm
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -30,13 +33,14 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install additional dependencies
         run: sudo apt-get update -y && sudo apt-get install imagemagick -y
-      - name: Run pre-build scripts
-        run: bash _scripts/generate.sh
-      - name: Build with Jekyll
-        run: npm run build --baseurl "${{ steps.pages.outputs.base_path }}"
+      - name: Install Node dependencies
+        run: npm ci
+      - name: Build
+        run: just ci
         env:
           JEKYLL_ENV: production
           TZ: Pacific/Auckland
+          BASEURL: ${{ steps.pages.outputs.base_path }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
