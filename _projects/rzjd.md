@@ -17,17 +17,20 @@ links:
 rzjd (Razza's [Johnny.Decimal] System Manager) is a tool to keep your notes
 organised. It is designed to be used both interactively and through scripts.
 
+Development stalled due to inconvenient data syncing, and eventually the project
+lost its purpose when I moved off [Johnny.Decimal] altogether. May revisit if I
+come back to a JD-style system.
+
 ## Design
 
-I had used [Go] for this project for the following reasons:
+I used [Go] for this project because:
 
-* It compiles to a simple executable which can simply be added to `PATH`,
-* and it is easy to [compile binaries for other platforms](https://github.com/itisrazza/rzjd/blob/main/scripts/build-all.sh).
-* This was an opportunity try out [Charm]'s terminal UI libraries.
+* It compiles to a simple executable that can be added to `PATH`,
+* cross-compiling for other platforms is straightforward,
+* and it was an opportunity to try out [Charm]'s terminal UI libraries.
 
-On the user interaction front, the `explore` mode was inspired by programs such
-as [calcurse] and [ranger], and should feel at home on a minimalist Linux
-desktop.
+The `explore` mode was inspired by [calcurse] and [ranger], and is designed to
+feel at home on a minimalist Linux desktop.
 
 [calcurse]: https://www.calcurse.org/
 [ranger]: https://github.com/ranger/ranger

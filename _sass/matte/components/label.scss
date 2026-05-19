@@ -1,9 +1,10 @@
 .label {
     font-size: 0.875rem;
+    line-height: 1.325em;
 
     background-color: var(--colour-foreground);
     color: var(--colour-background);
-    padding: 0.125rem 0.5rem;
+    padding: 0.125rem 0.325rem;
     border-radius: 0.25rem;
 
     &.label-wip {

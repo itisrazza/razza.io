@@ -1,7 +1,7 @@
 ---
 title: SuperSize
 description: Resize windows across multiple displays
-link: https://github.com/itisrazza/SuperSize
+archived: true
 layout: project
 platforms: [ Windows ]
 links:
@@ -10,6 +10,14 @@ links:
   - label: GitHub
     url: https://github.com/itisrazza/SuperSize
 ---
+
+<div class="alert alert-archived">
+  <p>SuperSize is being archived.</p>
+  <p>I no longer use Windows on the daily and no longer plan to develop this
+    project further.</p>
+  <p>I'm currently cleaning up documentation and working on documentation in
+    case it may be useful to someone else.</p>
+</div>
 
 SuperSize lets you maximise your window across multiple displays for maximum
 work (or play). It includes a couple of presets to define the window position
@@ -211,4 +219,4 @@ to let you adapt it to your use case.
 
 ## Download
 
-Releases are [publised directly on GitHub](https://github.com/itisrazza/SuperSize/releases) as portable executables.
+Releases are [published directly on GitHub](https://github.com/itisrazza/SuperSize/releases) as portable executables.

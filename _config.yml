@@ -1,4 +1,4 @@
-title: Raresh Nistor
+title: Rareș Nistor
 # description: >- # this means to ignore newlines until "baseurl:"
 #   Write an awesome description for your new site here. You can edit this
 #   line in _config.yml. It will appear in your document head meta (for
@@ -7,7 +7,7 @@ title: Raresh Nistor
 baseurl: ""
 url: "https://razza.io"
 
-author: Raresh Nistor
+author: Rareș Nistor
 
 collections:
   projects:
@@ -22,7 +22,7 @@ collections:
 
 feed:
   excerpt_only: true
-  author: Raresh Nistor
+  author: Rareș Nistor
 
 plugins:
   - jekyll-feed

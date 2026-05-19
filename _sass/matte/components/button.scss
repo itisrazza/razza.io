@@ -20,6 +20,7 @@
   }
 
   &:active {
+    outline: 1px solid var(--colour-edge);
     background: var(--colour-edge);
     text-decoration: none;
   }

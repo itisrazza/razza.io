@@ -13,13 +13,17 @@ platforms: [ WIP, Windows ]
 featured: true
 ---
 
-<div class="callout callout-info"><b>Update:</b> VGAPainter is planned to be revived and updated in the near future.</div>
+<div class="alert"><b>Note:</b> If you're looking for a pixel art editor, you should really just use <a href="https://www.aseprite.org/">Aseprite</a>. This is mostly a personal exercise.</div>
 
-VGAPainter is a 256-color bitmap editor primarily targeting VGA mode 13h. It also supports custom palletes, importing and exporting to true colour formats and a binary bitmap format.
+VGAPainter is a 256-color bitmap editor primarily targeting VGA mode 13h. It also supports custom palettes, importing and exporting to true colour formats and a binary bitmap format.
 
 This was created as an experiment and means of generating visuals capable of display in MS-DOS. But it can also be used in making pixel art for other systems as well.
 
-# System Requirements
+## Planned rewrite
+
+The current version targets Windows and is built on .NET. A rewrite in Kotlin using the Swing toolkit is planned — partly to bring it cross-platform, but mostly as an exercise to build a template for future JVM-based applications.
+
+## System Requirements
 
 |                    | GitHub Releases             | Microsoft Store                   |
 |--------------------|-----------------------------|-----------------------------------|

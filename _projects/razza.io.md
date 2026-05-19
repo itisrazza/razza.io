@@ -17,11 +17,15 @@ custom theme written largely by hand with HTML and [SCSS].
 [GitHub Pages]: https://pages.github.com/
 [SCSS]: https://sass-lang.com/
 
-HTML and CSS does the heavy lifting here, with some JS sprinked in to add a few
-easter eggs, analytics, or the map on the [Travels](travels) page.
+HTML and CSS do the heavy lifting here, with JavaScript sprinkled in for things
+like easter eggs[^eggs], analytics, and the map on the [Travels](travels) page — with
+more to come.[^react]
+
+[^eggs]: Try clicking my name in the footer, or opening the browser console.
+[^react]: At least it's not entirely JavaScript, unlike most React sites.
 
 This website was previously made with PHP in 2016-2022, React in 2021-2023. I
-switched to Jekyll because I keeps everything much simpler with keeping site
+switched to Jekyll because it keeps everything much simpler with keeping site
 content authored as Markdown, and saves on web server maintenance.
 
 ## Design

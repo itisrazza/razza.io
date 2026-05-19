@@ -1,0 +1,51 @@
+---
+layout: chrome
+---
+
+<header>
+  <h1>Projects</h1>
+  <p>What I work on in my free time. Mostly tools for whatever niche problem I had.</p>
+</header>
+
+<div class="project-list">
+  {% assign projects = site.projects | where: "archived", nil %}
+  {% for project in projects %}
+    {%- include project-tile.html project=project %}
+  {% endfor %}
+</div>
+
+<section id="archived">
+  <header class="chrome-inset">
+    <h2>Archived</h2>
+    <p>Some older projects I have tinkered with in the past.</p>
+  </header>
+  <div class="project-list">
+    {% assign projects = site.projects | where: "archived", "true" %}
+    {% for project in projects %}
+      {%- include project-tile.html project=project %}
+    {% endfor %}
+  </div>
+</section>
+
+<section id="one-off">
+    <header class="chrome-inset">
+        <h2>One-offs & historical</h2>
+        <p>Below are some projects I had completed and am not longer updating.</p>
+    </header>
+    <main class="project-list">
+        {% for project in site.data.projects %}
+        {% assign icon = 'assets/logos/projects/undefined.svg' %}
+        {% if project.icon %}
+        {% assign icon = 'assets/logos/projects/' | append: project.icon %}
+        {% endif %}
+
+        <a href="{{ project.link }}" class="miniproject-tile">
+            <img src="{{ icon | relative_url }}" alt="" width="32" height="32">
+            <span class="miniproject-tile-meta">
+                <span class="title">{{ project.name }}</span>
+                <span class="description">{{ project.description }}</span>
+            </span>
+        </a>
+        {% endfor %}
+    </main>
+</section>

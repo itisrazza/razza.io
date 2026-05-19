@@ -6,7 +6,7 @@ $breakpoint-l: 820px;
 $breakpoint-m: 660px;
 
 @mixin inset() {
-  padding-inline: 1.25rem;
+  padding-inline: 1.5rem;
 }
 
 body > .page-chrome {
@@ -36,6 +36,10 @@ body > .page-chrome {
     padding: 0.5rem 1.5rem;
     display: flex;
     justify-content: space-between;
+
+    #footer-name {
+      cursor: pointer;
+    }
   }
 
   .chrome-inset {

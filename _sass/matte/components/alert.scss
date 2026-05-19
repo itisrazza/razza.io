@@ -1,0 +1,16 @@
+.alert {
+  background: var(--colour-background-elevated);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+
+  p {
+    margin-block: 0.5rem;
+
+    &:first-child { margin-block-start: 0 }
+    &:last-child  { margin-block-end:   0 }
+  }
+}
+
+.chrome-inset .alert {
+  margin-inline: -1.5rem;
+}
