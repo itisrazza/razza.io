@@ -14,28 +14,36 @@ subtitle: |
 
 ### Operating system
 
+* **macOS**
 * **Linux**[^gnupluslinux]
-  * **[Arch Linux]** for high-contact devices (desktop & laptops)
+  * **[Arch Linux]** for high-contact devices (desktop & laptop VMs)
   * **[Debian]** for servers (where things have to be stable)
-* **Windows**[^windows]
+* **Windows**
 
 [Debian]: https://debian.org/
 [Fedora]: https://fedoraproject.org/
 [Arch Linux]: https://archlinux.org/
 
-I've been using Linux on-and-off since roughly 2011. I've become increasingly
+macOS is my primary daily-driver. It's a nice middle ground between the UNIX
+machinery I've gotten used to on Linux, and the wide software support Windows
+has.
+
+I've also been using Linux on-and-off since roughly 2011. I've become increasingly
 familiar with the way it works over the years and decided to take the full
-plunge as the daily driver on my desktop in August 2025.
+plunge as the daily driver on my desktop in August 2025. Haven't had any issues
+so far.
+ 
+Windows is well... Windows. It's been getting worse to use from 2022 onwards,
+so it only gets booted up a couple times per month at most.
 
-[^gnupluslinux]: some people may want it to be called GNU/Linux or GNU+Linux, but I'm not into libre purism.
-[^windows]: now permanenly relegated to my slower, secondary SSD.
+[^gnupluslinux]: some people may want it to be called GNU/Linux or GNU+Linux, but I'm not into the libre purism schtick.
 
+#### Linux desktop environment
 
-#### Desktop environment
-
-On Linux, my go-to desktop environment is **[KDE]**. It retains the desktop
-metaphor and way of working I had become accustomed to ever since I started
-using computers, and everything tends to be fairly well integrated.
+When I need to use my desktop (Linux), my go-to desktop environment is
+[KDE]. It retains the desktop metaphor and way of working I had become
+accustomed to ever since I started using computers, and everything tends to be
+fairly well integrated.
 
 Also, honourable mentions to [GNOME], [XFCE], [Niri] and [i3], where I've also
 spent a good amount of time.
@@ -62,6 +70,7 @@ spent a good amount of time.
 * **IntelliJ IDEA** and friends &mdash; Java, Rails and C# projects
 * **Visual Studio** &mdash; Windows C# projects
 * **GNOME Builder** &mdash; Desktop Linux projects
+* **Xcode** &mdash; macOS/iOS projects
 
 
 #### SDK managers
@@ -104,17 +113,17 @@ spent a good amount of time.
   <tr>
     <th></th>
     <th><img src="{{ '/assets/logos/systems/mercur.svg' | relative_url }}" alt="" width="32" height="32"><br>Mercur (desktop)</th>
-    <th><img src="{{ '/assets/logos/systems/venus.svg'  | relative_url }}" alt="" width="32" height="32"><br>Venus (laptop)</th>
+    <th><img src="{{ '/assets/logos/systems/pamant.svg' | relative_url }}" alt="" width="32" height="32"><br>Pământ (laptop)</th>
   </tr>
   <tr>
     <th>Model</th>
     <td><i>(custom built)</i></td>
-    <td>Lenovo ThinkPad T480</td>
+    <td>MacBook Pro</td>
   </tr>
   <tr>
     <th rowspan="2">OS</th>
     <td><a href="https://archlinux.org/" target="_blank">Arch Linux</a></td>
-    <td rowspan="2"><a href="https://archlinux.org/" target="_blank">Arch Linux</a></td>
+    <td rowspan="2">macOS</td>
   </tr>
   <tr>
     <td>Windows 11</td>
@@ -122,12 +131,12 @@ spent a good amount of time.
   <tr>
     <th>CPU</th>
     <td>AMD Ryzen 7 5700X</td>
-    <td>Intel Core i5-6XXX</td>
+    <td>Apple M4 Pro</td>
   </tr>
   <tr>
     <th>RAM</th>
     <td>64 GiB</td>
-    <td>12 GiB</td>
+    <td>24 GiB</td>
   </tr>
   <tr>
     <th>GPU</th>
@@ -136,31 +145,43 @@ spent a good amount of time.
   </tr>
 </table>
 
-The desktop I have initally build in 2019 to have a solid workstation to use at
-home and access while I'm at university, upgrading it over time. The guiding
+I initially built the desktop in 2019 to have a solid workstation to use at
+home and access while I'm at uni, upgrading it over time. The guiding
 principle for part choices initially was "it should run Linux well", and has
-been triple-booting Windows 10, macOS and Arch Linux for most of its life.
+been triple-booting Windows 10, macOS[^hackintosh] and Arch Linux for most of its life.
 
-Laptop-wise, I got a Lenovo ThinkPad because it happened to be the best for my
-allocated budget when I was looking at [off-lease laptops at my local
-electronics retailer](https://www.pbtech.co.nz/category/computers/exleased/laptops).
+Laptop-wise, I've sprung for a last-gen MacBook Pro. They're quite honestly the
+best laptops on the market[^laptopgood], as my needs for a laptop have outgrown
+my previous set up.
 
-At the moment, my laptop is a glorified terminal for web services and
-remote shell connections to my desktop or development virtual machine.
+[^hackintosh]: man... the Hackintosh days...
+[^laptopgood]: as of May 2026, in my opinion
+
+Previously, I used a Lenovo ThinkPad. If you don't need a lot of performance,
+and have given yourself a tight budget, it's worth squeezing the life out of an
+old business laptop, with a screwdriver, some patience and a few spare parts on
+hand.
+
+I've stopped using Windows for the most part. There is still the occasional
+need to boot it up for games that require spyware[^anticheat], or to work on
+CAD models my laptop won't run[^myfault].
+
+[^anticheat]: also known as "kernel anti-cheat"
+[^myfault]: my fault, probably. I'm an amateur when it comes to 3D modelling. 
 
 Onto peripherals:
 
 * **Keyboard:** [Logitech G512 Carbon Lightsync](https://www.pbtech.co.nz/product/KEYLOG4253602/Logitech-G512-CARBON-LIGHTSYNC-RGB-Clicky-Mechanic) &mdash;
-  I found to prefer clickier mechnical keyboards, and tend to use 102 of the 104 keys PC keyboards have had since 1995.
+  I found to prefer clickier mechanical keyboards, and tend to use 102 of the 104 keys PC keyboards have had since 1995.
 * **Mouse:** [Logitech MX Vertical](https://www.pbtech.co.nz/product/MSELOG4393045/Logitech-MX-Vertical-Advanced-Ergonomic-Wireless-M) &mdash;
   Most mice I've had in the past are too small for my hands, this one was the first comfortable one I've had.
-* **Camera:** a crappy 1080p one I can get my hands onto early-2020.
+* **Camera:** a crappy 1080p one I got my hands on in early 2020.
 * **Microphone:** Logitech Blue Yeti USB &mdash;
   Been told too many times I sounded as if I'm speaking into a can.
 * **Displays:** 2&times; DELL P2214H (1920&times;1080 @ 60Hz) &mdash;
   1080p is all you need[^1080p]. Fairly cheap[^cheap], too.
 
-[^1080p]: not really, a HiDPI display (4K/2160p) would be nicer. These are ex-lease, like my laptop.
+[^1080p]: not really, a HiDPI display (4K/2160p) would be nicer. These are ex-lease.
 [^cheap]: roughly NZ$100 each.
 
 

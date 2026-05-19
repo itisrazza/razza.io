@@ -12,6 +12,17 @@ $heading-base-varations: "YTLC" 540, "wdth" 110;
 :root {
   font-family: $body-font-family;
   font-variation-settings: $body-base-variations;
+  line-height: 1.5em;
+}
+
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+
+sub { 
+  top: 0.4em; 
 }
 
 // headings
@@ -32,6 +43,7 @@ $heading-sizes: (
   font-variation-settings: $heading-base-varations, "wght" 800;
 
   margin-block: unset;
+  line-height: 1.5em;
 }
 
 @each $level, $size in $heading-sizes {
