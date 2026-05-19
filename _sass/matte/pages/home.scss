@@ -1,97 +1,135 @@
 @use "../components/button.scss";
 @use "../typography.scss";
 @use "../chrome.scss";
+@use "../colours.scss";
 
 .layout-home {
-  [data-ref='name'] {
-    cursor: pointer;
-    user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding-block: 2rem;
+  box-sizing: border-box;
+
+  min-height: 100vh;
+  
+  @media screen and (max-width: chrome.$breakpoint-m - 1px) {
+    padding-block: 0;
+  }
+
+  .page-chrome {
+    margin-block: 0;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .home-content {
+    header svg {
+      min-width: 280px;
+      width: 60%;
+      height: auto;
+      color: var(--colour-focus);
+
+      @media screen and (min-width: chrome.$breakpoint-m) {
+        width: 360px;
+      }
+
+      @media screen and (min-width: chrome.$breakpoint-l) {
+        width: 480px;
+      }
+    }
+
+    // Stroke durations are proportional to estimated path length.
+    // Delays are cumulative so strokes appear sequentially.
+    header svg path {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      animation-name: signature-draw-stroke;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+    }
+
+    #sig-r-down     { animation-duration: 0.15s; animation-delay: 0.00s; }
+    #sig-r-sweep    { animation-duration: 0.25s; animation-delay: 0.15s; }
+    #sig-ares       { animation-duration: 0.35s; animation-delay: 0.40s; }
+    #sig-s-comma    { animation-duration: 0.10s; animation-delay: 0.75s; }
+    #sig-n-down     { animation-duration: 0.15s; animation-delay: 0.85s; }
+    #sig-n-sweep    { animation-duration: 0.20s; animation-delay: 1.00s; }
+    #sig-istor-base { animation-duration: 0.35s; animation-delay: 1.20s; }
+    #sig-it-top     { animation-duration: 0.15s; animation-delay: 1.55s; }
   }
 
   .home-links {
+    background: var(--colour-background-elevated);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    gap: 1rem;
+
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    align-items: stretch;
 
-    .home-section-links {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.5rem;
+    a {
+      font-weight: 600;
+      font-variation-settings: typography.$body-base-variations, "wght" 600;
+      text-decoration: none;
+      border-bottom: 1px dotted;
 
-      a {
-        @include button.button();
+      &:hover {
+        border-bottom-style: solid;
+      }
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0.5rem;
+      .note-date {
+        font-size: 0.9em;
+        font-weight: 400;
+        font-variation-settings: typography.$body-base-variations;
 
-        .home-section-link-icon {
-          font-size: 32px;
-        }
-
-        .home-section-link-label {
-          @include typography.heading("h6");
-        }
+        &::before { content: "(" }
+        &::after  { content: ")" }
       }
     }
 
-    .home-personal-links {
+    .link-section {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: stretch;
-      gap: 0.5rem;
+      gap: 1em;
 
-      .home-social-links {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-        gap: 0.5rem;
-
-        a {
-          @include button.button();
-        }
-      }
-
-      .home-about-links {
+      .link-group {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-
-        a {
-          @include button.button();
-        }
+        align-items: start;
+        gap: 0.25em;
       }
+
+      /* @media screen and (min-width: $breakpoint-m) {
+        .link-group {
+          display: flex;
+          gap: 1em;
+        }
+      } */
     }
 
     @media screen and (min-width: chrome.$breakpoint-m) {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
+      gap: 0.25em;
+
+      .link-section {
+        gap: 1em;
+
+        .link-group {
+          flex-direction: row;
+          gap: 1em;
+        }
+      }
     }
   }
+}
 
-  .home-list {
-    background: var(--colour-background-elevated);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    gap: 0.5rem;
-    display: flex;
-    flex-direction: column;
+@keyframes signature-draw-stroke {
+  to { stroke-dashoffset: 0; }
+}
 
-    >header {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding-inline: 1rem;
-    }
-
-    >footer {
-      display: flex;
-      gap: 0.25rem;
-      justify-content: flex-end;
-    }
+@media (prefers-reduced-motion: reduce) {
+  .layout-home header svg path {
+    animation: none;
+    stroke-dashoffset: 0;
   }
 }

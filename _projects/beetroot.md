@@ -10,6 +10,7 @@ links:
     url: https://beetroot.live/
   - label: GitHub
     url: https://github.com/beetroot-music
+archived: true
 ---
 
 > Beetroot is currently in development.

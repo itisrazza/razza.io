@@ -24,11 +24,11 @@ body > .page-chrome {
   @media screen and (min-width: $breakpoint-m) {
     margin-block: 32px;
 
-    max-width: $width-m;
+    width: $width-m;
   }
 
   @media screen and (min-width: $breakpoint-l) {
-    max-width: $width-l;
+    width: $width-l;
   }
 
   > footer {

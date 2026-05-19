@@ -1,17 +1,5 @@
 @use "sass:map";
 
-$light-background: oklch(0.95 0 0);
-$light-background-elevated: oklch(0.9 0.0125 250);
-$light-edge: oklch(0.775 0.0125 250);
-$light-foreground: oklch(0 0 0);
-$light-accent: oklch(0.45 0.165 250);
-
-$dark-background: oklch(0.2 0.015 275.0);
-$dark-background-elevated: oklch(0.3 0.02 275.0);
-$dark-edge: oklch(0.5 0.02 275.0);
-$dark-foreground: oklch(1 0 0);
-$dark-accent: oklch(0.8 0.2 80);
-
 $chroma: (
   "light": 300,
   "dark":  295,
@@ -25,7 +13,7 @@ $light: (
   "edge":                oklch(75% 30% map.get($chroma, "light")), // interactable edge components
   "edge-active":         oklch(50% 25% map.get($chroma, "light")), // selected edges
   "accent":              oklch(45% 50% 265),                       // links
-  "focus":               oklch(70% 35% map.get($chroma, "focus")), // signature / focus ring
+  "focus":               #D000FF,
 );
 
 $dark: (
@@ -35,7 +23,7 @@ $dark: (
   "edge":                oklch(40% 30% map.get($chroma, "dark")),
   "edge-active":         oklch(50% 25% map.get($chroma, "dark")),
   "accent":              oklch(80% 60% 80),                     
-  "focus":               oklch(70% 35% map.get($chroma, "focus")),
+  "focus":               #D000FF,
 );
 
 $schemes: (

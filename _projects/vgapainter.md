@@ -9,7 +9,8 @@ links:
     url: https://www.microsoft.com/store/apps/9NLF1CTQ6Z49
   - label: GitHub
     url: https://github.com/thegreatrazz/VGAPainter
-platforms: [ Windows ]
+platforms: [ WIP, Windows ]
+featured: true
 ---
 
 <div class="callout callout-info"><b>Update:</b> VGAPainter is planned to be revived and updated in the near future.</div>

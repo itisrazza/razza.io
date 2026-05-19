@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: stretch;
   padding-inline: 0.5rem;
-  view-transition-name: navigation;
+  // view-transition-name: navigation;
 
   label {
     display: flex;
@@ -72,11 +72,12 @@
     display: none;
   }
 
-  @media screen and (max-width: chrome.$breakpoint-m) {
+  @media screen and (max-width: chrome.$breakpoint-m - 1px) {
     position: sticky;
     top: 0.5rem;
     flex-direction: column;
     padding-inline: unset;
+    z-index: 99;
 
     label[for="navigation-toggle"] {
       @include button.button();

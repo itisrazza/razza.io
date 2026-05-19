@@ -1,94 +1,50 @@
 ---
 layout: chrome
 nav_tag: home
+html_classes: 
 ---
 
-<header class="page-header">
-  <h1 data-ref="name">Rareș Nistor</h1>
-</header>
-
-<section class="home-links">
-  <div class="home-section-links">
-    <a href="{{ 'projects' | relative_url }}">
-      <span class="home-section-link-icon"><i class="bi bi-hammer"></i></span>
-      <span class="home-section-link-label">Projects</span>
-    </a>
-    <a href="{{ 'notes' | relative_url }}">
-      <span class="home-section-link-icon"><i class="bi bi-files"></i></span>
-      <span class="home-section-link-label">Notes</span>
-    </a>
-    <a href="{{ 'gallery' | relative_url }}">
-      <span class="home-section-link-icon"><i class="bi bi-images"></i></span>
-      <span class="home-section-link-label">Gallery</span>
-    </a>
-    <a href="{{ 'travels' | relative_url }}">
-      <span class="home-section-link-icon"><i class="bi bi-compass"></i></span>
-      <span class="home-section-link-label">Travels</span>
-    </a>
-  </div>
-  <div class="home-personal-links">
-    <div class="home-social-links">
-      <a href="https://github.com/itisrazza"><i class="bi bi-github"></i></a>
-      <a href="https://linkedin.com/in/rareshn">
-        <i class="bi bi-linkedin"></i>
-      </a>
-      <a href="mailto:raresh@nistor.email"><i class="bi bi-envelope-at"></i> </a>
-    </div>
-    <div class="home-about-links">
-      <a href="{{ 'about' | relative_url }}"><i class="bi bi-person-fill"></i> About</a>
-      <a href="{{ 'links' | relative_url }}"><i class="bi bi-link"></i> Links</a>
-      <a href="{{ 'uses'  | relative_url }}"><i class="bi bi-hammer"></i> Uses</a>
-    </div>
-  </div>
-</section>
-
-<section class="home-list">
+<div class="home-content">
   <header>
-    <h2 class="text-h6">Projects</h2>
+    {%- include signature.svg -%}
+    <p>i make things. software mostly, with lots of detours on the way.</p>
   </header>
-  <main>{%- include project-list.html -%}</main>
-  <footer>
-    <a href="{{ 'projects' | relative_url }}" class="button">More <i class="bi bi-arrow-up-right"></i></a>
-  </footer>
-</section>
 
-<section class="home-list">
-  <header>
-    <h2 class="text-h6">Notes</h2>
-  </header>
-  <main class="note-list">
-    {%- assign notes = site.notes | reverse | slice: 0, 5 -%}
-    {%- for note in notes -%}
-      {%- include note-tile.html -%}
-    {%- endfor -%}
-  </main>
-  <footer>
-    <a href="/feed.xml" class="button" title="Atom Feed">
-      <i class="bi bi-rss-fill"></i>
-    </a>
-    <a href="{{ 'notes' | relative_url }}" class="button">
-      More <i class="bi bi-arrow-up-right"> </i>
-    </a>
-  </footer>
-</section>
+  <div class="home-links">
+    <div class="link-section">
+      {% assign projects = site.projects | where: "featured", "true" %}
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const NAMES = [ "Rareș Nistor", "Raresh Nistor" ];
-    let selectedName = 0;
+      <i class="bi bi-hammer"></i>
+      <div class="link-group">
+	{% for project in projects %}
+          {% assign logo = 'assets/logos/projects/' | append: project.slug | append: '.svg' %}
 
-    const nameElement = document.querySelector("[data-ref='name']");
+          <a href="{{ project.url | relative_url }}"><img src="{{ logo | relative_url }}" alt="" width="16" height="16"> {{ project.title }}</a>
+	{% endfor %}
+	<a href="{{ 'projects' | relative }}">More <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+    </div>
+    
+    <div class="link-section">
+      {% assign note = site.notes | last %}
+     
+      <i class="bi bi-newspaper"></i>
+      <div class="link-group">
+	<a href="{{ note.url | relative_url }}">{{ note.title }} <span class="note-date">{{ note.date | date: "%B %e, %Y" }}</a>
+	<a href="{{ 'notes' | relative_url }}">More <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+    </div>
+    
+    <div class="link-section">
+      {% assign note = site.notes | last %}
+     
+      <i class="bi bi-person-fill"></i>
+      <div class="link-group">
+	<a href="{{ 'about' | relative_url }}">About</a>
+	<a href="{{ 'links' | relative_url }}">Links</a>
+	<a href="{{ 'uses'  | relative_url }}">Uses</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-    if (nameElement == null) {
-      console.error("Can't find element to change the name on");
-      return;
-    }
-
-    const changeName = () => {
-      selectedName = (selectedName + 1) % NAMES.length;
-      nameElement.innerText = NAMES[selectedName];
-    };
-
-    nameElement.addEventListener("click", () => changeName());
-  });
-</script>

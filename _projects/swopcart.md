@@ -2,6 +2,7 @@
 layout: project
 published: true
 wip: true
+featured: true
 
 title: Swopcart
 description: Self-hosted personal video game library manager
