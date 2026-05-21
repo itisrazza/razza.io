@@ -4,9 +4,10 @@
 code,
 kbd,
 pre {
+  --text-mono: 1;
+  --text-crsv: 0;
+
   font-family: typography.$mono-font-family;
-  font-feature-settings: "ss03" on, "ss04" on, "ss05" on, "cv02" on, "cv03" on,
-    "cv04" on;
 }
 
 code {

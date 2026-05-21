@@ -70,8 +70,7 @@
     align-items: stretch;
 
     a {
-      font-weight: 600;
-      font-variation-settings: typography.$body-base-variations, "wght" 600;
+      --text-wght: 600;
       text-decoration: none;
       border-bottom: 1px dotted;
 
@@ -81,8 +80,7 @@
 
       .note-date {
         font-size: 0.9em;
-        font-weight: 400;
-        font-variation-settings: typography.$body-base-variations;
+        --text-wght: 400;
 
         &::before { content: "(" }
         &::after  { content: ")" }

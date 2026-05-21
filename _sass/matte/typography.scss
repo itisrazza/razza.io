@@ -1,18 +1,29 @@
 @use "sass:map";
 
-$body-font-family: "Nunito Sans", "Inter", sans-serif;
+$body-font-family: "Recursive", sans-serif;
 $heading-font-family: $body-font-family;
-$mono-font-family: "Commit Mono", "Berkeley Mono", monospace;
-
-$body-base-variations: "YTLC" 540, "opsz" 8;
-$heading-base-varations: "YTLC" 540, "wdth" 110;
+$mono-font-family: $body-font-family;
 
 //
 
 :root {
+  --text-wght: 400;
+  --text-casl: 0;
+  --text-crsv: 0.5;
+  --text-mono: 0;
+  --text-slnt: 0;
+
   font-family: $body-font-family;
-  font-variation-settings: $body-base-variations;
   line-height: 1.5em;
+}
+
+* {
+  font-variation-settings:
+    "wght" var(--text-wght),
+    "CASL" var(--text-casl),
+    "CRSV" var(--text-crsv),
+    "MONO" var(--text-mono),
+    "slnt" var(--text-slnt);
 }
 
 sup, sub {
@@ -37,11 +48,12 @@ $heading-sizes: (
 );
 
 @mixin heading($size) {
-  font-family: $heading-font-family;
-  font-size: map.get($heading-sizes, $size);
-  font-weight: normal;
-  font-variation-settings: $heading-base-varations, "wght" 800;
+  --text-wght: 800;
+  --text-casl: 1;
+  --text-crsv: 1;
+  --text-slnt: -5;
 
+  font-size: map.get($heading-sizes, $size);
   margin-block: unset;
   line-height: 1.5em;
 }
