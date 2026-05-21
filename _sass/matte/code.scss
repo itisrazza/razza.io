@@ -4,8 +4,8 @@
 code,
 kbd,
 pre {
-  --text-mono: 1;
-  --text-crsv: 0;
+  --font-var-mono: 1;
+  --font-var-crsv: 0;
 
   font-family: typography.$mono-font-family;
 }

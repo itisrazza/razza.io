@@ -1,21 +1,17 @@
 @use "sass:map";
 
-$body-font-family: "Nunito Sans", "Inter", sans-serif;
-$heading-font-family: "Recursive", sans-serif;
-$mono-font-family: "Recursive", sans-serif;
+$body-font-family: "Recursive", "Noto Sans", "Noto Sans JP", sans-serif;
+$heading-font-family: $body-font-family;
+$mono-font-family: $body-font-family;
 
 //
 
 :root {
-  // Recursive axes (headings, mono)
-  --text-wght: 400;
-  --text-casl: 0;
-  --text-crsv: 0.5;
-  --text-mono: 0;
-  --text-slnt: 0;
-  // Nunito Sans axes (body)
-  --text-ytlc: 540;
-  --text-opsz: 8;
+  --font-var-wght: 400;
+  --font-var-casl: 0;
+  --font-var-crsv: 0.5;
+  --font-var-mono: 0;
+  --font-var-slnt: 0;
 
   font-family: $body-font-family;
   line-height: 1.5em;
@@ -23,13 +19,21 @@ $mono-font-family: "Recursive", sans-serif;
 
 * {
   font-variation-settings:
-    "wght" var(--text-wght),
-    "CASL" var(--text-casl),
-    "CRSV" var(--text-crsv),
-    "MONO" var(--text-mono),
-    "slnt" var(--text-slnt),
-    "YTLC" var(--text-ytlc),
-    "opsz" var(--text-opsz);
+    "wght" var(--font-var-wght),
+    "CASL" var(--font-var-casl),
+    "CRSV" var(--font-var-crsv),
+    "MONO" var(--font-var-mono),
+    "slnt" var(--font-var-slnt);
+}
+
+b, strong {
+  --font-var-wght: 700;
+}
+
+em, i {
+  font-style: italic;
+  --font-var-slnt: -15;
+  --font-var-crsv: 1;
 }
 
 sup, sub {
@@ -54,12 +58,10 @@ $heading-sizes: (
 );
 
 @mixin heading($size) {
-  --text-wght: 800;
-  --text-casl: 1;
-  --text-crsv: 1;
-  --text-slnt: -5;
+  --font-var-wght: 800;
+  --font-var-casl: 1;
+  --font-var-slnt: -5;
 
-  font-family: $heading-font-family;
   font-size: map.get($heading-sizes, $size);
   margin-block: unset;
   line-height: 1.5em;
@@ -86,6 +88,15 @@ $heading-sizes: (
 .text-smaller {
   font-size: 0.875rem;
 }
+
+.bold   { --font-var-wght: 700; }
+.italic {
+  font-style: italic;
+  --font-var-slnt: -15;
+  --font-var-crsv: 1;
+}
+.cursive-always { --font-var-crsv: 1; }
+.cursive-never  { --font-var-crsv: 0; }
 
 // link
 
