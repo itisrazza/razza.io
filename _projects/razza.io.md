@@ -39,11 +39,7 @@ I created a mockup in [Figma] before implementing it.
 
 [Figma]: https://www.figma.com/design/4DOj6e0gjkjN80ejJBvFqr/Razza-Design?node-id=3-25&t=WsewlEItHQ3YZFem-1
 
-For typography, the main body text is [Nunito Sans] with the lower case height
-increased and optical size reduced[^razza-sans]. For monospace text, I use
-[Commit Mono].
+For typography, I use [Recursive] — a variable font that covers both the body
+and monospace text, with axes for weight, slant, casualness, and mono style.
 
-[^razza-sans]: in other projects where variable font support is limited, you may see a "Razza Sans" instead
-
-[Nunito Sans]: https://fonts.google.com/specimen/Nunito+Sans
-[Commit Mono]: https://commitmono.com/
+[Recursive]: https://www.recursivefont.com/
