@@ -60,6 +60,7 @@ $heading-sizes: (
 @mixin heading($size) {
   --font-var-wght: 800;
   --font-var-casl: 1;
+  --font-var-crsv: 1;
   --font-var-slnt: -5;
 
   font-size: map.get($heading-sizes, $size);
@@ -89,14 +90,23 @@ $heading-sizes: (
   font-size: 0.875rem;
 }
 
-.bold   { --font-var-wght: 700; }
-.italic {
+.t-bold   { --font-var-wght: 700; }
+.t-italic {
   font-style: italic;
   --font-var-slnt: -15;
   --font-var-crsv: 1;
 }
-.cursive-always { --font-var-crsv: 1; }
-.cursive-never  { --font-var-crsv: 0; }
+.t-cursive-always { --font-var-crsv: 1; }
+.t-cursive-never  { --font-var-crsv: 0; }
+
+.t-linear         { --font-var-casl: 0; }
+.t-linear-mostly  { --font-var-casl: 0.25; }
+.t-casual-somewhat{ --font-var-casl: 0.5; }
+.t-casual-mostly  { --font-var-casl: 0.75; }
+.t-casual         { --font-var-casl: 1; }
+
+.t-mono           { --font-var-mono: 1; }
+.t-proportional   { --font-var-mono: 0; }
 
 // link
 
