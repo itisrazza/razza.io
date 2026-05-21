@@ -2,7 +2,8 @@
   max-width: 100%;
 }
 
-.chrome-inset article img.full {
+.chrome-inset article img.full,
+.chrome-inset article video.full {
   display: block;
   width: calc(100% + 3rem);
   margin-inline: -1.5rem;
