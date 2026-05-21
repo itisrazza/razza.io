@@ -41,6 +41,8 @@ jobs:
           JEKYLL_ENV: production
           TZ: Pacific/Auckland
           BASEURL: ${{ steps.pages.outputs.base_path }}
+      - name: Remove original gallery photos from artifact
+        run: rm -f _site/assets/gallery/*.jpg
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 

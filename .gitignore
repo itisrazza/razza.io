@@ -11,6 +11,7 @@ node_modules/
 
 # generated assets
 assets/gallery/thumbs/
+assets/gallery/large/
 
 # claude code
 CLAUDE.md
