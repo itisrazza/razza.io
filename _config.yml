@@ -54,3 +54,4 @@ exclude:
   - package.json
   - package-lock.json
   - tsconfig.json
+  - CLAUDE.md
