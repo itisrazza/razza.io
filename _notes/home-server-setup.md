@@ -3,13 +3,18 @@ layout: post
 title:  "Home Server Setup"
 date:   2021-08-28
 categories: notes linux
+
 ---
 
-<aside>
-⚠️ I’ll be updating this soon when I have the time.
-</aside>
+<div class="callout callout-migrated" markdown="1">
+<i class="bi bi-clock-history"></i> Originally published on [Notion](https://www.notion.so/razza/Home-File-Server-Setup-ad3e3fedee164295a9461c00a9720cfc).
 
-A new note in a while, eh? New Zealand has gone into lockdown and I suddenly had a lot of free time on my hands. So I set up a Minecraft server on my home server and after playing with my friends and having that server moved over to a friend's who has way more powerful metal to carry it, I though I might as well install Windows Server on it to provide some extra services I couldn't get working on Linux, like WDS.
+This is the original article with a few markup changes, spelling and grammatical fixes, and removal of a dead link.
+
+It reflects my setup at the time of writing — things have changed since. A new post is coming when it’s time.
+</div>
+
+A new note in a while, eh? New Zealand has gone into lockdown and I suddenly had a lot of free time on my hands. So I set up a Minecraft server on my home server and after playing with my friends and having that server moved over to a friend's who has way more powerful metal to carry it, I thought I might as well install Windows Server on it to provide some extra services I couldn't get working on Linux, like WDS.
 
 That venture ended in failure with Windows failing to activate as another one of my friends reprimanded me for trying such a thing.
 
@@ -17,7 +22,7 @@ So here I am, running back to good old trusty Debian Linux.
 
 # Debian Install and Config
 
-The first thing to do is to say *arrivederci* to Windows Server and reinstall Debian. Luckily Debian 11 was released last weekend, which means I've got something in exchange for my boneheadedness. Luckily I already had a backup with all the data from before I tried to install Windows and will be restoring that.
+The first thing to do is to say *arrivederci* to Windows Server and reinstall Debian. Debian 11 was released last weekend, which means I've got something in exchange for my boneheadedness. Luckily I already had a backup with all the data from before I tried to install Windows and will be restoring that.
 
 The computer running this is an older desktop computer for the early Windows 8 era with the DVD drive swapped out with a 4TB hard drive. Connected to it, I have an external 4TB hard drive to act as a copy of the internal one. Its primary role is to host both SMB and SFTP shares me and my brother can access from within our home.
 
@@ -25,6 +30,7 @@ After installing Debian, I then installed an SSH server and exFAT driver to read
 
 I've also set up a static IP within my home network so I can easily access it from other machines without having the IP address keep changing. I'll write down the config for future reference:
 
+<!-- TODO: convert to <details> figure component (task #2) -->
 - `/etc/network/interfaces`
     
     ```
@@ -41,7 +47,7 @@ I've also set up a static IP within my home network so I can easily access it fr
     allow-hotplug enp2s0
     iface enp2s0 inet static
     	address	192.168.1.XXX
-    	submask	255.255.255.0
+    	netmask	255.255.255.0
     	gateway	192.168.1.1
     	dns-nameservers	192.168.1.1	1.1.1.1	1.0.0.1
     
@@ -54,7 +60,7 @@ I then started to copy the files back to the internal hard drive.
 
 # Users and Shares Setup
 
-The next item on the list is to set up users and shares. I created UNIX users for both me and my brother, accompanied by a folder on the external storage to act as out shares. I've also created a `public` share for movies, music, software etc.
+The next item on the list is to set up users and shares. I created UNIX users for both me and my brother, accompanied by a folder on the external storage to act as our shares. I've also created a `public` share for movies, music, software etc.
 
 ```
 /stor1/
@@ -64,33 +70,31 @@ The next item on the list is to set up users and shares. I created UNIX users fo
     └── vlad
 ```
 
-These folders would be exposed directly as SMB shares, with symlinks in our own home folders to easily access them thought SFTP.
+These folders would be exposed directly as SMB shares, with symlinks in our own home folders to easily access them through SFTP.
 
-![SFTP is easy enough to get working with SSH.](/assets/notes/2021-08-28-home-server-setup/sshd.png)
-
-SFTP is easy enough to get working with SSH.
+![SFTP is easy enough to get working with SSH.](/assets/notes/2021-08-28-home-server-setup/sshd.png){:.full}
 
 ## Samba
 
-<aside>
-🚧 Still working on this. Samba is quite "fun" to deal with.
-
-</aside>
+<div class="callout" markdown="1">
+<i class="bi bi-exclamation-triangle"></i> It looks like 20 year old me forgot to fill this section in.
+</div>
 
 # Backups
 
-Where there are files, there are backups. I plan on having a two levels of backups of the internal hard drive. Nightly backups to the external hard drive (on-site backup), and in the future, weekly off-site backups.
+Where there are files, there are backups. I plan on having two levels of backups of the internal hard drive. Nightly backups to the external hard drive (on-site backup), and in the future, weekly off-site backups.
 
-Since I want my external hard drive to be easily accessible during an emergency. I have set it up as a exFAT file system so that it's readable on Windows, macOS and Linux (with the appropriate drivers installed).
+Since I want my external hard drive to be easily accessible during an emergency, I have set it up as an exFAT file system so that it's readable on Windows, macOS and Linux (with the appropriate drivers installed).
 
 Onto the *how*. A program called `rsync` is very useful for making both local and remote copies of everything. I also found an app called [Pushover](https://pushover.net/) for real-time notifications so I have a notification ready in the morning with how the backup went over the weekend. Here's a screenshot from before I reset my server.
 
-![697F72FE-AC0D-4AE1-B25E-A0E4B17954CF.jpeg](/assets/notes/2021-08-28-home-server-setup/pushover.jpeg)
+![Pushover notification showing backup status.](/assets/notes/2021-08-28-home-server-setup/pushover.jpeg){:.full}
 
 ## `rsync` and Logs
 
 I'll begin by setting up rsync itself. It'll be set up to archive everything, and keep any deleted files. The future off-site backup will be managed by having an identical copy of the on-site one, file deletions and all.
 
+<!-- TODO: convert to <details> figure component (task #2) -->
 - **Command explainer:**
     - Local backup (`/stor1` → `/stor2`)
         
@@ -106,17 +110,12 @@ I'll begin by setting up rsync itself. It'll be set up to archive everything, an
     - Local backup (to exFAT)
         
         ```
-        $ rsync -rltv /stor1/ /stor2
+        rsync -rltv /stor1/ /stor2
         ```
         
         After some testing, the `-a` flag tries to set permissions on the exFAT and fails since exFAT doesn't support UNIX permissions, owner and group rights. To patch this, I've replaced the `-a` flag with a subset of flags it bundles. Namely `-rlt` (recursive, copy symlinks as symlinks and preserve times).
         
     - Remote backup
-        
-        <aside>
-        🚧 Coming soon...
-        
-        </aside>
         
     
     Another tidbit to note with the `rsync` command. A trailing slash at the end of a folder path means to copy the files inside it to the target, not the folder itself. It's (almost) the same as writing `path/to/folder/*` for `cp`.
@@ -142,15 +141,15 @@ curl -X POST \
         >/dev/null 2>/dev/null
 ```
 
-This will let me know how the backups are progressing without pulling up a SSH window. And if something goes wrong I can fix it.
+This will let me know how the backups are progressing without pulling up an SSH window. And if something goes wrong I can fix it.
 
 ## Scheduling
 
-To make this script run nightly, I'll be using a program standard on many UNIX system called `cron`. Think of it as the Linux version of [Windows's Task Scheduler](https://en.wikipedia.org/wiki/Windows_Task_Scheduler).
+To make this script run nightly, I'll be using a program standard on many UNIX systems called `cron`. Think of it as the Linux version of [Windows's Task Scheduler](https://en.wikipedia.org/wiki/Windows_Task_Scheduler).
 
 I can edit my `crontab` (a fancy name for the list of scheduled tasks) by running `crontab -e`. But since the backup tool copies data from multiple users, I will run it as the `root` user with `sudo`.
 
-Now, because I keep forgetting how to write out the task definitions, I use a website called [crontab.guru](https://crontab.guru/) to generate those for me. 
+Now, because I keep forgetting how to write out the task definitions, I use a website called [crontab.guru](https://crontab.guru/) to generate those for me.
 
 A line in this file is a different task, first the time it would take place, then the command to run. To run my backup utility at 2AM daily, I'd write this down.
 
@@ -166,8 +165,7 @@ To help with keeping track of how backups are progressing, the script also write
 
 # Web Interface
 
-I've also created a simple web interface for keeping tabs on the server with simple details like the system's uptime, memory usage, access to the "public" share, and the state of the backup.
+I've also created a simple web interface for keeping tabs on the server. It shows system status at the time of the page load — uptime, memory usage, and backup state — alongside quick links to the SMB and SFTP shares. It also exposes the public share over HTTP, which filled a gap for older Windows and macOS versions that had trouble connecting to newer SMB encryption. Logs are accessible from the interface too.
 
-![Untitled](/assets/notes/2021-08-28-home-server-setup/picton.png)
+![Picton home server dashboard.](/assets/notes/2021-08-28-home-server-setup/picton.png){:.full}
 
-The code for my dashboard is on GitHub: https://github.com/thegreatrazz/picton.

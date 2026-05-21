@@ -3,28 +3,36 @@ layout: post
 title: Keeping dotfiles in sync
 date: 2025-04-09
 categories: notes dotfiles
+resources:
+  - id: dotfiles
+    label: itisrazza/dotfiles
+    description: A subset of my own dotfiles split across multiple computers
+    url: https://github.com/itisrazza/dotfiles
+    type: GitHub
+    icon: github
 ---
 
-I wipe my systems, especially on Linux where data protability is much easier
+I wipe my systems, especially on Linux where data portability is much easier
 than on Windows or macOS, fairly regularly. For systems where I log in fairly
 regularly, such as my WSL sandbox or development server, I like to have my
 various dotfiles and scripts synced.
 
-This also works for something like macOS. When I received a new workstation
-from work, I was able to get things up and going quite quickly even though I
-had opted to reconfigure everything from the beginning.
+This also works on macOS — in fact, this is how I manage my dotfiles there too.
+When I received a new workstation from work, I was able to get things up and
+going quite quickly even though I had opted to reconfigure everything from the
+beginning.
 
 There isn't really much of a need to use a specific dotfile manager. `git` is
 all you need.
 
 ## Creating a dotfile store
 
-Creating a dotfile store is as easy as creating a folder and create a bare Git
+Creating a dotfile store is as easy as creating a folder and creating a bare Git
 repo inside of it.
 
 ```bash
-mkdir ...
-cd ...
+mkdir ~/src/itisrazza/dotfiles
+cd ~/src/itisrazza/dotfiles
 git init --bare
 ```
 
@@ -52,7 +60,7 @@ dfgit add ~/.bashrc
 dfgit commit
 ```
 
-## Pusing and pulling changes
+## Pushing and pulling changes
 
 We're going through the basic motions at this point.
 
@@ -70,7 +78,7 @@ dfgit pull
 ## Cloning the changes to a new system
 
 Setting these up on a new system is also quite easy. Once you set Git and your
-SSH keys up. You can simply clone the repository with the `--bare` argument.
+SSH keys up, you can simply clone the repository with the `--bare` argument.
 
 ```bash
 git clone --bare git@github.com:itisrazza/dotfiles.git ~/src/itisrazza/dotfiles
@@ -81,7 +89,7 @@ system, I generally make a backup of the default configs just in case and do a
 hard reset.
 
 ```bash
-git --git-dir=/abs/path/to/dotfiles --work-dir=$HOME reset --hard
+git --git-dir=/abs/path/to/dotfiles --work-tree=$HOME reset --hard
 ```
 
 ## Tips for dotfile management
@@ -96,7 +104,7 @@ Instead of having a single `.bashrc` or `.zshrc` file, consider splitting up
 your files. I've adapted this convention from how daemons on Linux tend to
 separate out their files.
 
-In your `.bashrc` you only need the following snippet.
+In your `.bashrc` (or `.zshrc` on macOS) you only need the following snippet.
 
 ```bash
 for include in $HOME/.bashrc.d/*.bash; do
@@ -104,18 +112,15 @@ for include in $HOME/.bashrc.d/*.bash; do
 done
 ```
 
-You can now store things in their specific file, aliases goes in
-`99-aliases.bash`, your environment managers in another file, etc.
+You can now store things in their specific file, aliases go in
+`99-aliases.bash`, your environment managers in another file, etc. On macOS
+with zsh, the same pattern applies using `.zshrc.d` and `.zsh` files.
 
 They should also be easier to check in and out of Git.
 
-# Real world example
+## Real world example
 
 Here's a real world example, my own dotfiles. This isn't a complete picture,
 but this shows some common settings I apply to my command-line tools.
 
-{% include big-link.html
-           icon='bi bi-github'
-           title='itisrazza/dotfiles'
-           subtitle="A subset of my own dotfiles split across multiple computers"
- %}
+{% include resource-download-card.html id="dotfiles" %}

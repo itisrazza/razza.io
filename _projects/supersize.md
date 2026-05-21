@@ -11,7 +11,7 @@ links:
     url: https://github.com/itisrazza/SuperSize
 ---
 
-<div class="alert alert-archived">
+<div class="callout callout-archived">
   <p>SuperSize is being archived.</p>
   <p>I no longer use Windows on the daily and no longer plan to develop this
     project further.</p>

@@ -1,7 +1,10 @@
-.alert {
+.callout {
   background: var(--colour-background-elevated);
-  padding: 0.5rem 1.5rem;
+  padding-block: 0.5rem;
+  padding-inline-start: 1.375rem;
+  padding-inline-end: 1.5rem;
   border-radius: 0.5rem;
+  border-inline-start: 0.125rem solid var(--colour-edge);
 
   p {
     margin-block: 0.5rem;
@@ -11,6 +14,6 @@
   }
 }
 
-.chrome-inset .alert {
+.chrome-inset .callout {
   margin-inline: -1.5rem;
 }

@@ -1,0 +1,7 @@
+{% assign resource = page.resources | where: "id", include.id | first %}{% if resource %}<a class="download-card" href="{{ resource.url }}"{% if resource.url contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+    <i class="bi bi-{{ resource.icon | default: "file-earmark-arrow-down-fill" }}"></i>
+    <span class="download-card-meta">
+        <span class="download-card-title">{{ resource.description | default: resource.label }}</span>
+        <span class="download-card-type">{{ resource.type }}</span>
+    </span>
+</a>{% endif %}

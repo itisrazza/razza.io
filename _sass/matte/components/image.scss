@@ -1,0 +1,11 @@
+.chrome-inset article img:not(.full) {
+  max-width: 100%;
+}
+
+.chrome-inset article img.full {
+  display: block;
+  width: calc(100% + 3rem);
+  margin-inline: -1.5rem;
+  max-height: max(6.25rem, 50vh);
+  object-fit: scale-down;
+}

@@ -3,13 +3,32 @@ layout: post
 title:  "Installing Windows within Windows"
 date:   2023-05-30
 categories: notes windows
+resources:
+  - id: ms-oem-docs
+    label: Boot to VHD docs
+    description: "Boot to a virtual hard disk: Add a VHDX or VHD to the boot menu"
+    url: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-vhd--native-boot--add-a-virtual-hard-disk-to-the-boot-menu?view=windows-11
+    type: Documentation
+    icon: book-half
+  - id: windows11-iso
+    label: Windows 11 download
+    description: Windows 11 Disk Image (ISO) download
+    url: https://www.microsoft.com/software-download/windows11
+    type: Download
+    icon: download
 ---
 
-Back in the days for high schools when I had way more time, I was toying around with my computer and with a couple of VMs and tools like [EasyBCD](https://neosmart.net/EasyBCD/) and found the Windows bootloader is capable of booting from hard drives images.
+<div class="callout callout-migrated" markdown="1">
+<i class="bi bi-clock-history"></i> Originally published on [Notion](https://www.notion.so/razza/Installing-Windows-within-Windows-0789c83496e04f7f9e1dfd4ccbf616be).
 
-![A screenshot of EasyBCD](/assets/notes/2023-05-30-installing-windows-within-windows/easybcd.png)
+This is the original article with a few markup changes and spelling fixes.
+</div>
 
-I've later found [Microsoft's OEM documentation](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-vhd--native-boot--add-a-virtual-hard-disk-to-the-boot-menu?view=windows-11) on how to do this properly.
+Back in my high school days when I had way more time, I was toying around with my computer and with a couple of VMs and tools like [EasyBCD](https://neosmart.net/EasyBCD/) and found the Windows bootloader is capable of booting from hard drive images.
+
+![A screenshot of EasyBCD](/assets/notes/2023-05-30-installing-windows-within-windows/easybcd.png){:.full}
+
+I've later found the {% include resource-chip.html id="ms-oem-docs" text="Microsoft's OEM documentation" %} on how to do this properly.
 
 Microsoft’s guide is tailored to OEMs setting this up from Windows PE and isn't necessarily tailored for the power user. So I thought I’d write things my own way to make this more accessible.
 
@@ -19,9 +38,9 @@ This is how I'm getting my streaming setup to work, so let's begin.
 
 ## Creating a virtual hard drive
 
-<aside>
-⚠️ `diskpart` is quite dangerous to use and can wipe your disk if you’re not careful. Use the `list` to make sure you’re operating on the right disk or volume.
-</aside>
+<div class="callout callout-warning" markdown="1">
+<i class="bi bi-exclamation-triangle"></i> `diskpart` is quite dangerous to use and can wipe your disk if you’re not careful. Use `list` to make sure you’re operating on the right disk or volume.
+</div>
 
 Open a terminal as an administrator (`Win` `X` → **Terminal (Admin)**) and run `diskpart`.
 
@@ -44,17 +63,18 @@ You can now `exit` from `diskpart`.
 
 ## Installing Windows
 
-Next up grab a [Windows 11 ISO](https://www.microsoft.com/software-download/windows11) (or any other ISO) and mount it on your system. Once the image is mounted, you can now apply the image to the virtual hard drive.
+Next up grab a {% include resource-chip.html id="windows11-iso" name="Windows 11 ISO" %} (or any other ISO) and mount it on your system. Once the image is mounted, you can now apply the image to the virtual hard drive.
 
 First check which edition you’d like to install with the following command and take note of the index numbers:
 
-```
+```powershell
 dism /get-wiminfo /wimfile:"X:\sources\install.wim"
 ```
 
+<!-- TODO: convert to <details> figure component (task #2) -->
 - **Example Output**
     
-    Below is the output from the Windows 11 ISO downloaded on 30/05/2023 .
+    Below is the output from the Windows 11 ISO downloaded on 30/05/2023.
     
     ```
     Deployment Image Servicing and Management tool
@@ -123,7 +143,7 @@ dism /get-wiminfo /wimfile:"X:\sources\install.wim"
 
 Then apply said image onto the virtual hard drive.
 
-```
+```powershell
 dism /apply-image /imagefile:"X:\sources\install.wim" /index:4 /applydir:V:\
 ```
 
@@ -131,11 +151,11 @@ dism /apply-image /imagefile:"X:\sources\install.wim" /index:4 /applydir:V:\
 
 Next up, we need to add Windows to the boot menu.
 
-```
+```powershell
 bcdboot V:\Windows
 ```
 
-And that’s it! This sets it default OS and it will now get picked up next time you reboot.
+And that’s it! This sets it as the default OS and it will now get picked up next time you reboot.
 
 ### Renaming the new installation
 
@@ -198,7 +218,7 @@ hypervisorlaunchtype    Auto
 
 And use that to change the name:
 
-```
+```powershell
 bcdedit /set "{cc33f9c6-fe8b-11ed-a1cd-683e26c558cc}" description "Stream"
 ```
 
@@ -206,10 +226,10 @@ bcdedit /set "{cc33f9c6-fe8b-11ed-a1cd-683e26c558cc}" description "Stream"
 
 You can also restore the default installation to the one you’re currently booted into by running:
 
-```
+```powershell
 bcdedit /default "{current}"
 ```
 
 # Finish
 
-At this point, you should restart your computer to make sure it still works. If everything goes to plan, you should see this screen.
+At this point, restart your computer. If everything goes to plan, Windows should drop you into the first time setup.

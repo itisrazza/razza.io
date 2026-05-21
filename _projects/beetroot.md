@@ -13,7 +13,7 @@ links:
 archived: true
 ---
 
-<div class="alert">
+<div class="callout">
   <p>Development on Beetroot has been stopped.</p>
   <p>Integrating with multiple music services means working around APIs that are largely locked down. Keeping those integrations working solo over time just isn't feasible.</p>
 </div>

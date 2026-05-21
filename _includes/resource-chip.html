@@ -1,0 +1,1 @@
+{% assign resource = page.resources | where: "id", include.id | first %}{% if resource %}<a class="resource-chip" href="{{ resource.url }}"{% if resource.url contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %}><i class="bi bi-{{ resource.icon | default: "file-earmark" }}"></i>{{ include.text | default: resource.label }}</a>{% endif %}

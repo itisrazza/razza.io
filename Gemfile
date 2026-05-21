@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "jekyll", "~> 4.3.2"
+gem "nokogiri", "~> 1.19", ">= 1.19.3"
 
 gem "csv", "~> 3.3"
 gem "base64", "~> 0.2.0"

@@ -13,7 +13,7 @@ platforms: [ WIP, Windows ]
 featured: true
 ---
 
-<div class="alert"><b>Note:</b> If you're looking for a pixel art editor, you should really just use <a href="https://www.aseprite.org/">Aseprite</a>. This is mostly a personal exercise.</div>
+<div class="callout"><b>Note:</b> If you're looking for a pixel art editor, you should really just use <a href="https://www.aseprite.org/">Aseprite</a>. This is mostly a personal exercise.</div>
 
 VGAPainter is a 256-color bitmap editor primarily targeting VGA mode 13h. It also supports custom palettes, importing and exporting to true colour formats and a binary bitmap format.
 

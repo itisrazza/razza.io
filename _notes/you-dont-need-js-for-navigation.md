@@ -3,6 +3,13 @@ layout: post
 title: You don't need JavaScript for navigation
 date: 2025-04-11
 categories: notes webdev
+resources:
+  - id: codepen
+    label: CodePen example
+    description: Full working example on CodePen
+    url: https://codepen.io/itisrazza/pen/xbxoaPd
+    type: CodePen
+    icon: code-slash
 ---
 
 When I was implementing the website redesign, for the mobile navigation menu
@@ -29,7 +36,7 @@ so:
 </nav>
 ```
 
-We're using the checkbox's state the DOM holds for us. We can use the `label`
+We're using the checkbox's state that the DOM holds for us. We can use the `label`
 element to use our own elements to change the state of the checkbox. That way,
 we can make the button look however we want.
 
@@ -61,9 +68,7 @@ You can also use it to change how the button looks if you'd like.
 
 ## In Action
 
-A full example is available on [Codepen].
-
-[Codepen]: https://codepen.io/itisrazza/pen/xbxoaPd
+{% include resource-download-card.html id="codepen" %}
 
 If you open this website on mobile, or in a smaller window, you can also see
 the same mechanism in action.

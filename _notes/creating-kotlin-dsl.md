@@ -3,7 +3,20 @@ layout: post
 title:  "Kotlin: Creating DSLs"
 date:   2021-01-20
 categories: notes kotlin
+resources:
+  - id: kotlin-type-safe-builders
+    label: Type-Safe Builders
+    description: Kotlin Type-Safe Builders documentation
+    url: https://kotlinlang.org/docs/reference/type-safe-builders.html
+    type: Documentation
+    icon: book-half
 ---
+
+<div class="callout callout-migrated" markdown="1">
+<i class="bi bi-clock-history"></i> Originally published on [Notion](https://www.notion.so/razza/Kotlin-Creating-DSLs-e17bcf7a69224477b0de4c3c6178b873).
+
+This article is the one originally posted with a few markup changes and spelling fixes.
+</div>
 
 I reckon Kotlin is better than Java. It's more dense and less verbose than Java, letting me get on with my day. One of the features I like the most about Kotlin is the relatively easy way of getting things built (based on the typical Java builders) with DSLs.
 
@@ -31,7 +44,7 @@ labelName.text = buildString {
 }.trim()
 ```
 
-The above example is pretty simple, but shows some of the basics. Notice how in the DSL body you wouldn't need to refer back to the StringBuilder object. In this case it's not too bad since I like to name my StringBuilder objects `sb` for brevity, but imaging it being something like `objectStringBuilder` or something like that.
+The above example is pretty simple, but shows some of the basics. Notice how in the DSL body you wouldn't need to refer back to the StringBuilder object. In this case it's not too bad since I like to name my StringBuilder objects `sb` for brevity, but imagine it being something like `objectStringBuilder` or something like that.
 
 You'll see how in the example I'm about to show, DSLs can really simplify a lot of complex operations.
 
@@ -68,6 +81,7 @@ Menu Bar
 
 And here's the original Java implementation (which `git blame` reveals me as the person who committed this.) You can see my best effort at keeping this mess clean.
 
+<!-- TODO: convert to <details> figure component (task #2, #4) -->
 - Java implementation
     
     ```java
@@ -122,6 +136,7 @@ And here's the original Java implementation (which `git blame` reveals me as the
 
 Using a simple DSL like the example above, we can make a DSL for creating the menu bar and the items going on it. But unlike the `buildString` one, we just return the new menu bar.
 
+<!-- TODO: convert to <details> figure component (task #2, #4) -->
 - JMenuBar, JMenu and JMenuItem DSLs (with an action one for good measure).
     
     ```kotlin
@@ -217,10 +232,8 @@ window.jMenuBar = buildMenuBar {
 
 I think the Kotlin code with the DSL functions is much more concise and easier to read than the Java one, making it easier to understand and change later on.
 
-[Java vs. Kotlin example, side by side](https://www.notion.so/Java-vs-Kotlin-example-side-by-side-984a1f8bb9004195a891aca72995b54e?pvs=21)
+<!-- TODO: add side-by-side Java/Kotlin comparison once component is built (task #1, #5) -->
 
 # Read More
 
-This entry is just the start. There are way more complex DSLs you can make, which you can read about below:
-
-[Type-Safe Builders](https://kotlinlang.org/docs/reference/type-safe-builders.html)
+This entry is just the start. There are way more complex DSLs you can make, which you can read about in the {% include resource-chip.html id="kotlin-type-safe-builders" %} docs.

@@ -1,0 +1,25 @@
+@use "../components/button";
+
+.page-chrome > header .post-resources {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.25rem;
+
+  .post-resource {
+    @include button.button();
+
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+.resource-chip {
+  @include button.button();
+
+  display: inline-flex;
+  vertical-align: baseline;
+  font-size: 0.9em;
+  padding: 0.1em 0.4em;
+  line-height: inherit;
+  translate: 0 -0.05em;
+}
