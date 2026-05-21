@@ -1,17 +1,21 @@
 @use "sass:map";
 
-$body-font-family: "Recursive", sans-serif;
-$heading-font-family: $body-font-family;
-$mono-font-family: $body-font-family;
+$body-font-family: "Nunito Sans", "Inter", sans-serif;
+$heading-font-family: "Recursive", sans-serif;
+$mono-font-family: "Recursive", sans-serif;
 
 //
 
 :root {
+  // Recursive axes (headings, mono)
   --text-wght: 400;
   --text-casl: 0;
   --text-crsv: 0.5;
   --text-mono: 0;
   --text-slnt: 0;
+  // Nunito Sans axes (body)
+  --text-ytlc: 540;
+  --text-opsz: 8;
 
   font-family: $body-font-family;
   line-height: 1.5em;
@@ -23,7 +27,9 @@ $mono-font-family: $body-font-family;
     "CASL" var(--text-casl),
     "CRSV" var(--text-crsv),
     "MONO" var(--text-mono),
-    "slnt" var(--text-slnt);
+    "slnt" var(--text-slnt),
+    "YTLC" var(--text-ytlc),
+    "opsz" var(--text-opsz);
 }
 
 sup, sub {
@@ -53,6 +59,7 @@ $heading-sizes: (
   --text-crsv: 1;
   --text-slnt: -5;
 
+  font-family: $heading-font-family;
   font-size: map.get($heading-sizes, $size);
   margin-block: unset;
   line-height: 1.5em;
