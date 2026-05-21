@@ -56,12 +56,14 @@ cd ~
 
 Lastly it's a good idea to create a shell script which starts the server. This is useful in the case of a Minecraft server since it runs on top of Java and we can pass flags to it easily.
 
+{% include resource-collapsible.html id="start-sh" %}
+<div class="collapsible-body collapsible-body-flush" markdown="1">
 ```sh
 #!/bin/sh
 java -Xmx1024M -Xms1024M -jar server.jar nogui
 ```
-
-{% include resource-download-card.html id="start-sh" %}
+</div>
+</details>
 
 Write a script with the arguments your game server needs and make it executable with
 
@@ -76,8 +78,8 @@ Give it a test and see if it runs before we make it a server. Make sure you do m
 
 systemd uses "unit files" to describe services. Unit files are kept in `/etc/systemd/system` — we'll be creating `minecraft.service`:
 
-{% include resource-download-card.html id="minecraft-server-service" %}
-
+{% include resource-collapsible.html id="minecraft-server-service" %}
+<div class="collapsible-body collapsible-body-flush" markdown="1">
 ```ini
 [Unit]
 Description=Minecraft Server
@@ -93,6 +95,8 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 ```
+</div>
+</details>
 
 The file above describes a unit called "Minecraft Server" (`Description=Minecraft Server`), which loads after the computer connects to a network (`After=network.target`).
 

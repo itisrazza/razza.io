@@ -81,102 +81,108 @@ Menu Bar
 
 And here's the original Java implementation (which `git blame` reveals me as the person who committed this.) You can see my best effort at keeping this mess clean.
 
-<!-- TODO: convert to <details> figure component (task #2, #4) -->
-- Java implementation
-    
-    ```java
-    // menuBar
-    menuBar = new JMenuBar();
+<details class="collapsible">
+<summary><i class="bi bi-code-slash"></i> Java implementation</summary>
+<div class="collapsible-body collapsible-body-flush" markdown="1">
+
+```java
+// menuBar
+menuBar = new JMenuBar();
+{
+    // menuBar_game
+    menuBar_game = new JMenu("Game");
+    menuBar_game.setMnemonic('G');
     {
-        // menuBar_game
-        menuBar_game = new JMenu("Game");
-        menuBar_game.setMnemonic('G');
-        {
-            // menuBar_game_quit
-            menuBar_game_quit = new JMenuItem("Quit");
-            menuBar_game_quit.setMnemonic('Q');
-            menuBar_game_quit
-                    .setAccelerator(
-                            KeyStroke.getKeyStroke(KeyEvent.VK_F4, InputEvent.ALT_MASK));
-            menuBar_game_quit.addActionListener(this::menuBar_game_quit_onClick);
-            menuBar_game.add(menuBar_game_quit);
-        }
-        menuBar.add(menuBar_game);
-    
-        // menuBar_help
-        menuBar_help = new JMenu("Help");
-        menuBar_help.setMnemonic('H');
-        {
-            // menuBar_help_howToPlay
-            menuBar_help_howToPlay = new JMenuItem("How to Play");
-            menuBar_help_howToPlay.setMnemonic('H');
-            menuBar_help_howToPlay.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0));
-            menuBar_help_howToPlay.addActionListener(e -> showHelpView());
-            menuBar_help.add(menuBar_help_howToPlay);
-    
-            // menuBar_help_about
-            menuBar_help_about = new JMenuItem("About");
-            menuBar_help_about.setMnemonic('A');
-            menuBar_help_about.addActionListener(e ->
-                    JOptionPane.showMessageDialog(
-                            window,
-                            "Cluedo 2.0 by Team LANR\n" +
-                                    "Shipping it to launch.\n" +
-                                    "\n" +
-                                    "Made by: Lawrence N, Andrew C, Nicholas WBA, Rareș N",
-                            "About Cluedo 2.0",
-                            JOptionPane.INFORMATION_MESSAGE));
-            menuBar_help.add(menuBar_help_about);
-        }
-        menuBar.add(menuBar_help);
+        // menuBar_game_quit
+        menuBar_game_quit = new JMenuItem("Quit");
+        menuBar_game_quit.setMnemonic('Q');
+        menuBar_game_quit
+                .setAccelerator(
+                        KeyStroke.getKeyStroke(KeyEvent.VK_F4, InputEvent.ALT_MASK));
+        menuBar_game_quit.addActionListener(this::menuBar_game_quit_onClick);
+        menuBar_game.add(menuBar_game_quit);
     }
-    window.setJMenuBar(menuBar);
-    ```
-    
+    menuBar.add(menuBar_game);
+
+    // menuBar_help
+    menuBar_help = new JMenu("Help");
+    menuBar_help.setMnemonic('H');
+    {
+        // menuBar_help_howToPlay
+        menuBar_help_howToPlay = new JMenuItem("How to Play");
+        menuBar_help_howToPlay.setMnemonic('H');
+        menuBar_help_howToPlay.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_F1, 0));
+        menuBar_help_howToPlay.addActionListener(e -> showHelpView());
+        menuBar_help.add(menuBar_help_howToPlay);
+
+        // menuBar_help_about
+        menuBar_help_about = new JMenuItem("About");
+        menuBar_help_about.setMnemonic('A');
+        menuBar_help_about.addActionListener(e ->
+                JOptionPane.showMessageDialog(
+                        window,
+                        "Cluedo 2.0 by Team LANR\n" +
+                                "Shipping it to launch.\n" +
+                                "\n" +
+                                "Made by: Lawrence N, Andrew C, Nicholas WBA, Rareș N",
+                        "About Cluedo 2.0",
+                        JOptionPane.INFORMATION_MESSAGE));
+        menuBar_help.add(menuBar_help_about);
+    }
+    menuBar.add(menuBar_help);
+}
+window.setJMenuBar(menuBar);
+```
+
+</div>
+</details>
 
 Using a simple DSL like the example above, we can make a DSL for creating the menu bar and the items going on it. But unlike the `buildString` one, we just return the new menu bar.
 
-<!-- TODO: convert to <details> figure component (task #2, #4) -->
-- JMenuBar, JMenu and JMenuItem DSLs (with an action one for good measure).
-    
-    ```kotlin
-    /**
-     * Create a menu bar.
-     */
-    fun buildMenuBar(init: JMenuBar.() -> Unit): JMenuBar {
-        val menuBar = JMenuBar()
-        menuBar.init()
-        return menuBar
+<details class="collapsible">
+<summary><i class="bi bi-code-slash"></i> JMenuBar, JMenu and JMenuItem DSLs (with an action one for good measure)</summary>
+<div class="collapsible-body collapsible-body-flush" markdown="1">
+
+```kotlin
+/**
+ * Create a menu bar.
+ */
+fun buildMenuBar(init: JMenuBar.() -> Unit): JMenuBar {
+    val menuBar = JMenuBar()
+    menuBar.init()
+    return menuBar
+}
+
+/**
+ * Create a menu.
+ */
+fun buildMenu(init: JMenu.() -> Unit): JMenu {
+    val menu = JMenu()
+    menu.init()
+    return menu
+}
+
+/**
+ * Create a menu item.
+ */
+fun buildMenuItem(init: JMenuItem.() -> Unit): JMenuItem {
+    val menuItem = JMenuItem()
+    menuItem.init()
+    return menuItem
+}
+
+/**
+ * Create an action.
+ */
+fun action(action: () -> Unit) = object : AbstractAction() {
+    override fun actionPerformed(e: ActionEvent?) {
+        action()
     }
-    
-    /**
-     * Create a menu.
-     */
-    fun buildMenu(init: JMenu.() -> Unit): JMenu {
-        val menu = JMenu()
-        menu.init()
-        return menu
-    }
-    
-    /**
-     * Create a menu item.
-     */
-    fun buildMenuItem(init: JMenuItem.() -> Unit): JMenuItem {
-        val menuItem = JMenuItem()
-        menuItem.init()
-        return menuItem
-    }
-    
-    /**
-     * Create an action.
-     */
-    fun action(action: () -> Unit) = object : AbstractAction() {
-        override fun actionPerformed(e: ActionEvent?) {
-            action()
-        }
-    }
-    ```
-    
+}
+```
+
+</div>
+</details>
 
 And with these DSLs, you can make the menu from above like this:
 

@@ -1,0 +1,6 @@
+{% assign resource = page.resources | where: "id", include.id | first %}{% if resource %}<details class="collapsible collapsible-resource">
+<summary>
+<i class="bi bi-{{ resource.icon | default: "file-earmark" }}"></i>
+<span class="collapsible-resource-title">{{ include.title | default: resource.label }}</span>
+<a class="collapsible-resource-download" href="{{ resource.url }}"{% if resource.url contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %} onclick="event.stopPropagation()" aria-label="Download {{ include.title | default: resource.label }}"><i class="bi bi-download" aria-hidden="true"></i></a>
+</summary>{% endif %}

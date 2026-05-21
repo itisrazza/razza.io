@@ -5,16 +5,22 @@ code,
 kbd,
 pre {
   --font-var-mono: 1;
+  --font-var-casl: 0;
   --font-var-crsv: 0;
 
   font-family: typography.$mono-font-family;
 }
 
-code {
+code,
+kbd {
   border-radius: 0.25em;
   font-size: 0.875em;
-  border: 1px solid var(--colour-edge);
   padding: 0.0625em 0.25em;
+  background-color: oklch(92% 8% 300);
+
+  @media (prefers-color-scheme: dark) {
+    background-color: oklch(15% 13% 295);
+  }
 }
 
 pre {
@@ -23,7 +29,6 @@ pre {
   border-radius: 0.5rem;
   font-size: 0.875rem;
   overflow-x: auto;
-  border: 1px solid var(--colour-edge);
 
   code {
     font-size: 1em;
@@ -32,22 +37,27 @@ pre {
   }
 }
 
-// below is output from rouge
+// Syntax highlighting — matte theme (purple/violet palette, harmonised with site colours)
+//
+// Semantic colour roles (light / dark):
+//   base:       oklch(22% 8% 295)   / oklch(90% 6% 295)   — plain text
+//   keyword:    oklch(42% 28% 15)   / oklch(75% 25% 10)   — rose/crimson
+//   builtin:    oklch(48% 26% 42)   / oklch(76% 30% 58)   — amber/rust
+//   string:     oklch(38% 22% 168)  / oklch(76% 22% 158)  — teal/mint
+//   number:     oklch(40% 30% 262)  / oklch(76% 25% 252)  — indigo/sky
+//   function:   oklch(40% 34% 305)  / oklch(78% 30% 305)  — purple/lilac
+//   comment:    oklch(58% 10% 295)  / oklch(56% 10% 295)  — muted lavender-gray
 
-.highlight table td {
-  padding: 5px;
-}
-
-.highlight table pre {
-  margin: 0;
-}
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
 
 .highlight,
 .highlight .w {
-  color: #24292f;
-  background-color: #f6f8fa;
+  color: oklch(22% 8% 295);
+  background-color: oklch(92% 8% 300);
 }
 
+// keywords
 .highlight .k,
 .highlight .kd,
 .highlight .kn,
@@ -55,49 +65,35 @@ pre {
 .highlight .kr,
 .highlight .kt,
 .highlight .kv {
-  color: #cf222e;
+  color: oklch(42% 28% 15);
 }
 
-.highlight .gr {
-  color: #f6f8fa;
-}
-
+// diff: generic error/removed
+.highlight .gr { color: oklch(91% 8% 300); }
 .highlight .gd {
-  color: #82071e;
-  background-color: #ffebe9;
+  color: oklch(35% 22% 15);
+  background-color: oklch(88% 14% 20);
 }
 
-.highlight .nb {
-  color: #953800;
-}
-
-.highlight .nc {
-  color: #953800;
-}
-
-.highlight .no {
-  color: #953800;
-}
-
+// built-ins, types, constants, namespaces
+.highlight .nb,
+.highlight .nc,
+.highlight .no,
 .highlight .nn {
-  color: #953800;
+  color: oklch(48% 26% 42);
 }
 
-.highlight .sr {
-  color: #116329;
-}
-
-.highlight .na {
-  color: #116329;
-}
-
+// strings (including regex, attribute values, tags)
+.highlight .sr,
+.highlight .na,
 .highlight .nt {
-  color: #116329;
+  color: oklch(38% 22% 168);
 }
 
+// diff: generic inserted
 .highlight .gi {
-  color: #116329;
-  background-color: #dafbe1;
+  color: oklch(32% 20% 168);
+  background-color: oklch(88% 14% 158);
 }
 
 .highlight .ges {
@@ -105,10 +101,8 @@ pre {
   font-style: italic;
 }
 
-.highlight .kc {
-  color: #0550ae;
-}
-
+// numbers, literals, operators, variables, constants
+.highlight .kc,
 .highlight .l,
 .highlight .ld,
 .highlight .m,
@@ -118,53 +112,30 @@ pre {
 .highlight .mi,
 .highlight .il,
 .highlight .mo,
-.highlight .mx {
-  color: #0550ae;
-}
-
-.highlight .sb {
-  color: #0550ae;
-}
-
-.highlight .bp {
-  color: #0550ae;
-}
-
-.highlight .ne {
-  color: #0550ae;
-}
-
-.highlight .nl {
-  color: #0550ae;
-}
-
-.highlight .py {
-  color: #0550ae;
-}
-
+.highlight .mx,
+.highlight .sb,
+.highlight .bp,
+.highlight .ne,
+.highlight .nl,
+.highlight .py,
 .highlight .nv,
 .highlight .vc,
 .highlight .vg,
 .highlight .vi,
-.highlight .vm {
-  color: #0550ae;
-}
-
+.highlight .vm,
 .highlight .o,
 .highlight .ow {
-  color: #0550ae;
+  color: oklch(40% 30% 262);
 }
 
-.highlight .gh {
-  color: #0550ae;
-  font-weight: bold;
-}
-
+// headings (markdown/diff)
+.highlight .gh,
 .highlight .gu {
-  color: #0550ae;
+  color: oklch(40% 30% 262);
   font-weight: bold;
 }
 
+// strings
 .highlight .s,
 .highlight .sa,
 .highlight .sc,
@@ -176,23 +147,23 @@ pre {
 .highlight .sx,
 .highlight .s1,
 .highlight .ss {
-  color: #0a3069;
+  color: oklch(38% 22% 168);
 }
 
-.highlight .nd {
-  color: #8250df;
-}
-
+// functions, decorators
+.highlight .nd,
 .highlight .nf,
 .highlight .fm {
-  color: #8250df;
+  color: oklch(40% 34% 305);
 }
 
+// error
 .highlight .err {
-  color: #f6f8fa;
-  background-color: #82071e;
+  color: oklch(91% 8% 300);
+  background-color: oklch(38% 24% 15);
 }
 
+// comments
 .highlight .c,
 .highlight .ch,
 .highlight .cd,
@@ -200,49 +171,23 @@ pre {
 .highlight .cp,
 .highlight .cpf,
 .highlight .c1,
-.highlight .cs {
-  color: #6e7781;
-}
-
-.highlight .gl {
-  color: #6e7781;
-}
-
+.highlight .cs,
+.highlight .gl,
 .highlight .gt {
-  color: #6e7781;
+  color: oklch(58% 10% 295);
 }
 
-.highlight .ni {
-  color: #24292f;
-}
-
-.highlight .si {
-  color: #24292f;
-}
-
-.highlight .ge {
-  color: #24292f;
-  font-style: italic;
-}
-
-.highlight .gs {
-  color: #24292f;
-  font-weight: bold;
-}
+// plain interpolation, generic
+.highlight .ni,
+.highlight .si { color: oklch(22% 8% 295); }
+.highlight .ge  { color: oklch(22% 8% 295); font-style: italic; }
+.highlight .gs  { color: oklch(22% 8% 295); font-weight: bold; }
 
 @media screen and (prefers-color-scheme: dark) {
-  .highlight table td {
-    padding: 5px;
-  }
-
-  .highlight table pre {
-    margin: 0;
-  }
-
   .highlight,
   .highlight .w {
-    color: #c9d1d9;
-    background-color: #161b22;
+    color: oklch(90% 6% 295);
+    background-color: oklch(15% 13% 295);
   }
 
   .highlight .k,
@@ -252,49 +197,31 @@ pre {
   .highlight .kr,
   .highlight .kt,
   .highlight .kv {
-    color: #ff7b72;
+    color: oklch(75% 25% 10);
   }
 
-  .highlight .gr {
-    color: #f0f6fc;
-  }
-
+  .highlight .gr { color: oklch(14% 12% 295); }
   .highlight .gd {
-    color: #ffdcd7;
-    background-color: #67060c;
+    color: oklch(88% 14% 10);
+    background-color: oklch(22% 18% 20);
   }
 
-  .highlight .nb {
-    color: #ffa657;
-  }
-
-  .highlight .nc {
-    color: #ffa657;
-  }
-
-  .highlight .no {
-    color: #ffa657;
-  }
-
+  .highlight .nb,
+  .highlight .nc,
+  .highlight .no,
   .highlight .nn {
-    color: #ffa657;
+    color: oklch(76% 30% 58);
   }
 
-  .highlight .sr {
-    color: #7ee787;
-  }
-
-  .highlight .na {
-    color: #7ee787;
-  }
-
+  .highlight .sr,
+  .highlight .na,
   .highlight .nt {
-    color: #7ee787;
+    color: oklch(76% 22% 158);
   }
 
   .highlight .gi {
-    color: #aff5b4;
-    background-color: #033a16;
+    color: oklch(84% 18% 158);
+    background-color: oklch(22% 16% 168);
   }
 
   .highlight .ges {
@@ -302,10 +229,7 @@ pre {
     font-style: italic;
   }
 
-  .highlight .kc {
-    color: #79c0ff;
-  }
-
+  .highlight .kc,
   .highlight .l,
   .highlight .ld,
   .highlight .m,
@@ -315,50 +239,25 @@ pre {
   .highlight .mi,
   .highlight .il,
   .highlight .mo,
-  .highlight .mx {
-    color: #79c0ff;
-  }
-
-  .highlight .sb {
-    color: #79c0ff;
-  }
-
-  .highlight .bp {
-    color: #79c0ff;
-  }
-
-  .highlight .ne {
-    color: #79c0ff;
-  }
-
-  .highlight .nl {
-    color: #79c0ff;
-  }
-
-  .highlight .py {
-    color: #79c0ff;
-  }
-
+  .highlight .mx,
+  .highlight .sb,
+  .highlight .bp,
+  .highlight .ne,
+  .highlight .nl,
+  .highlight .py,
   .highlight .nv,
   .highlight .vc,
   .highlight .vg,
   .highlight .vi,
-  .highlight .vm {
-    color: #79c0ff;
-  }
-
+  .highlight .vm,
   .highlight .o,
   .highlight .ow {
-    color: #79c0ff;
+    color: oklch(76% 25% 252);
   }
 
-  .highlight .gh {
-    color: #1f6feb;
-    font-weight: bold;
-  }
-
+  .highlight .gh,
   .highlight .gu {
-    color: #1f6feb;
+    color: oklch(76% 25% 252);
     font-weight: bold;
   }
 
@@ -373,21 +272,18 @@ pre {
   .highlight .sx,
   .highlight .s1,
   .highlight .ss {
-    color: #a5d6ff;
+    color: oklch(76% 22% 158);
   }
 
-  .highlight .nd {
-    color: #d2a8ff;
-  }
-
+  .highlight .nd,
   .highlight .nf,
   .highlight .fm {
-    color: #d2a8ff;
+    color: oklch(78% 30% 305);
   }
 
   .highlight .err {
-    color: #f0f6fc;
-    background-color: #8e1519;
+    color: oklch(90% 6% 295);
+    background-color: oklch(28% 22% 15);
   }
 
   .highlight .c,
@@ -397,33 +293,14 @@ pre {
   .highlight .cp,
   .highlight .cpf,
   .highlight .c1,
-  .highlight .cs {
-    color: #8b949e;
-  }
-
-  .highlight .gl {
-    color: #8b949e;
-  }
-
+  .highlight .cs,
+  .highlight .gl,
   .highlight .gt {
-    color: #8b949e;
+    color: oklch(56% 10% 295);
   }
 
-  .highlight .ni {
-    color: #c9d1d9;
-  }
-
-  .highlight .si {
-    color: #c9d1d9;
-  }
-
-  .highlight .ge {
-    color: #c9d1d9;
-    font-style: italic;
-  }
-
-  .highlight .gs {
-    color: #c9d1d9;
-    font-weight: bold;
-  }
+  .highlight .ni,
+  .highlight .si { color: oklch(90% 6% 295); }
+  .highlight .ge  { color: oklch(90% 6% 295); font-style: italic; }
+  .highlight .gs  { color: oklch(90% 6% 295); font-weight: bold; }
 }

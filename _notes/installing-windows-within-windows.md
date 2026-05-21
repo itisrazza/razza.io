@@ -63,7 +63,7 @@ You can now `exit` from `diskpart`.
 
 ## Installing Windows
 
-Next up grab a {% include resource-chip.html id="windows11-iso" name="Windows 11 ISO" %} (or any other ISO) and mount it on your system. Once the image is mounted, you can now apply the image to the virtual hard drive.
+Next up grab a {% include resource-chip.html id="windows11-iso" text="Windows 11" %} ISO and mount it on your system. Once the image is mounted, you can now apply the image to the virtual hard drive.
 
 First check which edition you’d like to install with the following command and take note of the index numbers:
 
@@ -71,75 +71,74 @@ First check which edition you’d like to install with the following command and
 dism /get-wiminfo /wimfile:"X:\sources\install.wim"
 ```
 
-<!-- TODO: convert to <details> figure component (task #2) -->
-- **Example Output**
-    
-    Below is the output from the Windows 11 ISO downloaded on 30/05/2023.
-    
-    ```
-    Deployment Image Servicing and Management tool
-    Version: 10.0.22621.1
-    
-    Details for image : X:\sources\install.wim
-    
-    Index : 1
-    Name : Windows 11 Home
-    Description : Windows 11 Home
-    Size : 16,509,169,302 bytes
-    
-    Index : 2
-    Name : Windows 11 Home N
-    Description : Windows 11 Home N
-    Size : 15,846,970,562 bytes
-    
-    Index : 3
-    Name : Windows 11 Home Single Language
-    Description : Windows 11 Home Single Language
-    Size : 16,511,179,323 bytes
-    
-    Index : 4
-    Name : Windows 11 Education
-    Description : Windows 11 Education
-    Size : 16,781,380,608 bytes
-    
-    Index : 5
-    Name : Windows 11 Education N
-    Description : Windows 11 Education N
-    Size : 16,120,610,930 bytes
-    
-    Index : 6
-    Name : Windows 11 Pro
-    Description : Windows 11 Pro
-    Size : 16,796,549,892 bytes
-    
-    Index : 7
-    Name : Windows 11 Pro N
-    Description : Windows 11 Pro N
-    Size : 16,118,481,221 bytes
-    
-    Index : 8
-    Name : Windows 11 Pro Education
-    Description : Windows 11 Pro Education
-    Size : 16,781,330,818 bytes
-    
-    Index : 9
-    Name : Windows 11 Pro Education N
-    Description : Windows 11 Pro Education N
-    Size : 16,120,560,240 bytes
-    
-    Index : 10
-    Name : Windows 11 Pro for Workstations
-    Description : Windows 11 Pro for Workstations
-    Size : 16,781,355,713 bytes
-    
-    Index : 11
-    Name : Windows 11 Pro N for Workstations
-    Description : Windows 11 Pro N for Workstations
-    Size : 16,120,585,585 bytes
-    
-    The operation completed successfully.
-    ```
-    
+<details class="collapsible">
+<summary><i class="bi bi-terminal"></i> <code>dism /get-wiminfo</code> output</summary>
+<div class="collapsible-body collapsible-body-flush" markdown="1">
+```
+Deployment Image Servicing and Management tool
+Version: 10.0.22621.1
+
+Details for image : X:\sources\install.wim
+
+Index : 1
+Name : Windows 11 Home
+Description : Windows 11 Home
+Size : 16,509,169,302 bytes
+
+Index : 2
+Name : Windows 11 Home N
+Description : Windows 11 Home N
+Size : 15,846,970,562 bytes
+
+Index : 3
+Name : Windows 11 Home Single Language
+Description : Windows 11 Home Single Language
+Size : 16,511,179,323 bytes
+
+Index : 4
+Name : Windows 11 Education
+Description : Windows 11 Education
+Size : 16,781,380,608 bytes
+
+Index : 5
+Name : Windows 11 Education N
+Description : Windows 11 Education N
+Size : 16,120,610,930 bytes
+
+Index : 6
+Name : Windows 11 Pro
+Description : Windows 11 Pro
+Size : 16,796,549,892 bytes
+
+Index : 7
+Name : Windows 11 Pro N
+Description : Windows 11 Pro N
+Size : 16,118,481,221 bytes
+
+Index : 8
+Name : Windows 11 Pro Education
+Description : Windows 11 Pro Education
+Size : 16,781,330,818 bytes
+
+Index : 9
+Name : Windows 11 Pro Education N
+Description : Windows 11 Pro Education N
+Size : 16,120,560,240 bytes
+
+Index : 10
+Name : Windows 11 Pro for Workstations
+Description : Windows 11 Pro for Workstations
+Size : 16,781,355,713 bytes
+
+Index : 11
+Name : Windows 11 Pro N for Workstations
+Description : Windows 11 Pro N for Workstations
+Size : 16,120,585,585 bytes
+
+The operation completed successfully.
+```
+</div>
+</details>
 
 Then apply said image onto the virtual hard drive.
 
@@ -163,6 +162,9 @@ You can also change the name of the new installation.
 
 List out the boot entries with `bcdedit /v` and copy the identifier of the entry referring to the VHDX file.
 
+<details class="collapsible">
+<summary><i class="bi bi-terminal"></i> <code>bcdedit /v</code> output</summary>
+<div class="collapsible-body collapsible-body-flush" markdown="1">
 ```
 Windows Boot Manager
 --------------------
@@ -215,6 +217,8 @@ nx                      OptIn
 bootmenupolicy          Standard
 hypervisorlaunchtype    Auto
 ```
+</div>
+</details>
 
 And use that to change the name:
 

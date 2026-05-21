@@ -1,0 +1,107 @@
+@use "button";
+
+details.collapsible {
+  > summary {
+    @include button.button;
+
+    --font-var-wght: 600;
+    --font-var-casl: 1;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+    line-height: 1.25;
+    > i { margin-block-start: 0.1em; }
+
+    &::-webkit-details-marker { display: none; }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: rotate(-45deg);
+      transition: transform 0.15s ease;
+      flex-shrink: 0;
+      margin-inline-start: auto;
+      align-self: center;
+    }
+  }
+
+  &[open] > summary {
+    border-radius: 0.5rem 0.5rem 0 0;
+
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  .collapsible-body {
+    background: var(--colour-background-elevated);
+    padding: 0.75rem 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    border: 1px solid var(--colour-edge);
+    border-top: none;
+    overflow-y: hidden;
+
+    &.collapsible-body-flush {
+      padding: 0;
+    }
+
+    > *:first-child { margin-block-start: 0; }
+    > *:last-child  { margin-block-end:   0; }
+
+    // Rouge wraps pre in div.highlighter-rouge > div.highlight
+    div[class*="highlighter-"],
+    pre {
+      margin-inline: 0;
+      margin-block: 0;
+      border-radius: 0.25rem;
+    }
+
+    pre {
+      padding-inline: 1rem;
+    }
+  }
+}
+
+.chrome-inset details.collapsible {
+  margin-inline: -1rem;
+}
+
+// Resource variant — summary styled as a download-card row
+details.collapsible-resource {
+  > summary {
+    gap: 0.75rem;
+
+    > i { font-size: 1.25rem; flex-shrink: 0; }
+
+    .collapsible-resource-title {
+      flex: 1;
+    }
+
+    .collapsible-resource-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.625rem;
+      border-radius: 0.375rem;
+      border: 1px solid var(--colour-edge);
+      color: inherit;
+      text-decoration: none;
+      font-size: 0.875em;
+      flex-shrink: 0;
+
+      &:hover {
+        background: var(--colour-edge);
+        text-decoration: none;
+      }
+    }
+  }
+}
