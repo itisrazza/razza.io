@@ -26,3 +26,11 @@ serve: thumbs js
     node _build.mjs --watch &
     watchexec -w assets/gallery --exts jpg -- ./_scripts/generate-gallery-thumbnails.sh &
     bundle exec jekyll serve
+
+# Create a new note: just new "Title" [slug]
+new title slug="":
+    ./_scripts/new-note.sh "{{title}}" {{slug}}
+
+# Review a note's content with Claude: just review _notes/my-note.md
+review file:
+    ./_scripts/review-note.sh "{{file}}"
