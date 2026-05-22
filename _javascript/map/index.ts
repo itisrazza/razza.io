@@ -15,7 +15,7 @@ L.Icon.Default.mergeOptions({
 interface TravelMarker {
   title: string;
   altTitle?: string;
-  hero?: string;
+  hero: string;
   country: string;
   countryLabel: string;
   link: string;
@@ -37,7 +37,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 function buildPopup({ title, altTitle, hero, country, countryLabel, link }: TravelMarker): string {
   return `<a class="map-popup" href="${link}">
-    ${hero ? `<img class="map-popup-hero" src="/assets/gallery/thumbs/${hero}.jpg" alt="${title}" loading="lazy">` : ""}
+    <img class="map-popup-hero" src="${hero}" alt="${title}" loading="lazy" onerror="this.remove()">
     <span class="country-label">
       <img src="/assets/icons/countries/${country}.svg" alt="">
       ${countryLabel}

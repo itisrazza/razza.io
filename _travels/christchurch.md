@@ -11,7 +11,6 @@ location:
   lat: -43.5311
   lon: 172.6361
 
-hero: cant-park-there
 ---
 
 # Food

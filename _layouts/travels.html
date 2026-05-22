@@ -14,7 +14,7 @@ bundles: [map]
 
 <script type="application/json" id="map-data">
   [{% for travel in travels %}
-    {"title":{{ travel.title | jsonify }}{% if travel.alt_title %},"altTitle":{{ travel.alt_title | jsonify }}{% endif %}{% if travel.hero %},"hero":{{ travel.hero | jsonify }}{% endif %},"country":{{ travel.country | jsonify }},"countryLabel":{{ site.data.countries[travel.country].label | jsonify }},"link":{{ travel.url | jsonify }},"lat":{{ travel.location.lat }},"lon":{{ travel.location.lon }}}{% unless forloop.last %},{% endunless %}
+    {"title":{{ travel.title | jsonify }}{% if travel.alt_title %},"altTitle":{{ travel.alt_title | jsonify }}{% endif %},"hero":{{ travel.slug | prepend: "/assets/travels/" | append: ".jpg" | jsonify }},"country":{{ travel.country | jsonify }},"countryLabel":{{ site.data.countries[travel.country].label | jsonify }},"link":{{ travel.url | jsonify }},"lat":{{ travel.location.lat }},"lon":{{ travel.location.lon }}}{% unless forloop.last %},{% endunless %}
   {% endfor %}]
 </script>
 
