@@ -1,11 +1,12 @@
 import * as esbuild from "esbuild";
-import { readdirSync } from "fs";
+import { readdirSync, existsSync } from "fs";
 
 const watch = process.argv.includes("--watch");
 
 const entryPoints = Object.fromEntries(
   readdirSync("_javascript", { withFileTypes: true })
     .filter((d) => d.isDirectory())
+    .filter((d) => existsSync(`_javascript/${d.name}/index.ts`))
     .map((d) => [d.name, `_javascript/${d.name}/index.ts`])
 );
 
