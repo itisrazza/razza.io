@@ -23,9 +23,11 @@
 <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
 
     {%- for bundle in page.bundles -%}
+    <link rel="stylesheet" href="{{ '/assets/js/' | append: bundle | append: '.css' | relative_url }}">
     <script src="{{ '/assets/js/' | append: bundle | append: '.js' | relative_url }}" defer></script>
     {%- endfor -%}
     {%- for bundle in layout.bundles -%}
+    <link rel="stylesheet" href="{{ '/assets/js/' | append: bundle | append: '.css' | relative_url }}">
     <script src="{{ '/assets/js/' | append: bundle | append: '.js' | relative_url }}" defer></script>
     {%- endfor -%}
 

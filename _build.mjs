@@ -16,6 +16,9 @@ const ctx = await esbuild.context({
   outdir: "assets/js",
   format: "iife",
   sourcemap: true,
+  loader: {
+    ".png": "dataurl",
+  },
 });
 
 if (watch) {
