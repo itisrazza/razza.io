@@ -5,6 +5,8 @@ title: Christchurch
 alt_title: Ōtautahi
 country: nz
 
+last_visit: 2025-01-01
+
 location:
   lat: -43.5311
   lon: 172.6361

@@ -25,7 +25,7 @@ serve: thumbs js
     trap 'kill $(jobs -p) 2>/dev/null' EXIT
     node _build.mjs --watch &
     watchexec -w assets/gallery --exts jpg -- ./_scripts/generate-gallery-thumbnails.sh &
-    bundle exec jekyll serve
+    bundle exec jekyll serve --livereload --host 0.0.0.0
 
 # Create a new note: just new "Title" [slug]
 new title slug="":

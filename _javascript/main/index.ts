@@ -1,25 +1,22 @@
+import setupFooter from "./footer";
+import setupNavigation from "./navigation";
+
 console.info(`You're more than welcome to look around here, but this whole this whole thing is on GitHub.
 
 More info: https://razza.io/projects/razza.io
 GitHub: https://github.com/itisrazza/razza.io
 `);
 
-const footerNames = [
-  "Rareș Nistor",
-  "Raresh Nistor",
-  "Razz Nistor",
-  "Razza",
-  "Рареш Нистор",
-  "ラレシュ ニストル",
-  "Ραρές Νίστορ",
-];
+const setupFunctions: [string, () => void][] = [
+  ["footer", setupFooter],
+  ["navigation", setupNavigation],
+]
 
-const footerName = document.getElementById("footer-name");
-if (footerName) {
-  let index = 0;
-
-  footerName.addEventListener("click", () => {
-    index = (index + 1) % footerNames.length;
-    footerName.textContent = footerNames[index];
-  });
+for (const [name, fn] of setupFunctions) {
+  try {
+    fn();
+    console.debug(`${name}: OK`);
+  } catch (error: unknown) {
+    console.log(`Failed to set up '${name}'`, error);
+  }
 }

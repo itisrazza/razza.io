@@ -5,6 +5,12 @@ $width-s: 100%;
 $breakpoint-l: 820px;
 $breakpoint-m: 660px;
 
+:root {
+  --breakpoint: sm;
+  @media screen and (min-width: $breakpoint-m) { --breakpoint: md; }
+  @media screen and (min-width: $breakpoint-l) { --breakpoint: lg; }
+}
+
 @mixin inset() {
   padding-inline: 1.5rem;
 }

@@ -7,23 +7,27 @@ $chroma: (
 );
 
 $light: (
-  "background":          oklch(95%  5% map.get($chroma, "light")), // page background
-  "background-elevated": oklch(90% 12% map.get($chroma, "light")), // elevated components
-  "foreground":          oklch(0 0 0),
-  "edge":                oklch(75% 30% map.get($chroma, "light")), // interactable edge components
-  "edge-active":         oklch(50% 25% map.get($chroma, "light")), // selected edges
-  "accent":              oklch(45% 50% 265),                       // links
-  "focus":               #D000FF,
+  "background":           oklch(95%  5% map.get($chroma, "light")), // page background
+  "background-elevated":  oklch(90% 12% map.get($chroma, "light")), // elevated components
+  "background-nav-blur":  rgba(255, 255, 255, 20%),
+  "foreground":           oklch(0 0 0),
+  "foreground-secondary": oklch(48% 22% map.get($chroma, "light")),
+  "edge":                 oklch(75% 30% map.get($chroma, "light")), // interactable edge components
+  "edge-active":          oklch(50% 25% map.get($chroma, "light")), // selected edges
+  "accent":               oklch(45% 50% 265),                       // links
+  "focus":                #D000FF,
 );
 
 $dark: (
-  "background":          oklch(10% 10% map.get($chroma, "dark")),
-  "background-elevated": oklch(20% 15% map.get($chroma, "dark")),
-  "foreground":          oklch(98%  5% map.get($chroma, "dark")),
-  "edge":                oklch(40% 30% map.get($chroma, "dark")),
-  "edge-active":         oklch(50% 25% map.get($chroma, "dark")),
-  "accent":              oklch(80% 60% 80),                     
-  "focus":               #D000FF,
+  "background":           oklch(10% 10% map.get($chroma, "dark")),
+  "background-elevated":  oklch(20% 15% map.get($chroma, "dark")),
+  "background-nav-blur":  rgba(0, 0, 0, 20%),
+  "foreground":           oklch(98%  5% map.get($chroma, "dark")),
+  "foreground-secondary": oklch(65% 22% map.get($chroma, "dark")),
+  "edge":                 oklch(40% 30% map.get($chroma, "dark")),
+  "edge-active":          oklch(50% 25% map.get($chroma, "dark")),
+  "accent":               oklch(80% 60% 80),
+  "focus":                #D000FF,
 );
 
 $schemes: (

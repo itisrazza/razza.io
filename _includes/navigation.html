@@ -1,9 +1,10 @@
 <nav>
-  <input type="checkbox" id="navigation-toggle">
-  <label for="navigation-toggle">
-      {%- include navlogo.html -%}
-      <div class="navigation-toggle-hint"><i class="bi bi-list"></i></div>
-  </label>
+  <div class="nav-blur"></div>
+
+  <button class="nav-fab" tabindex="0"><i class="bi bi-list"></i></button>
+
+  <div class="nav-logo">{%- include navlogo.html -%}</div>
+
   <ul class="nav-links">
       {% for navigation in site.data.navigation %}
         {% assign page_tag = page.nav_tag | default: layout.nav_tag %}
@@ -11,9 +12,9 @@
         {% if page_tag == navigation.tag %}
           {% assign classes = 'class="current"' %}
         {% endif %}
-        <li><a href="{{ navigation.path | relative_url }}" {{ classes }}>
-          <i class="bi bi-{{ navigation.icon }}"></i>
-          <span class="navigation-label {% if navigation.expanded %}navigation-label-expanded{% endif %}">{{ navigation.label }}</span>
+        <li><a href="{{ navigation.path | relative_url }}" {{ classes }} aria-label="{{ navigation.label }}">
+          <i class="bi bi-{{ navigation.icon }}" aria-hidden="true"></i>
+          <span class="navigation-label {% if navigation.expanded %}navigation-label-expanded{% endif %}" aria-hidden="true">{{ navigation.label }}</span>
         </a></li>
       {% endfor %}
   </ul>

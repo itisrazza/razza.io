@@ -1,7 +1,7 @@
 ---
 layout: chrome
 nav_tag: home
-html_classes: 
+html_classes:
 ---
 
 <div class="home-content">
@@ -11,40 +11,56 @@ html_classes:
   </header>
 
   <div class="home-links">
-    <div class="link-section">
+    <div class="link-section" role="group" aria-label="Projects">
       {% assign projects = site.projects | where: "featured", "true" %}
 
-      <i class="bi bi-hammer"></i>
+      <i class="bi bi-hammer" aria-hidden="true"></i>
       <div class="link-group">
-	{% for project in projects %}
+	      {% for project in projects %}
           {% assign logo = 'assets/logos/projects/' | append: project.slug | append: '.svg' %}
 
           <a href="{{ project.url | relative_url }}"><img src="{{ logo | relative_url }}" alt="" width="16" height="16"> {{ project.title }}</a>
-	{% endfor %}
-	<a href="{{ 'projects' | relative }}">More <i class="bi bi-box-arrow-up-right"></i></a>
+	      {% endfor %}
+	      <a href="{{ 'projects' | relative }}">More <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
       </div>
     </div>
-    
-    <div class="link-section">
+
+    <div class="link-section" role="group" aria-label="Notes">
       {% assign note = site.notes | last %}
-     
-      <i class="bi bi-newspaper"></i>
+
+      <i class="bi bi-newspaper" aria-hidden="true"></i>
       <div class="link-group">
-	<a href="{{ note.url | relative_url }}">{{ note.title }} <span class="note-date">{{ note.date | date: "%B %e, %Y" }}</a>
-	<a href="{{ 'notes' | relative_url }}">More <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="{{ note.url | relative_url }}">{{ note.title }} <span class="note-date">{{ note.date | date: "%B %e, %Y" }}</a>
+        <a href="{{ 'notes' | relative_url }}">More <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
       </div>
     </div>
-    
-    <div class="link-section">
-      {% assign note = site.notes | last %}
-     
-      <i class="bi bi-person-fill"></i>
+
+    <div class="link-section" role="group" aria-label="Gallery">
+      <i class="bi bi-images" aria-hidden="true"></i>
       <div class="link-group">
-	<a href="{{ 'about' | relative_url }}">About</a>
-	<a href="{{ 'links' | relative_url }}">Links</a>
-	<a href="{{ 'uses'  | relative_url }}">Uses</a>
+        <a href="{{ 'gallery' | relative_url }}">Gallery</i></a>
+      </div>
+    </div>
+
+    <div class="link-section" role="group" aria-label="Travels">
+      {% assign last_travel = site.travels | where_exp: "t", "t.last_visit != nil" | sort: "last_visit" | last %}
+
+      <i class="bi bi-compass" aria-hidden="true"></i>
+      <div class="link-group">
+        {% if last_travel %}<a href="{{ last_travel.url | relative_url }}">{{ last_travel.title }} <span class="note-date">visited {{ last_travel.last_visit | date: "%b %Y" }}</span></a>{% endif %}
+        <a href="{{ 'travels' | relative_url }}">More <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+      </div>
+    </div>
+
+    <div class="link-section" role="group" aria-label="About">
+      {% assign note = site.notes | last %}
+
+      <i class="bi bi-person-fill" aria-hidden="true"></i>
+      <div class="link-group">
+        <a href="{{ 'about' | relative_url }}">About</a>
+        <a href="{{ 'links' | relative_url }}">Links</a>
+        <a href="{{ 'uses'  | relative_url }}">Uses</a>
       </div>
     </div>
   </div>
 </div>
-

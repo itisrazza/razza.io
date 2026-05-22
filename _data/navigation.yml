@@ -7,7 +7,7 @@
   label: Projects
   path: /projects
 - tag: notes
-  icon: files
+  icon: newspaper
   label: Notes
   path: /notes
 - tag: gallery
