@@ -20,7 +20,7 @@ ro:
   native: România
 
 md:
-  label: Moldova (Republic)
+  label: Republica Moldova
   en: Moldova
   ro: Republica Moldova
   mi: Morotawa
@@ -53,3 +53,10 @@ ua:
   ro: Ucraina
   mi: Ūkareinga
   native: Україна
+
+hk:
+  label: Hong Kong &middot; 香港
+  en: Hong Kong
+  ro: Hong Kong
+  mi: Hongipua
+  native: 香港

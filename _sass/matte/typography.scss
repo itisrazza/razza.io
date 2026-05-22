@@ -14,7 +14,7 @@ $mono-font-family: $body-font-family;
   --font-var-slnt: 0;
 
   font-family: $body-font-family;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 
 * {
@@ -42,8 +42,8 @@ sup, sub {
   top: -0.4em;
 }
 
-sub { 
-  top: 0.4em; 
+sub {
+  top: 0.4em;
 }
 
 // headings
@@ -57,15 +57,18 @@ $heading-sizes: (
   "h6": 1rem,
 );
 
-@mixin heading($size) {
+@mixin heading-vars {
   --font-var-wght: 800;
   --font-var-casl: 1;
   --font-var-crsv: 1;
   --font-var-slnt: -5;
+}
+
+@mixin heading($size) {
+  @include heading-vars;
 
   font-size: map.get($heading-sizes, $size);
   margin-block: unset;
-  line-height: 1.5em;
 }
 
 @each $level, $size in $heading-sizes {
@@ -75,7 +78,7 @@ $heading-sizes: (
 
     .alt-title {
       font-size: 0.8em;
-      opacity: 0.6;
+      color: var(--colour-foreground-secondary);
     }
   }
 

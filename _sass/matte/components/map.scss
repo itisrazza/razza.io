@@ -1,7 +1,118 @@
+@use "../typography.scss";
+
 #map {
-    display: block;
-    min-height: 300px;
-    height: 40vh;
+  display: block;
+  min-height: 300px;
+  height: 40vh;
+  border-radius: 0.5rem;
+  background-color: black;
+  font-family: unset;
+
+  // Zoom controls
+  .leaflet-bar {
+    border: 1px solid var(--colour-edge);
     border-radius: 0.5rem;
-    background-color: black;
+    box-shadow: none;
+    overflow: hidden;
+
+    a {
+      background-color: var(--colour-background-elevated);
+      color: var(--colour-foreground);
+      border-bottom: 1px solid var(--colour-edge);
+      width: 2rem;
+      height: 2rem;
+      line-height: 1.4;
+      padding: 0;
+      text-decoration: none;
+
+      &:hover, &:focus {
+        background-color: var(--colour-edge);
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  // Attribution
+  .leaflet-control-attribution {
+    background: var(--colour-background-elevated);
+    color: var(--colour-foreground-secondary);
+    border-radius: 0.25rem;
+    font-size: 0.7rem;
+    padding: 0.125rem 0.5rem;
+    margin: 0.25rem;
+
+    a { color: var(--colour-accent); }
+  }
+
+  // Popup wrapper
+  .leaflet-popup-content-wrapper {
+    background: var(--colour-background-elevated);
+    color: var(--colour-foreground);
+    border: 1px solid var(--colour-edge);
+    border-radius: 0.5rem;
+    box-shadow: none;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .leaflet-popup-content {
+    margin: 0;
+    width: auto !important; // override Leaflet's computed inline width
+  }
+
+  .leaflet-popup-tip {
+    background: var(--colour-background-elevated);
+    box-shadow: none;
+  }
+}
+
+// Popup card — rendered inside .leaflet-popup-content
+.map-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.25rem;
+  min-width: 220px;
+  text-decoration: none;
+  color: var(--colour-foreground);
+  padding: 0.25rem;
+
+  &:hover { text-decoration: none; }
+
+  .country-label {
+    display: flex;
+  }
+
+  .map-popup-hero {
+    display: block;
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+
+  .map-popup-body {
+    padding: 0.25rem 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .map-popup-title {
+    @include typography.heading-vars;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    color: var(--colour-foreground);
+    font-size: 1rem;
+  }
+
+  .map-popup-alt-title {
+    font-size: 1em;
+    color: var(--colour-foreground-secondary);
+  }
 }

@@ -1,5 +1,6 @@
 @use "../components/button";
 @use "../typography";
+@use "../chrome";
 
 .layout-travel .page-chrome {
   > header {
@@ -8,13 +9,13 @@
 }
 
 .country-label {
-  background-color: var(--colour-background);
-  color: var(--colour-foreground);
+  background-color: var(--colour-background-swap);
+  color: var(--colour-foreground-swap);
+  line-height: 1.3;
 
   display: inline-flex;
   flex-direction: row;
   gap: 0.5rem;
-  align-self: flex-start;
   justify-content: flex-start;
   align-items: center;
   font-size: 0.8rem;
@@ -31,18 +32,41 @@
   @include button.button();
 
   flex-direction: column;
+  align-items: stretch;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0.125rem;
+  padding: 0.25rem;
+  gap: 0.25rem;
 
-  >.title {
+  > .travel-tile-hero {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    background-color: var(--colour-background);
+    flex-shrink: 0;
+  }
+
+  > .title {
     @include typography.heading("h6");
+    padding: 0 0.25rem 0.25rem;
 
     .alt-title {
-      opacity: 0.6;
+      color: var(--colour-foreground-secondary);
 
-      &::before { content: '(' }
-      &::after { content: ')' }
+      &::before { content: none; }
+      &::after { content: none; }
     }
+  }
+}
+
+// Grid layout for the travels listing page
+.layout-travels .note-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+
+  @media screen and (max-width: calc(chrome.$breakpoint-m - 1px)) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

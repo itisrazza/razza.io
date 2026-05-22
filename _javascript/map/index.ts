@@ -15,6 +15,9 @@ L.Icon.Default.mergeOptions({
 interface TravelMarker {
   title: string;
   altTitle?: string;
+  hero?: string;
+  country: string;
+  countryLabel: string;
   link: string;
   lat: number;
   lon: number;
@@ -24,7 +27,6 @@ const dataEl = document.getElementById("map-data");
 if (dataEl == null) throw new Error("map: no #map-data element found");
 
 const markers: TravelMarker[] = JSON.parse(dataEl.textContent ?? "[]");
-console.debug({markers});
 
 const map = L.map("map").setView([0, 174.783333], 1);
 
@@ -33,8 +35,24 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
-for (const { title, altTitle, link, lat, lon } of markers) {
-  const name = altTitle ? `${title} (${altTitle})` : title;
-  const marker = L.marker([lat, lon]).addTo(map);
-  marker.bindPopup(L.popup().setContent(`<a href="${link}">${name}</a>`));
+function buildPopup({ title, altTitle, hero, country, countryLabel, link }: TravelMarker): string {
+  return `<a class="map-popup" href="${link}">
+    ${hero ? `<img class="map-popup-hero" src="/assets/gallery/thumbs/${hero}.jpg" alt="${title}" loading="lazy">` : ""}
+    <span class="country-label">
+      <img src="/assets/icons/countries/${country}.svg" alt="">
+      ${countryLabel}
+    </span>
+    <div class="map-popup-body">
+      <div class="map-popup-title">
+        <strong>${title}</strong>
+        ${altTitle ? `<span class="map-popup-alt-title">${altTitle}</span>` : ""}
+      </div>
+    </div>
+  </a>`;
+}
+
+for (const marker of markers) {
+  L.marker([marker.lat, marker.lon])
+    .addTo(map)
+    .bindPopup(L.popup({ closeButton: false, minWidth: 220 }).setContent(buildPopup(marker)));
 }

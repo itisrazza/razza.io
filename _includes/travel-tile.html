@@ -1,4 +1,9 @@
 <a href="{{ travel.url | relative_url }}" class="travel-tile">
+    {% if travel.hero %}
+    <img class="travel-tile-hero" src="/assets/gallery/thumbs/{{ travel.hero }}.jpg" alt="{{ travel.title }}" loading="lazy">
+    {% else %}
+    <div class="travel-tile-hero"></div>
+    {% endif %}
     <span class="country-label"><img src="/assets/icons/countries/{{ travel.country }}.svg"> {{ site.data.countries[travel.country].label }}</span>
     <span class="title">
         <span class="title">{{ travel.title }}</span>
