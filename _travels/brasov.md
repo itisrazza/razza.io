@@ -1,12 +1,12 @@
 ---
 layout: travel
 
-title: Suceava
+title: Brașov
 country: ro
 
 location:
-  lat: 47.651389
-  lon: 26.255556
+  lat: 45.666667
+  lon: 25.616667
 
 published: false
 ---
