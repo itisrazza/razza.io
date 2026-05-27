@@ -4,11 +4,9 @@ description: Bitmap painter and converter for low bpp image formats
 layout: project
 links:
   - label: Download
-    url: https://github.com/thegreatrazz/VGAPainter/releases
-  - label: Microsoft Store
-    url: https://www.microsoft.com/store/apps/9NLF1CTQ6Z49
+    url: https://github.com/cable-car-games/VGAPainter/releases
   - label: GitHub
-    url: https://github.com/thegreatrazz/VGAPainter
+    url: https://github.com/cable-car-games/VGAPainter
 platforms: [ WIP, Windows ]
 featured: true
 ---
