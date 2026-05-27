@@ -1,7 +1,7 @@
 - name: Semafor
   description: A traffic light to let others know whenever I'm in a meeting.
   link: https://github.com/itisrazza/semafor
-  icon: semafor.png
+  icon: semafor.svg
   archived: true
 
 - name: Property Card Generator
@@ -25,12 +25,13 @@
 - name: Coronabot
   description: Discord bot for course email, assignments and class time notifications.
   link: https://github.com/itisrazza/coronabot
-  icon: coronabot.png
+  icon: coronabot.svg
   archived: true
 
 - name: Razza's Tetris
   description: A retro-looking Tetris clone to learn SDL.
   link: https://github.com/itisrazza/tetris
+  icon: tetris.svg
   archived: true
 
 - name: Homepage
@@ -51,16 +52,19 @@
 - name: Crawl Generator
   description: A credits crawl image generator
   link: https://github.com/itisrazza/CrawlGen/releases/tag/the-only-one
+  icon: crawl-generator.svg
   archived: true
 
 - name: CASIO Pong
   description: A port of Pong to the CASIO fx-9860G graphing calculators.
   link: https://github.com/itisrazza/casio-pong
+  icon: casio-pong.svg
   archived: true
 
 - name: Conic Sections
   description: A quick conic section plotter for absolutely no reason.
   link: https://itisrazza.github.io/conic-sections/
+  icon: conic-sections.svg
   archived: true
 
 - name: TCP Listener
@@ -71,18 +75,20 @@
 - name: Notify.js
   description: Notification that appears inside the webpage.
   link: http://itisrazza.github.io/notify.js/
+  icon: notify.svg
   archived: true
 
 - name: Slidey.js
   description: A simple slideshow solution written in pure JavaScript and CSS.
   link: https://slidey.js.org
+  icon: slidey.svg
   archived: true
 
 - name: Words on Digital Paper (Engine)
   description: Blog platform for a high school assignment (2TCD).
   link: https://github.com/itisrazza/wodp-engine
-  archived: true
   icon: wodp.svg
+  archived: true
 
 - name: BetaMuseum
   description: A museum with old software relics (1TCD).
@@ -94,7 +100,7 @@
   description: Batch script resident on the camera SD card to quickly dump images.
   link: https://github.com/itisrazza/cameradump
   archived: true
-  icon: cameradumper.ico
+  icon: cameradump.svg
 
 - name: Annual Fireworks
   description: Firework animations I stream to celebrate New Year's.
