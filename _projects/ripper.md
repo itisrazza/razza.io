@@ -3,7 +3,6 @@ title: Ripper
 description: Appliance for Ripping CDs and DVDs
 layout: project
 platforms:
-  - WIP
   - Embedded
   - Linux
   - CAD
