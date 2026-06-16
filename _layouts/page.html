@@ -2,22 +2,7 @@
 layout: chrome
 ---
 
-<header>
-  <h1>{{ page.title }}</h1>
-  {%- if page.subtitle -%}
-    <div>{{ page.subtitle }}</div>
-  {%- endif -%}
-
-  {% if page.links %}
-    <ul class="header-buttons">
-      {% for link in page.links %}
-        <li>
-          <a href="{{ link.url }}" target="_blank" class="button">{{ link.label }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-</header>
+{%- include header.html -%}
 
 <main class="chrome-inset">
   <article>

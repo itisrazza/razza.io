@@ -1,3 +1,5 @@
 ---
 layout: travels
+
+title: Travels
 ---

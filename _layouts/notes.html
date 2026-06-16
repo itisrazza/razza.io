@@ -2,11 +2,7 @@
 layout: chrome
 ---
 
-<header>
-    <h1>Notes</h1>
-    <p>Here are some notes I've written down for different things. Think of them as a bunch of Markdown files left in a
-        folder somewhere.</p>
-</header>
+{%- include header.html -%}
 
 {% assign notes = site.notes | reverse %}
 

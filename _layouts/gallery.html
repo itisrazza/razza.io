@@ -3,11 +3,7 @@ layout: chrome
 nav_tag: gallery
 ---
 
-<header>
-  <h1>Gallery</h1>
-  <p>These are some photos I've taken, either just looking around or travelling to various places.</p>
-  <!-- This is also the first time I had a gallery on my site since 2017 according to IA Web Archive. -->
-</header>
+{%- include header.html -%}
 
 <section class="gallery-tiles">
   {% for image in site.data.gallery %}

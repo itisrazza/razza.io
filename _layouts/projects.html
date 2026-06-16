@@ -2,10 +2,7 @@
 layout: chrome
 ---
 
-<header>
-  <h1>Projects</h1>
-  <p>What I work on in my free time. Mostly tools for whatever niche problem I had.</p>
-</header>
+{%- include header.html -%}
 
 <div class="project-list">
   {% assign projects = site.projects | where: "archived", nil %}
