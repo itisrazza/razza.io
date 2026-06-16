@@ -1,0 +1,13 @@
+---
+title: Knowledge Base
+subtitle: |
+  Imagine a pile of Markdown files left in a folder somewhere.
+
+layout: page
+nav_tag: kb
+---
+
+<details class="treeview" open>
+  <summary>Knowledge Base</summary>
+  {%- include kb-tree.html node=site.data.kb_tree open=true -%}
+</details>

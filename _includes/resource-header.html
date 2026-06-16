@@ -1,0 +1,9 @@
+{% if page.resources %}
+  <div class="post-resources">
+    {% for resource in page.resources %}
+    <a class="post-resource" href="{{ resource.url }}"{% if resource.url contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+      <i class="bi bi-{{ resource.icon | default: "file-earmark" }}"></i>{{ resource.label }}
+    </a>
+    {% endfor %}
+  </div>
+{% endif %}

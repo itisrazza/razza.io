@@ -1,0 +1,29 @@
+---
+layout: chrome
+---
+
+{%- assign rel = page.relative_path | remove_first: "_kb/" -%}
+{%- assign segs = rel | split: "/" -%}
+
+<nav class="kb-breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ "/kb" | relative_url }}" aria-label="Knowledge Base"><i class="bi bi-journal-bookmark-fill"></i></a>
+  {%- assign folder_count = segs.size | minus: 1 -%}
+  {%- for seg in segs limit: folder_count -%}
+    <span class="kb-breadcrumb-sep" aria-hidden="true">/</span>
+    <span>{{ seg }}</span>
+  {%- endfor -%}
+</nav>
+
+<header>
+  <div class="header-page-meta">
+    <h1>{{ page.title | default: page.name }}</h1>
+  </div>
+
+  {%- include resource-header.html -%}
+</header>
+
+<main class="chrome-inset">
+  <article>
+    {{ content }}
+  </article>
+</main>

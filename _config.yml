@@ -19,6 +19,17 @@ collections:
   travels:
     name: true
     output: true
+  kb:
+    name: true
+    output: true
+
+defaults:
+  - scope:
+      path: "_kb"
+      type: kb
+    values:
+      layout: kb
+      nav_tag: kb
 
 feed:
   excerpt_only: true

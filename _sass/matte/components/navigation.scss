@@ -6,7 +6,7 @@
 $links-scale-start: 0.975;
 
 @media screen and (max-width: calc(chrome.$breakpoint-m - 1px)) {
-  .page-chrome > nav {
+  .page-chrome > nav.site-nav {
     .nav-logo {
       display: none;
     }
@@ -116,7 +116,7 @@ $links-scale-start: 0.975;
 }
 
 @media screen and (min-width: chrome.$breakpoint-m) {
-  .page-chrome>nav {
+  .page-chrome>nav.site-nav {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;

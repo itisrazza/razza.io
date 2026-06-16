@@ -1,0 +1,14 @@
+<ul>
+  {%- assign pages = include.node.pages | sort: "title" -%}
+  {%- for doc in pages -%}
+    <li><a href="{{ doc.url | relative_url }}"><i class="bi bi-file-earmark"></i> {{ doc.title | default: doc.name }}</a></li>
+  {%- endfor -%}
+  {%- for folder in include.node.folders -%}
+    <li>
+      <details{% if include.open %} open{% endif %}>
+        <summary>{{ folder.name }}</summary>
+        {%- include kb-tree.html node=folder open=include.open -%}
+      </details>
+    </li>
+  {%- endfor -%}
+</ul>

@@ -6,10 +6,10 @@
   icon: hammer
   label: Projects
   path: /projects
-- tag: notes
-  icon: newspaper
-  label: Notes
-  path: /notes
+- tag: kb
+  icon: journal-bookmark-fill
+  label: Knowledge Base
+  path: /kb
 - tag: gallery
   icon: images
   label: Gallery
