@@ -1,0 +1,88 @@
+@use "../focus";
+
+.treeview {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: flex-start;
+      gap: 0.25rem;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 24px;
+        background:
+          url(/assets/ui/treeview/item.svg) no-repeat top,
+          url(/assets/ui/treeview/item-continue.svg) repeat-y top 16px left;
+        align-self: stretch;
+      }
+
+      &:last-child::before {
+        background-image: url(/assets/ui/treeview/item-last.svg);
+      }
+
+      i.bi {
+        display: inline-block;
+        min-width: 24px;
+        text-align: center;
+      }
+
+      > a {
+        display: flex;
+        gap: inherit;
+      }
+    }
+
+    .treeview-item-index {
+      --font-var-wght: 600;
+    }
+  }
+
+  details {
+    flex-grow: 1;
+
+    > summary {
+      display: flex;
+      flex-grow: 1;
+
+      justify-content: flex-start;
+      gap: 0.25rem;
+      user-select: none;
+
+      @include focus.hide-for-mouse();
+    }
+
+    > summary::before {
+      content: "\F3D9";
+      display: grid;
+      width: 24px;
+      height: 24px;
+      font-family: "bootstrap-icons";
+      place-items: center;
+    }
+
+    &:open > summary {
+      --font-var-wght: 800;
+
+      &::before {
+        content: "\F3D8";
+      }
+    }
+  }
+}
+
+details.treeview {
+  // immediate summary may be a top-level node
+  > summary {}
+}

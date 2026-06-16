@@ -1,0 +1,94 @@
+---
+layout: chrome
+nav_tag: home
+title: Sitemap
+---
+
+<details class="treeview treeview-sitemap" open>
+  <summary><a href="/"><i class="bi bi-house"></i> razza.io</a></summary>
+  <ul>
+    <li>
+      <details>
+        <summary>Projects</summary>
+        <ul>
+          <li class="treeview-item-index"><a href="/projects"><i class="bi bi-card-list"></i> Index</a></li>
+          {%- assign projects = site.projects | where: "archived", nil -%}
+          {%- for project in projects -%}
+            <li><a href="{{ project.url }}"><i class="bi bi-hammer"></i> {{ project.title }}</a></li>
+          {%- endfor -%}
+          <li>
+            <details>
+              <summary>Archived</summary>
+              <ul>
+                {%- assign projects = site.projects | where: "archived", "true" -%}
+                {%- for project in projects -%}
+                  <li><a href="{{ project.url }}"><i class="bi bi-hammer"></i> {{ project.title }}</a></li>
+                {%- endfor -%}
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>One-off & historical</summary>
+              <ul>
+                {%- assign projects = site.data.projects -%}
+                {%- for project in projects -%}
+                  <li><a href="{{ project.link }}" target="_blank"><i class="bi bi-link-45deg"></i> {{ project.name }}</a></li>
+                {%- endfor -%}
+              </ul>
+            </details>
+          </li>
+        </ul>
+
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary>Notes</summary>
+        <ul>
+          <li class="treeview-item-index"><a href="/notes"><i class="bi bi-card-list"></i> Index</a></li>
+          {%- assign notes = site.notes | reverse -%}
+          {%- for note in notes -%}
+            <li><a href="{{ note.url }}"><i class="bi bi-filetype-md"></i> {{ note.title }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary>Gallery</summary>
+        <ul>
+          <li class="treeview-item-index"><a href="/gallery"><i class="bi bi-card-list"></i> Index</a></li>
+          {% for image in site.data.gallery %}
+            <li><a href="/gallery/#show-{{ image.id }}"><i class="bi bi-image"></i> {{ image.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary>Travels</summary>
+        <ul>
+          <li class="treeview-item-index"><a href="/travels"><i class="bi bi-card-list"></i> Index</a></li>
+          {% for travel in site.travels %}
+            <li><a href="{{ travel.url }}"><i class="bi bi-compass"></i> {{ travel.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details open>
+        <summary>About</summary>
+        <ul>
+          <li><a href="/about"><i class="bi bi-file-earmark"></i> About</a></li>
+          <li><a href="/uses"><i class="bi bi-file-earmark"></i> Uses</a></li>
+          <li><a href="/links"><i class="bi bi-file-earmark"></i> Links</a></li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+</details>
