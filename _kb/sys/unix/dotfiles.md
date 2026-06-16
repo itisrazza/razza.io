@@ -1,11 +1,23 @@
 ---
-title: Keeping dotfiles in sync
+title: Dotfiles
 date: 2025-04-09
 resources:
   - id: dotfiles
     label: itisrazza/dotfiles
     description: A subset of my own dotfiles split across multiple computers
     url: https://github.com/itisrazza/dotfiles
+    type: GitHub
+    icon: github
+  - id: mac
+    label: itisrazza/dotfiles-mac
+    description: A subset of my own dotfiles split across multiple computers
+    url: https://github.com/itisrazza/dotfiles-mac
+    type: GitHub
+    icon: github
+  - id: linux
+    label: itisrazza/dotfiles-linux
+    description: A subset of my own dotfiles split across multiple computers
+    url: https://github.com/itisrazza/dotfiles-linux
     type: GitHub
     icon: github
 ---

@@ -1,5 +1,5 @@
 ---
-title: You don't need JavaScript for navigation
+title: No-JS site navigation
 date: 2025-04-11
 resources:
   - id: codepen
@@ -34,9 +34,9 @@ so:
 </nav>
 ```
 
-We're using the checkbox's state that the DOM holds for us. We can use the `label`
-element to use our own elements to change the state of the checkbox. That way,
-we can make the button look however we want.
+We're using the checkbox's state that the DOM holds for us. We can use the
+`label` element to use our own elements to change the state of the checkbox.
+That way, we can make the button look however we want.
 
 ## CSS Styling
 

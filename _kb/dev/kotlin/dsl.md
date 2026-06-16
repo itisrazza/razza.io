@@ -1,5 +1,5 @@
 ---
-title:  "Creating DSLs"
+title:  "DSLs"
 date:   2021-01-20
 resources:
   - id: kotlin-type-safe-builders

@@ -1,5 +1,5 @@
 ---
-title: "Making Services on Linux (systemd)"
+title: "systemd: Service units"
 date: 2020-01-10
 resources:
   - id: start-sh
