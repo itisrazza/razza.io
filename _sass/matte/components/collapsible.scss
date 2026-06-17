@@ -33,11 +33,24 @@ details.collapsible {
     }
   }
 
-  &[open] > summary {
-    border-radius: 0.5rem 0.5rem 0 0;
+  &::details-content {
+    transition: transform .2s cubic-bezier(.23,1,.32,1), opacity .1s;
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
 
-    &::after {
-      transform: rotate(45deg);
+  &:open {
+    &::details-content {
+      opacity: 1;
+      transform: none;
+    }
+
+    > summary {
+      border-radius: 0.5rem 0.5rem 0 0;
+
+      &::after {
+        transform: rotate(45deg);
+      }
     }
   }
 

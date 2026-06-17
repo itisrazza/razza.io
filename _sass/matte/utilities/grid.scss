@@ -1,0 +1,27 @@
+// Grid layout utilities. Compose: `grid grid-gaps grid-col-3`.
+
+@use "../chrome";
+
+.grid {
+  display: grid;
+}
+
+.grid-gaps {
+  gap: 0.5em;
+}
+
+// Column counts collapse on narrow viewports.
+// sm (< md): 1 column · md: 2 columns · lg: 3 columns
+.grid-col-2,
+.grid-col-3 {
+  grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: chrome.$breakpoint-m) {
+  .grid-col-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-col-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media screen and (min-width: chrome.$breakpoint-l) {
+  .grid-col-3 { grid-template-columns: repeat(3, 1fr); }
+}

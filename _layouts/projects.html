@@ -35,14 +35,7 @@ layout: chrome
         {% if project.icon %}
         {% assign icon = 'assets/logos/projects/' | append: project.icon %}
         {% endif %}
-
-        <a href="{{ project.link }}" class="miniproject-tile">
-            <img src="{{ icon | relative_url }}" alt="" width="32" height="32">
-            <span class="miniproject-tile-meta">
-                <span class="title">{{ project.name }}</span>
-                <span class="description">{{ project.description }}</span>
-            </span>
-        </a>
+        {% include card-tile.html title=project.name description=project.description url=project.link logo=icon %}
         {% endfor %}
     </main>
 </section>

@@ -1,0 +1,10 @@
+{% capture body %}{% if include.logo %}<img src="{{ include.logo | relative_url }}" alt="" width="32" height="32"{% if include.mono %} class="logo-mono"{% endif %}>{% else %}<span class="card-tile-icon" aria-hidden="true"></span>{% endif %}
+  <span class="card-tile-meta">
+    <span class="title">{{ include.title }}</span>
+    {% if include.description %}<span class="description">{{ include.description }}</span>{% endif %}
+    {% if include.badge %}<span class="labels"><span class="label">{{ include.badge }}</span></span>{% endif %}
+  </span>{% endcapture %}{% if include.url %}<a class="card-tile" href="{{ include.url }}"{% if include.url contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+  {{ body }}
+</a>{% else %}<div class="card-tile">
+  {{ body }}
+</div>{% endif %}

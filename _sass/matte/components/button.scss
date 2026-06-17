@@ -1,5 +1,20 @@
 @use "../focus";
 
+@mixin button-interaction {
+  &:hover {
+    outline: 1px solid var(--colour-edge);
+    text-decoration: none;
+  }
+
+  &:active {
+    outline: 1px solid var(--colour-edge);
+    background: var(--colour-edge);
+    text-decoration: none;
+  }
+
+  @include focus.hide-for-mouse();
+}
+
 @mixin button {
   box-sizing: content-box;
   background-color: var(--colour-background-elevated);
@@ -15,18 +30,7 @@
   gap: 0.25rem;
   user-select: none;
 
-  &:hover {
-    outline: 1px solid var(--colour-edge);
-    text-decoration: none;
-  }
-
-  &:active {
-    outline: 1px solid var(--colour-edge);
-    background: var(--colour-edge);
-    text-decoration: none;
-  }
-
-  @include focus.hide-for-mouse();
+  @include button-interaction;
 }
 
 .button {
